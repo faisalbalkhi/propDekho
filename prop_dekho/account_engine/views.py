@@ -16,3 +16,8 @@ def register(request):
 
 def index(request):
     return render(request, 'index.html')
+
+
+def dashboard_add_listing(request):
+    
+    return render(request, 'dashboard-add-listing.html')
