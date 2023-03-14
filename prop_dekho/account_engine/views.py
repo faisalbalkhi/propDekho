@@ -19,5 +19,7 @@ def index(request):
 
 
 def dashboard_add_listing(request):
-    
     return render(request, 'dashboard-add-listing.html')
+
+def contacts(request):
+    return render(request, 'contacts.html')

@@ -6,5 +6,6 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('', views.index, name='index'),
     path('dashboard-add-listing/', views.dashboard_add_listing, name='dashboard_add_listing'),
+    path('contatcs/', views.contacts, name='contacts')
     
 ]

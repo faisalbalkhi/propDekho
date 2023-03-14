@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
+    {% load static %}
     <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
@@ -8,12 +9,12 @@
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
         <!--=============== css  ===============-->	
-        <link type="text/css" rel="stylesheet" href="css/plugins.css">
-        <link type="text/css" rel="stylesheet" href="css/style.css">
-		<link type="text/css" rel="stylesheet" href="css/dark-style.css">		
-        <link type="text/css" rel="stylesheet" href="css/color.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/plugins.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+		<link type="text/css" rel="stylesheet" href="/static/css/dark-style.css">		
+        <link type="text/css" rel="stylesheet" href="/static/css/color.css">
         <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     </head>
     <body>
         <!--loader-->
@@ -36,7 +37,7 @@
             <!-- header -->
             <header class="main-header">
                 <!--  logo  -->
-                <div class="logo-holder"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                <div class="logo-holder"><a href="index.html"><img src="{% static 'images/logo.png' %}" alt=""></a></div>
                 <!-- logo end  -->
                 <!-- nav-button-wrap--> 
                 <div class="nav-button-wrap color-bg nvminit">
@@ -123,7 +124,7 @@
                                 <!--second level -->   
                                 <ul>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
+                                    <li><a href="{% url 'contacts' %}">Contacts</a></li>
                                     <li><a href="help.html">Help FAQ</a></li>
                                     <li><a href="pricing.html">Pricing </a></li>
                                     <li><a href="dashboard.html">User Dashboard</a></li>
@@ -308,22 +309,16 @@
                 <!-- content -->	
                 <div class="content">
                     <!--  section  -->
-                    <section class="hidden-section single-par2  " data-scrollax-parent="true">
+                    <section class="hidden-section single-par2  " data-scrollax-parent="true" >
                         <div class="bg-wrap bg-parallax-wrap-gradien">
-                            <div class="bg par-elem "  data-bg="images/bg/1.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+                            <div class="bg par-elem " style="background-size: 98%; background-repeat: no-repeat;" data-bg="https://imgs.search.brave.com/_GEIcZuPHJVuDxwx-Vq-wOhAAyLTZQSZO2XL3nTwqlQ/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMzky/MTk3OC5qcGc" data-scrollax="properties: { translateY: '30%' }"></div>
                         </div>
                         <div class="container">
                             <div class="section-title center-align big-title">
                                 <h2><span>Our Contacts</span></h2>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit amet fermentum sem.</h4>
+                                <h4>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</h4>
                             </div>
-                            <div class="scroll-down-wrap">
-                                <div class="mousey">
-                                    <div class="scroller"></div>
-                                </div>
-                                <span>Scroll Down To Discover</span>
-                            </div>
-                        </div>
+                        
                     </section>
                     <!--  section  end--> 		
                     <!-- breadcrumbs-->
@@ -332,10 +327,7 @@
                             <div class="breadcrumbs-list">
                                 <a href="#">Home</a> <a href="#">Pages</a><span>Contacts</span>
                             </div>
-                            <div class="share-holder hid-share">
-                                <a href="#" class="share-btn showshare sfcs">  <i class="fas fa-share-alt"></i>  Share   </a>
-                                <div class="share-container  isShare"></div>
-                            </div>
+                           
                         </div>
                     </div>
                     <!-- breadcrumbs end -->
@@ -359,7 +351,7 @@
                                         <i class="fal fa-phone-rotary"></i>
                                         <h4>Our Phones<span>02</span></h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                        <a href="#" class="serv-link sl-b">+7(111)123456789</a>
+                                        <a style="color: blue" href="https://wa.me/+919654673054">+91-9654673054</a>
                                     </div>
                                 </div>
                                 <!-- services-item  end-->
@@ -367,8 +359,8 @@
                                 <div class="col-md-4">
                                     <div class="services-item fl-wrap">
                                         <i class="fal fa-map-marked"></i>
-                                        <h4>Our Adress <span>03</span></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                        <h4>Our Address <span>03</span></h4>
+                                        <p>2nd Floor ILD Trade Center Sector 47 Sohna Road Gurgaon 122018 </p>
                                         <a href="#" class="serv-link sl-b">USA 27TH Brooklyn NY</a>
                                     </div>
                                 </div>
@@ -376,17 +368,9 @@
                             </div>
                             <div class="clearfix"></div>
                             <div class="contacts-opt fl-wrap">
-                                <div class="contact-social">
-                                    <span class="cs-title">Find us on: </span>
-                                    <ul>
-                                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                    </ul>
-                                </div>
+                               
                                 <a href="#" class="btn small-btn float-btn color-bg cf_btn">Write Mesagge</a>
-                                <div class="contact-notifer">Or visit our <a href="help.html">  help page</a></div>
+                                
                             </div>
                             <!--box-widget  -->			
                             <div class="box-widget">
@@ -409,38 +393,7 @@
                     <!-- section end-->	
                 </div>
                 <!-- content end -->	
-                <!-- subscribe-wrap -->	
-                <div class="subscribe-wrap fl-wrap">
-                    <div class="container">
-                        <div class="subscribe-container fl-wrap color-bg">
-                            <div class="pwh_bg"></div>
-                            <div class="mrb_dec mrb_dec3"></div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="subscribe-header">
-                                        <h4>newsletter</h4>
-                                        <h3>Sign up for newsletter and get latest news and update</h3>
-                                    </div>
-                                </div>
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <div class="footer-widget fl-wrap">
-                                        <div class="subscribe-widget fl-wrap">
-                                            <div class="subcribe-form">
-                                                <form id="subscribe">
-                                                    <input class="enteremail fl-wrap" name="email" id="subscribe-email" placeholder="Enter Your Email" spellcheck="false" type="text">
-                                                    <button type="submit" id="subscribe-button" class="subscribe-button color-bg">  Subscribe</button>
-                                                    <label for="subscribe-email" class="subscribe-message"></label>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- subscribe-wrap end -->	
+                	
                 <!-- footer -->	
                 <footer class="main-footer fl-wrap">
                     <div class="footer-inner fl-wrap">
@@ -484,8 +437,8 @@
                                         </div>
                                         <ul  class="footer-contacts fl-wrap">
                                             <li><span><i class="fal fa-envelope"></i> Mail :</span><a href="#" target="_blank">yourmail@domain.com</a></li>
-                                            <li> <span><i class="fal fa-map-marker"></i> Adress :</span><a href="#" target="_blank">USA 27TH Brooklyn NY</a></li>
-                                            <li><span><i class="fal fa-phone"></i> Phone :</span><a href="#">+7(111)123456789</a></li>
+                                            <li> <span><i class="fal fa-map-marker"></i> Address :</span><a href="#" target="_blank">2nd Floor ILD Trade Center Sector 47 Sohna Road Gurgaon 122018</a></li>
+                                            <li><span><i class="fal fa-phone"></i> Phone :</span><a href="https://wa.me/+919654673054">+91-9654673054</a></li>
                                         </ul>
                                         <div class="footer-social fl-wrap">
                                             <ul>
@@ -670,10 +623,10 @@
         </div>
         <!--contact-form-wrap end-->	
         <!--=============== scripts  ===============-->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOU_API_KEY_HERE&libraries=places"></script>
-        <script src="js/map-single.js"></script>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/plugins.js"></script>
+        <script src="/static/js/scripts.js"></script>
+        <script src="/static/https://maps.googleapis.com/maps/api/js?key=YOU_API_KEY_HERE&libraries=places"></script>
+        <script src="/static/js/map-single.js"></script>
     </body>
 </html>
