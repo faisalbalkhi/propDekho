@@ -2024,17 +2024,17 @@ nav li ul a:before , nav li ul a:after {
 }
 /*------hero ------------------------------------------------*/
 .hero-title h2{
-	color: #fff;
+	color: #000;
 	font-size: 40px;
 	line-height: 50px;
 	text-align: left;
 	font-weight: 600;
 }
 .hero-title h4 { 
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: 600;
  	text-align: left;
-	color: #fff;
+	color: #000;
 	margin-bottom: 20px;
 }
 .hero-title.hero-title_center h4  , .hero-title.hero-title_center h2 {
@@ -2165,7 +2165,7 @@ nav li ul a:before , nav li ul a:after {
 .main-search-input-item .nice-select .list {
 	margin-top: 0;
 }
-.hero-section_dec:before {
+/* .hero-section_dec:before {
     content: "";
     position: absolute;
     height: 100%;
@@ -2174,12 +2174,12 @@ nav li ul a:before , nav li ul a:after {
 	left: 15%;
     background: linear-gradient(to left, rgba(255,255,255,0.99) 20%, rgba(255,255,255,0.5) 70%, rgba(255,255,255,0) 95%);
 	z-index: 5
-}
+} */
 .hero-notifer {
 	text-align: left;
-	color: #fff;
-	font-size: 13px;
-	font-weight: 600;
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
 	margin-top: 30px;
 }
 .hero-notifer.hn_center {

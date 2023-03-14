@@ -46,9 +46,9 @@
 .geodir_save-btn span i, .compare-btn span i  , .lc-wbtn i {
 	font-weight: bold;
 }
-.hero-section_dec:before {
+/* .hero-section_dec:before {
     background: linear-gradient(to left, rgba(27, 24, 43,0.99) 20%, rgba(27, 24, 43,0.5) 70%, rgba(27, 24, 43,0) 95%);
-}
+} */
 
 .dashbard-menu-header , .dashboard-stats i , .dasboard-scrollnav-wrap , .main-header , .header-search-wrapper , .header-opt-modal , .dashboard-submenu , .custom-form  textarea:focus , .custom-form input[type="text"]:focus  , .custom-form  input[type=email]:focus  , .custom-form  input[type=password]:focus , .listsearch-input-item input[type="text"]:focus , .secondary-nav , .main-register .custom-form input[type="text"]  , .main-register .custom-form  input[type=email]   , .main-register .custom-form  input[type=password]   {
 	box-shadow: 0 9px 16px rgb(0 0 0 / 50%);
