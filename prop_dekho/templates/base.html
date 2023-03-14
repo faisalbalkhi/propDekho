@@ -133,7 +133,7 @@
                             <a href="#">Pages <i class="fa fa-caret-down"></i></a>
                             <!--second level -->
                             <ul>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
                                 <li><a href="{% url 'contacts' %}">Contacts</a></li>
                                 <li><a href="help.html">Help FAQ</a></li>
                                 <li><a href="pricing.html">Pricing </a></li>
@@ -343,7 +343,7 @@
             <div class="content">
                 <!--  section  -->
 
-{% block content %}
+{% block content %} 
 {% endblock %}
 
             </div>
