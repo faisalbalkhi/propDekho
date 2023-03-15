@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %} {% block content %}
 <!-- <div class="bg-wrap">
         <div class="bg par-elem " style="background: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg'); "
@@ -33,6 +34,58 @@
   <div class="container">
     <div class="hero-title hero-title_small">
       <h2>Find Your Dream House</h2>
+=======
+{% extends 'base.html' %}      
+{% block content %}  
+ 
+<section class="hero-section hero-section_dec" style="background-image: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg;'); background-repeat:no-repeat; background-size : 100%" >
+   
+        <div class="container">
+        <div class="hero-title hero-title_small">
+            <h4>Real Estate </h4>
+            <h2>Welcome, {{request.user|upper}} <br>
+                Find the house of your Dream, using our Platform
+            </h2>
+        </div>
+        <div class="main-search-input-wrap">
+            <div class="main-search-input fl-wrap">
+                <div class="main-search-input-item">
+                    <input type="text" placeholder="What are you looking for?" value="" />
+                </div>
+                <div class="main-search-input-item">
+                    <select data-placeholder="All Categories" class="chosen-select no-search-select">
+                        <option>All Statuses</option>
+                        <option>For Rent</option>
+                        <option>For Sale</option>
+                    </select>
+                </div>
+                <div class="main-search-input-item">
+                    <select data-placeholder="All Categories" class="chosen-select">
+                        <option>All Cities</option>
+                        <option>New York</option>
+                        <option>London</option>
+                        <option>Paris</option>
+                        <option>Kiev</option>
+                        <option>Moscow</option>
+                        <option>Dubai</option>
+                        <option>Rome</option>
+                        <option>Beijing</option>
+                    </select>
+                </div>
+                <button class="main-search-button color-bg"
+                    onclick="window.location.href='listing.html'"> Search <i class="far fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hero-notifer fl-wrap">Need more search options? <a href="listing.html">Advanced
+                Search</a> </div>
+        <div class="scroll-down-wrap">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+            <span>Scroll Down To Discover</span>
+        </div>
+>>>>>>> 6c3bbd8a67ea5230d90739f2016bac5b690ca33d
     </div>
     <div class="house-statuses">
       <div class="status" id="buy" data-label="Buy" onclick="func1()">Buy</div>

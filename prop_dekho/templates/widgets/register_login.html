@@ -26,10 +26,11 @@
                         <!--tab -->
                         <div id="tab-1" class="tab-content first-tab">
                             <div class="custom-form">
-                                <form method="post" name="registerform">
-                                    <label>Username or Email Address * <span class="dec-icon"><i
+                                <form method="post" action="{% url 'login' %}" name="registerform">
+                                    {% csrf_token %}
+                                    <label>Username * <span class="dec-icon"><i
                                                 class="fal fa-user"></i></span></label>
-                                    <input name="email" type="text" placeholder="Enter your E-mail"
+                                    <input name="username" type="text" placeholder="Enter your Username"
                                         onClick="this.select()" value="">
                                     <div class="pass-input-wrap fl-wrap">
 
@@ -59,16 +60,14 @@
                                     <form method="post" name="registerform" class="main-register-form"
                                         id="main-register-form2" action="{% url 'register' %}" onsubmit="return validation()">
                                         {% csrf_token %}
-
-                                        <div class="form-group" style="text-align: center; margin: 1rem 0rem;">
-                                            <h5 style="color: white; margin-bottom : 1.5rem; font-family: fangsong;">Register as :</h5>
-                                            <input type="radio" id="User" name="registerAs" value="regUser">
-                                            <span style="color: white; margin-right :2rem; font-family: fangsong;"><strong>Individual</strong></span>
-                                            
-                                            <input type="radio"  name="registerAs" id="RegAgent" value="regAgent" >
-                                                <span style="color: white; font-family: fangsong;"><strong>Agent / Builder</strong></span>
-                                            </div>
-
+                                        <div class="form-group">
+                                            <label for="individual">Individual</label>
+                                            <input type="radio" name="user_type" id="individual" value="individual">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="agent">Agent</label>
+                                            <input type="radio" name="user_type" id="agent" value="agent">
+                                        </div>
                                         <div class="form-group">
                                         <label>Full Name * <span class="dec-icon"><i
                                                     class="fal fa-user"></i></span></label>
