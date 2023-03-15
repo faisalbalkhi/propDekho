@@ -1,19 +1,13 @@
 {% extends 'base.html' %}      
 {% block content %}  
- <!-- <div class="bg-wrap">
-        <div class="bg par-elem " style="background: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg'); "
-            data-scrollax="properties: { translateY: '30%' }">
-        </div>
-        data-scrollax-parent="true"
-    </div> -->
-    <!-- <div class="overlay"></div> -->
+ 
 <section class="hero-section hero-section_dec" style="background-image: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg;'); background-repeat:no-repeat; background-size : 100%" >
    
         <div class="container">
         <div class="hero-title hero-title_small">
-            <h4>Real Estate Searching Platform</h4>
-            <h2>Find The House of Your Dream <br>
-                Using Our Platform
+            <h4>Real Estate </h4>
+            <h2>Welcome, {{request.user|upper}} <br>
+                Find the house of your Dream, using our Platform
             </h2>
         </div>
         <div class="main-search-input-wrap">
