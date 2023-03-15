@@ -9,6 +9,7 @@ from .models import User
 
 
 def register(request):
+    user_type = None
     if request.method == "POST":
         user_type = request.POST.get('user_type')
         username = request.POST.get('username')
