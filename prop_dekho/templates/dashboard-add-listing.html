@@ -94,7 +94,7 @@
                         <div class="user-profile-menu">
                             <h3>Main</h3>
                             <ul class="no-list-style">
-                                <li><a href="dashboard.html"><i class="fal fa-chart-line"></i>Dashboard</a></li>
+                                <li><a href="{% url 'dashboard_add_listing' %}"><i class="fal fa-chart-line"></i>Dashboard</a></li>
                                 <li><a href="dashboard-myprofile.html"><i class="fal fa-user-edit"></i> Edit profile</a></li>
                                 <li><a href="dashboard-messages.html"><i class="fal fa-envelope"></i> Messages <span>3</span></a></li>
                                 <li><a href="dashboard-agents.html"><i class="fal fa-users"></i> Agents List</a></li>
@@ -674,7 +674,7 @@
                         <div class="dashboard-footer-links fl-wrap">
                             <span>Helpfull Links:</span>
                             <ul>
-                                <li><a href="about.html">About  </a></li>
+                                <li><a href="{% url 'about' %}">About  </a></li>
                                 <li><a href="blog.html">Blog</a></li>
                                 <li><a href="pricing.html">Pricing Plans</a></li>
                                 <li><a href="{% url 'contacts' %}">Contacts</a></li>
