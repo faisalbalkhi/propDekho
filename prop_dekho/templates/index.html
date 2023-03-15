@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+{% extends 'base.html' %} 
+{% block content %}
+=======
+>>>>>>> 4b36f63d5244f28fb12b4dc9916f55aca372cc70
 {% extends 'base.html' %} {% block content %}
+>>>>>>> 02e42f4694c07ba1da5165b63931579e7d9a2e63
 <!-- <div class="bg-wrap">
         <div class="bg par-elem " style="background: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg'); "
             data-scrollax="properties: { translateY: '30%' }">
@@ -32,12 +40,23 @@
 >
   <div class="container">
     <div class="hero-title hero-title_small">
+<<<<<<< HEAD
       <h2>Welcome, {{request.user|upper}} <br>Find Your Dream House</h2>
+=======
+<<<<<<< HEAD
+      <h2> Welcome, {{request.user|upper}} <br>
+        Find Your Dream House</h2>
+=======
+      <h2>Welcome, {{request.user|upper}} <br>Find Your Dream House, using our platform</h2>
+>>>>>>> 02e42f4694c07ba1da5165b63931579e7d9a2e63
+>>>>>>> 4b36f63d5244f28fb12b4dc9916f55aca372cc70
     </div>
-    <div class="house-statuses">
-      <div class="status" id="buy" data-label="Buy" onclick="func1()">Buy</div>
-      <div class="status" id="rent" data-label="Rent" onclick="func2()">Rent</div>
-      <div class="status" id="pg" data-label="PG" onclick="func3()">PG</div>
+    <div class="house-statuses" style="background: translucent;">
+      <div style="cursor:pointer;" class="status" id="buy" data-label="Buy" onclick="func1()">Buy</div>
+      <div>|</div>
+      <div style="cursor:pointer;" class="status" id="rent" data-label="Rent" onclick="func2()">Rent</div>
+      <div>|</div>
+      <div style="cursor:pointer;" class="status" id="pg" data-label="PG" onclick="func3()">PG</div>
     </div>
     <div class="main-search-input-wrap">
       <div class="main-search-input fl-wrap">
@@ -49,7 +68,7 @@
             style="color: white"
           />
         </div>
-        <div class="main-search-input-item">
+        <!-- <div class="main-search-input-item">
           <select
             data-placeholder="All Categories"
             class="chosen-select no-search-select"
@@ -58,7 +77,7 @@
             <option>For Rent</option>
             <option>For Sale</option>
           </select>
-        </div>
+        </div> -->
         <div class="main-search-input-item">
           <select data-placeholder="All Categories" class="chosen-select">
             <option>All Cities</option>
