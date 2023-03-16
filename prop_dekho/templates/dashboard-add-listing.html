@@ -97,7 +97,7 @@
                                 <li><a href="{% url 'dashboard_add_listing' %}"><i class="fal fa-chart-line"></i>Dashboard</a></li>
                                 <li><a href="dashboard-myprofile.html"><i class="fal fa-user-edit"></i> Edit profile</a></li>
                                 <li><a href="dashboard-messages.html"><i class="fal fa-envelope"></i> Messages <span>3</span></a></li>
-                                <li><a href="dashboard-agents.html"><i class="fal fa-users"></i> Agents List</a></li>
+                                <li><a href="{% url 'dashboard_agent' %}"><i class="fal fa-users"></i> Agents List</a></li>
                                 <li>
                                     <a href="#" class="submenu-link"><i class="fal fa-plus"></i>Submenu</a>
                                     <ul  class="no-list-style">
@@ -240,97 +240,12 @@
                             </div>
                             <!-- dasboard-widget-box  end-->
                             <!-- dasboard-widget-title -->
-                            <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec2">
-                                <h5><i class="fas fa-street-view"></i>More Details</h5>
-                            </div>
-                            <!-- dasboard-widget-title end -->
-                            <!-- dasboard-widget-box  -->
-                            <div class="dasboard-widget-box   fl-wrap">
-                                <div class="custom-form">
-                                    
-                                    <div class="clearfix"></div>
-                                    
-                                    <div class="clearfix"></div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label>City</label>
-                                            <div class="listsearch-input-item">
-                                                <select data-placeholder="Apartments" class="chosen-select no-search-select" >
-                                                    <option>All Cities</option>
-                                                    <option>New York</option>
-                                                    <option>London</option>
-                                                    <option>Paris</option>
-                                                    <option>Kiev</option>
-                                                    <option>Moscow</option>
-                                                    <option>Dubai</option>
-                                                    <option>Rome</option>
-                                                    <option>Beijing</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label>Project/Building Name </label>
-                                            <input style="padding-left: 10px !important" type="text" placeholder="Start typing building/project name...." value=""/>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label>Locality </label>
-                                            <input style="padding-left: 10px !important" type="text" placeholder="Start typing Locality name...." value=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- dasboard-widget-box  end-->							
-                            <!-- dasboard-widget-title -->
-                            <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec3">
-                                <h5><i class="fas fa-image"></i>Property Picture</h5>
-                            </div>
-                            <!-- dasboard-widget-title end -->
-                            <!-- dasboard-widget-box  -->
-                            <div class="dasboard-widget-box   fl-wrap">
-                                <div class="custom-form">
-                                    <span style="color: white; ">Accepted formats are .jpg, .gif, .bmp & .png and Maximum size allowed 10 MB</span>
-                                    <div class="clearfix"></div>
-                                    <div class="listsearch-input-item fl-wrap">
-                                        <form class="fuzone">
-                                            <div class="fu-text">
-                                                <span><i class="far fa-cloud-upload-alt"></i> Click here or drop files to upload</span>
-                                                <div class="photoUpload-files fl-wrap"></div>
-                                            </div>
-                                            <input type="file" class="upload" multiple>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- dasboard-widget-box  end-->		
-                            <!-- dasboard-widget-title -->
-                            <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec3">
-                                <h5><i class="fas fa-video"></i>Property video</h5>
-                            </div>
-                            <!-- dasboard-widget-title end -->
-                            <!-- dasboard-widget-box  -->
-                            <div class="dasboard-widget-box   fl-wrap">
-                                <div class="custom-form">
-                                    <span style="color: white; ">Accepted formats are .mp4,.MPEG, FLV, MOV & SWF and Maximum size allowed 30 MB</span>
-                                    <div class="clearfix"></div>
-                                    <div class="listsearch-input-item fl-wrap">
-                                        <form class="fuzone">
-                                            <div class="fu-text">
-                                                <span><i class="far fa-cloud-upload-alt"></i> Click here or drop files to upload</span>
-                                                <div class="photoUpload-files fl-wrap"></div>
-                                            </div>
-                                            <input type="file" class="upload" multiple>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- dasboard-widget-box  end-->					
-                            <!-- dasboard-widget-title -->
                             <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec4">
                                 <h5><i class="fas fa-list"></i>Property Profile</h5>
                             </div>
                             <!-- dasboard-widget-title end -->
-                            <!-- dasboard-widget-box  -->
-                            <div class="dasboard-widget-box   fl-wrap">
+                             <!-- dasboard-widget-box  -->
+                             <div class="dasboard-widget-box   fl-wrap">
                                 <div class="custom-form">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -351,12 +266,6 @@
                                                     <label>Garage: <span class="dec-icon"><i class="far fa-warehouse"></i></span></label>
                                                     <input type="text" placeholder="Number of cars" value=""/>														
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label>Details Text</label>
-                                            <div class="listsearch-input-item">
-                                                <textarea cols="40" rows="3" style="height: 235px" placeholder="Datails" spellcheck="false"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -478,7 +387,73 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- dasboard-widget-box  end-->						
+                            <!-- dasboard-widget-box  end-->
+                            <!-- dasboard-widget-title -->
+                            <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec2">
+                                <h5><i class="fas fa-street-view"></i>More Details</h5>
+                            </div>
+                            <!-- dasboard-widget-title end -->
+                            <!-- dasboard-widget-box  -->
+                            <div class="dasboard-widget-box   fl-wrap">
+                                <div class="custom-form">
+                                    
+                                    <div class="clearfix"></div>
+                                    
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>City</label>
+                                            <div class="listsearch-input-item">
+                                                <select data-placeholder="Apartments" class="chosen-select no-search-select" >
+                                                    <option>All Cities</option>
+                                                    <option>New York</option>
+                                                    <option>London</option>
+                                                    <option>Paris</option>
+                                                    <option>Kiev</option>
+                                                    <option>Moscow</option>
+                                                    <option>Dubai</option>
+                                                    <option>Rome</option>
+                                                    <option>Beijing</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Project/Building Name </label>
+                                            <input style="padding-left: 10px !important" type="text" placeholder="Start typing building/project name...." value=""/>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Locality </label>
+                                            <input style="padding-left: 10px !important" type="text" placeholder="Start typing Locality name...." value=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- dasboard-widget-box  end-->	
+                           						
+                            <!-- dasboard-widget-title -->
+                            <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec3">
+                                <h5><i class="fas fa-image"></i>Property Picture</h5>
+                            </div>
+                            <!-- dasboard-widget-title end -->
+                            <!-- dasboard-widget-box  -->
+                            <div class="dasboard-widget-box   fl-wrap">
+                                <div class="custom-form">
+                                    <span style="color: white; ">Accepted formats are .jpg, .gif, .bmp & .png and Maximum size allowed 10 MB</span>
+                                    <div class="clearfix"></div>
+                                    <div class="listsearch-input-item fl-wrap">
+                                        <form class="fuzone">
+                                            <div class="fu-text">
+                                                <span><i class="far fa-cloud-upload-alt"></i> Click here or drop files to upload</span>
+                                                <div class="photoUpload-files fl-wrap"></div>
+                                            </div>
+                                            <input type="file" class="upload" multiple>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- dasboard-widget-box  end-->							
+                            
+                            						
                             <!-- dasboard-widget-title -->
                             <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec5">
                                 <h5><i class="fas fa-home-lg-alt"></i>Rooms</h5>
