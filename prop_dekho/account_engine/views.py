@@ -79,6 +79,11 @@ def about(request):
 def dashboard_agent(request):
     return render(request, 'dashboard-agents.html')
 
+
 def dashboard_mypropfile(request):
     return render(request, 'dashboard-myprofile.html')
+
+
+def agent_list(request):
+    return render(request, 'agent-list.html')
 
