@@ -3168,7 +3168,8 @@ canvas {
 }
 
 .fa-check:before {
-    content: "\f00c"
+    content: "\f00c";
+    margin-left: 1.3rem;
 }
 
 .fa-check-circle:before {
@@ -5656,7 +5657,8 @@ canvas {
 }
 
 .fa-headset:before {
-    content: "\f590"
+    content: "\f590";
+    margin-left: 1.3rem;
 }
 
 .fa-heart:before {
@@ -7284,7 +7286,8 @@ canvas {
 }
 
 .fa-phone-laptop:before {
-    content: "\f87a"
+    content: "\f87a";
+    margin-left: 1.3rem;
 }
 
 .fa-phone-office:before {
@@ -9796,7 +9799,8 @@ canvas {
 }
 
 .fa-users-cog:before {
-    content: "\f509"
+    content: "\f509";
+    margin-left: 1.3rem;
 }
 
 .fa-users-crown:before {

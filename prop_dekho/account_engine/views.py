@@ -75,3 +75,7 @@ def contacts(request):
 def about(request):
     return render(request, 'about.html')
 
+
+def dashboard_mypropfile(request):
+    return render(request, 'dashboard-myprofile.html')
+
