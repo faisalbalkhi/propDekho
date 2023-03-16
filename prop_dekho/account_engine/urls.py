@@ -11,4 +11,6 @@ urlpatterns = [
     path('contacts/', views.contacts, name='contacts'),
     path('about/', views.about, name='about'),
     path('dashboard-agent/', views.dashboard_agent, name='dashboard_agent'),
+    path('dashboard/myprofile/', views.dashboard_mypropfile, name='dashboard_mypropfile'),
+
 ]
