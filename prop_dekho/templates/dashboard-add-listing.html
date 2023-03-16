@@ -135,7 +135,7 @@
                             <div class="dashbard-menu-header">
                                 <div class="dashbard-menu-avatar fl-wrap">
                                     <img src="{% static 'images/avatar/1.jpg' %}" alt="">
-                                    <h4>Welcome, <span>Alica Noory</span></h4>
+                                    <h4>Welcome, <span>{{request.user|upper}}</span></h4>
                                 </div>
                                 <a href="{% url 'index' %}" class="log-out-btn   tolt" data-microtip-position="bottom"  data-tooltip="Log Out"><i class="far fa-power-off"></i></a>
                             </div>

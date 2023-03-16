@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     # 'ckeditor_uploader',
+    'django.contrib.humanize',
 
     'account_engine',
     'properties_engine',
