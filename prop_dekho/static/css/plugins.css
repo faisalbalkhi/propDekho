@@ -3168,7 +3168,8 @@ canvas {
 }
 
 .fa-check:before {
-    content: "\f00c"
+    content: "\f00c";
+    margin-left: 1.3rem;
 }
 
 .fa-check-circle:before {
