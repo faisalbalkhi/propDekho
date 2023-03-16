@@ -10,5 +10,7 @@ urlpatterns = [
     path('dashboard/add/listing/', views.dashboard_add_listing, name='dashboard_add_listing'),
     path('contacts/', views.contacts, name='contacts'),
     path('about/', views.about, name='about'),
+    path('dashboard-agent/', views.dashboard_agent, name='dashboard_agent'),
+    path('dashboard/myprofile/', views.dashboard_mypropfile, name='dashboard_mypropfile'),
 
 ]
