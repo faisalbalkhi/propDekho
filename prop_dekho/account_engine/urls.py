@@ -10,5 +10,5 @@ urlpatterns = [
     path('dashboard/add/listing/', views.dashboard_add_listing, name='dashboard_add_listing'),
     path('contacts/', views.contacts, name='contacts'),
     path('about/', views.about, name='about'),
-
+    path('pg-Guest/',views.pg_Guest, name='pg_Guest'),
 ]

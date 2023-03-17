@@ -1,5 +1,4 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <!-- <div class="bg-wrap">
         <div class="bg par-elem " style="background: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg'); "
             data-scrollax="properties: { translateY: '30%' }">
@@ -9,8 +8,9 @@
 <!-- <div class="overlay"></div> -->
 
 <style>
+
   .house-statuses {
-    background-color: white;
+    background-color: transparent;
     display: flex;
     width: 35%;
     height: 3rem;
@@ -20,6 +20,30 @@
     margin-left: 7rem;
     position: relative;
     top: 36px;
+    border: 1px solid black;
+  }
+  .status{
+    cursor: pointer;
+    font-size: large;
+    font-weight: 700;
+  }
+ 
+
+  .dropdown-menu li {
+    position: relative;
+  }
+  .dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+  }
+  .dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+  }
+  .dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
   }
 </style>
 
@@ -33,30 +57,39 @@
 >
   <div class="container">
     <div class="hero-title hero-title_small">
-      <h2>Welcome, {{request.user|upper}} <br>Find Your Dream House, using our platform</h2>
+      <h2>
+        Welcome, {{request.user|upper}} <br />Find Your Dream House, using our
+        platform
+      </h2>
     </div>
-    <div class="house-statuses" style="background: translucent;">
-      <div style="cursor:pointer;" class="status" id="buy" data-label="Buy" onclick="func1()">Buy</div>
+    <div class="house-statuses" >
+      <div class="status" id="buy" data-label="Buy" onclick="func1()">
+        Sell
+      </div>
       <div>|</div>
-      <div style="cursor:pointer;" class="status" id="rent" data-label="Rent" onclick="func2()">Rent</div>
+      <div class="status" id="rent" data-label="Rent" onclick="func2()" >
+        Rent
+      </div>
       <div>|</div>
-      <div style="cursor:pointer;" class="status" id="pg" data-label="PG" onclick="func3()">PG</div>
+      <div class="status" id="pg" data-label="PG" onclick="func3()" >
+       <a href="{% url 'pg_Guest' %}" style="color : Black">PG/Guest</a> 
+      </div>
     </div>
     <div class="main-search-input-wrap">
       <div class="main-search-input fl-wrap">
         <div class="main-search-input-item">
-            <select data-placeholder="All Categories" class="chosen-select">
-              <option>All Cities</option>
-              <option>New York</option>
-              <option>London</option>
-              <option>Paris</option>
-              <option>Kiev</option>
-              <option>Moscow</option>
-              <option>Dubai</option>
-              <option>Rome</option>
-              <option>Beijing</option>
-            </select>
-          </div>
+          <select data-placeholder="All Categories" class="chosen-select">
+            <option>All Cities</option>
+            <option>New York</option>
+            <option>London</option>
+            <option>Paris</option>
+            <option>Kiev</option>
+            <option>Moscow</option>
+            <option>Dubai</option>
+            <option>Rome</option>
+            <option>Beijing</option>
+          </select>
+        </div>
         <div class="main-search-input-item">
           <input
             type="text"
@@ -65,17 +98,45 @@
             style="color: white"
           />
         </div>
-        <div class="main-search-input-item">
-          <select
-            data-placeholder="All Categories"
-            class="chosen-select no-search-select"
-          >
-            <option>Budget</option>
-            <option>For Rent</option>
-            <option>For Sale</option>
-          </select>
-        </div>
-        
+        <!-- <div class="main-search-input-item">
+          <div class="dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="color: white"
+            >
+              Budget
+            </a>
+            <ul class="dropdown-menu" style="display: flex">
+              <li>
+                <a class="dropdown-item" href="#"> Min Salary </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"> Max Salary </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+
         <button
           class="main-search-button color-bg"
           onclick="window.location.href='listing.html'"
@@ -115,7 +176,7 @@
       <div class="col-md-4">
         <div class="section-title fl-wrap">
           <h4>Browse Hot Offers</h4>
-          <h2>Latest Properties</h2>
+          <h2>Trending Properties</h2>
         </div>
       </div>
       <div class="col-md-8">

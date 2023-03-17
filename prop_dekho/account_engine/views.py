@@ -75,3 +75,9 @@ def contacts(request):
 def about(request):
     return render(request, 'about.html')
 
+
+def pg_Guest(request):
+    return render(request, 'pgGuest.html')
+
+
+
