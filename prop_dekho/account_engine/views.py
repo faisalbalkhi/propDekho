@@ -1,5 +1,4 @@
-from audioop import reverse
-from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import authenticate, logout
@@ -28,6 +27,7 @@ def register(request):
             user = User(user_type=user_type, username=username, mobile_number=mobile_number, email=email, password=encrypted_password)
             user.save()
             auth_login(request, user)
+            messages.success(request, "You are register as %s successfully!" % user.get_user_type_display())
             if user.user_type:
                 return redirect('dashboard_add_listing')
             return redirect('login')
@@ -63,10 +63,6 @@ def logout_view(request):
 
 def index(request):
     properties = Property.objects.all()
-    print()
-    print()
-    print()
-    print(properties)
     return render(request, 'index.html',{
         'properties': properties,
     })
