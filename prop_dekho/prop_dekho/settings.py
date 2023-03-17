@@ -36,8 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    # 'ckeditor_uploader',
+    'django.contrib.humanize',
 
-    'account_engine'
+    'account_engine',
+    'properties_engine',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +140,18 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL='account_engine.User'
+
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+
+# CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+CKEDITOR_CONFIGS = {
+'default': {
+'toolbar': 'full',
+'width': 1000,
+'height': 400
+},
+}

@@ -45,7 +45,7 @@
         <!-- header -->
         <header class="main-header">
             <!--  logo  -->
-            <div class="logo-holder"><a href="index.html"><img src="/static/images/logo.png" alt=""></a></div>
+            <div class="logo-holder"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt=""></a></div>
             <!-- logo end  -->
             <!-- nav-button-wrap-->
             <div class="nav-button-wrap color-bg nvminit">
@@ -123,7 +123,7 @@
                             <a href="#">Agents<i class="fa fa-caret-down"></i></a>
                        //comment     second level
                             <ul>
-                                <li><a href="agent-list.html">Agent List</a></li>
+                                <li><a href="{% url 'agent_list' %}">Agent List</a></li>
                                 <li><a href="agency-list.html">Agency List</a></li>
                                 <li><a href="agent-single.html">Agent Single</a></li>
                                 <li><a href="agency-single.html">Agency Single</a></li>
