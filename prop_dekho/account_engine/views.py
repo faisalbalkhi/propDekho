@@ -5,6 +5,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.hashers import make_password
 
+from  properties_engine .models import  Property
 from .models import User
 
 
@@ -61,7 +62,14 @@ def logout_view(request):
 
 
 def index(request):
-    return render(request, 'index.html')
+    properties = Property.objects.all()
+    print()
+    print()
+    print()
+    print(properties)
+    return render(request, 'index.html',{
+        'properties': properties,
+    })
 
 
 def dashboard_add_listing(request):
@@ -79,6 +87,11 @@ def about(request):
 def dashboard_agent(request):
     return render(request, 'dashboard-agents.html')
 
+
 def dashboard_mypropfile(request):
     return render(request, 'dashboard-myprofile.html')
+
+
+def agent_list(request):
+    return render(request, 'agent-list.html')
 
