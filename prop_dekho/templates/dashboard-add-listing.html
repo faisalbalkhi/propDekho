@@ -97,13 +97,8 @@
                                 <li><a href="{% url 'dashboard_add_listing' %}"><i class="fal fa-chart-line"></i>Dashboard</a></li>
                                 <li><a href="{% url 'dashboard_mypropfile' %}"><i class="fal fa-user-edit"></i> Edit profile</a></li>
                                 <li><a href="dashboard-messages.html"><i class="fal fa-envelope"></i> Messages <span>3</span></a></li>
-<<<<<<< HEAD
-                                <!-- <li><a href="dashboard-agents.html"><i class="fal fa-users"></i> Agents List</a></li> -->
-                                <!-- <li>
-=======
-                                <li><a href="{% url 'dashboard_agent' %}"><i class="fal fa-users"></i> Agents List</a></li>
+                                <li><a href="dashboard-agent.html"><i class="fal fa-users"></i> Agents List</a></li>
                                 <li>
->>>>>>> 19d5d10106b8bdc49faa0e02991229494e618b3b
                                     <a href="#" class="submenu-link"><i class="fal fa-plus"></i>Submenu</a>
                                     <ul  class="no-list-style">
                                         <li><a href="#"><i class="fal fa-th-list"></i> Submenu 2 </a></li>
@@ -111,7 +106,7 @@
                                         <li><a href="#"><i class="fal fa-comments-alt"></i>Submenu 2</a></li>
                                         <li><a href="#"><i class="fal fa-file-plus"></i> Submenu 2</a></li>
                                     </ul>
-                                </li> -->
+                                </li>
                             </ul>
                         </div>
                         <!-- user-profile-menu end-->
@@ -130,11 +125,20 @@
                     <div class="dashbard-menu-footer">© Homeradar 2022 .  All rights reserved.</div>
                 </div>
                 <!-- dashbard-menu-wrap end  -->		
-                <!-- content -->	
                 <div class="dashboard-content">
                     <div class="dashboard-menu-btn color-bg"><span><i class="fas fa-bars"></i></span>Dasboard Menu</div>
                     <div class="container dasboard-container">
                         <!-- dashboard-title -->	
+                         <!-- content -->	
+                        <!-- end message framework -->
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert {{ message.tags }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %} 
+                        <!-- end message framework -->
                         <div class="dashboard-title fl-wrap">
                             <div class="dashboard-title-item"><span>Add Listing</span></div>
                             <div class="dashbard-menu-header">
@@ -142,7 +146,7 @@
                                     <img src="{% static 'images/avatar/1.jpg' %}" alt="">
                                     <h4>Welcome, <span>{{request.user|upper}}</span></h4>
                                 </div>
-                                <a href="{% url 'index' %}" class="log-out-btn   tolt" data-microtip-position="bottom"  data-tooltip="Log Out"><i class="far fa-power-off"></i></a>
+                                <a href="{% url 'logout' %}" class="log-out-btn   tolt" data-microtip-position="bottom"  data-tooltip="Log Out"><i class="far fa-power-off"></i></a>
                             </div>
                             <!--Tariff Plan menu-->
                             <div class="tfp-det-container">
