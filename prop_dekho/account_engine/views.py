@@ -84,14 +84,10 @@ def about(request):
     return render(request, 'about.html')
 
 
-def dashboard_agent(request):
-    return render(request, 'dashboard-agents.html')
+def pg_Guest(request):
+    return render(request, 'pgGuest.html')
 
 
 def dashboard_mypropfile(request):
     return render(request, 'dashboard-myprofile.html')
-
-
-def agent_list(request):
-    return render(request, 'agent-list.html')
 
