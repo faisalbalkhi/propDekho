@@ -97,8 +97,13 @@
                                 <li><a href="{% url 'dashboard_add_listing' %}"><i class="fal fa-chart-line"></i>Dashboard</a></li>
                                 <li><a href="{% url 'dashboard_mypropfile' %}"><i class="fal fa-user-edit"></i> Edit profile</a></li>
                                 <li><a href="dashboard-messages.html"><i class="fal fa-envelope"></i> Messages <span>3</span></a></li>
+<<<<<<< HEAD
+                                <!-- <li><a href="dashboard-agents.html"><i class="fal fa-users"></i> Agents List</a></li> -->
+                                <!-- <li>
+=======
                                 <li><a href="{% url 'dashboard_agent' %}"><i class="fal fa-users"></i> Agents List</a></li>
                                 <li>
+>>>>>>> 19d5d10106b8bdc49faa0e02991229494e618b3b
                                     <a href="#" class="submenu-link"><i class="fal fa-plus"></i>Submenu</a>
                                     <ul  class="no-list-style">
                                         <li><a href="#"><i class="fal fa-th-list"></i> Submenu 2 </a></li>
@@ -106,7 +111,7 @@
                                         <li><a href="#"><i class="fal fa-comments-alt"></i>Submenu 2</a></li>
                                         <li><a href="#"><i class="fal fa-file-plus"></i> Submenu 2</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <!-- user-profile-menu end-->
@@ -117,7 +122,7 @@
                                 <li><a href="dashboard-listing-table.html"><i class="fal fa-th-list"></i> My listigs  </a></li>
                                 <li><a href="dashboard-bookings.html"> <i class="fal fa-calendar-check"></i> Bookings <span>3</span></a></li>
                                 <li><a href="dashboard-review.html"><i class="fal fa-comments-alt"></i> Reviews <span>2</span> </a></li>
-                                <li><a href="{% url 'dashboard_add_listing' %}" class="user-profile-act"><i class="fal fa-file-plus"></i> Add New</a></li>
+                                <!-- <li><a href="{% url 'dashboard_add_listing' %}" class="user-profile-act"><i class="fal fa-file-plus"></i> Add New</a></li> -->
                             </ul>
                         </div>
                         <!-- user-profile-menu end--> 
@@ -135,7 +140,7 @@
                             <div class="dashbard-menu-header">
                                 <div class="dashbard-menu-avatar fl-wrap">
                                     <img src="{% static 'images/avatar/1.jpg' %}" alt="">
-                                    <h4>Welcome, <span>Alica Noory</span></h4>
+                                    <h4>Welcome, <span>{{request.user|upper}}</span></h4>
                                 </div>
                                 <a href="{% url 'index' %}" class="log-out-btn   tolt" data-microtip-position="bottom"  data-tooltip="Log Out"><i class="far fa-power-off"></i></a>
                             </div>
