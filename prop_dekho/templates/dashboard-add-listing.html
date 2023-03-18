@@ -16,6 +16,13 @@
         <link type="text/css" rel="stylesheet" href="/static/css/color.css">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/17483d7dfc" crossorigin="anonymous"></script>
+
     </head>
     <body>
         <!--loader-->
@@ -97,8 +104,8 @@
                                 <li><a href="{% url 'dashboard_add_listing' %}"><i class="fal fa-chart-line"></i>Dashboard</a></li>
                                 <li><a href="{% url 'dashboard_mypropfile' %}"><i class="fal fa-user-edit"></i> Edit profile</a></li>
                                 <li><a href="dashboard-messages.html"><i class="fal fa-envelope"></i> Messages <span>3</span></a></li>
-                                <li><a href="dashboard-agent.html"><i class="fal fa-users"></i> Agents List</a></li>
-                                <li>
+                                <!-- <li><a href="dashboard-agents.html"><i class="fal fa-users"></i> Agents List</a></li> -->
+                                <!-- <li>
                                     <a href="#" class="submenu-link"><i class="fal fa-plus"></i>Submenu</a>
                                     <ul  class="no-list-style">
                                         <li><a href="#"><i class="fal fa-th-list"></i> Submenu 2 </a></li>
@@ -256,6 +263,90 @@
                              <!-- dasboard-widget-box  -->
                              <div class="dasboard-widget-box   fl-wrap">
                                 <div class="custom-form">
+
+                                    <div class="clearfix"></div>
+                                    <label>Furnished: </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="check-c4" type="checkbox" name="check">
+                                                <label for="check-c4">Fully Furnished</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">Semi-Furnished</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">Non-Furnished</label>
+                                            </li>
+                                        </ul>
+                                        <!-- Checkboxes end -->												
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <label>Age of property: </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="check-c4" type="checkbox" name="check">
+                                                <label for="check-c4">0-1 Years</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">1-5 Years</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">5-10 years</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">10+ years</label>
+                                            </li>
+                                        </ul>
+                                        <!-- Checkboxes end -->												
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <label>BHK: </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="check-c4" type="checkbox" name="check">
+                                                <label for="check-c4">1 BHK</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">2 BHK</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">3 BHK</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">4 BHK</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c20" type="checkbox" name="check" onclick="customInput1()">
+                                               <label for="check-c20">Custom</label>
+                                             
+
+                                            </li>
+                                        </ul>
+                                        <div class="col-md-7" id="customBhk" style="display: none;">
+                                            <!-- <label> <span class="dec-icon"><i class="far fa-rupee-sign"></i></span></label> -->
+                                            <input type="text" placeholder=" Enter No. of Rooms " value="" style="width: 21rem;"/>	
+                                        </div>
+                                        <!-- Checkboxes end -->												
+                                    </div>
+
+
+
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="row">
@@ -264,16 +355,14 @@
                                                     <input type="text" placeholder="House Area" value=""/>											
                                                     <label>Balconies: <span class="dec-icon"><i class="far fa-clouds"></i></span></label>
                                                     <input type="text" placeholder="No. of Balconies" value=""/>													
-                                                    <label>Yard size: <span class="dec-icon"><i class="far fa-trees"></i></span></label>
-                                                    <input type="text" placeholder="Yard size" value=""/>													
+                                                  												
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <label>Bedrooms: <span class="dec-icon"><i class="far fa-bed"></i></span></label>
                                                     <input type="text" placeholder="No. of Bedrooms" value=""/>
                                                     <label>Bathrooms: <span class="dec-icon"><i class="far fa-bath"></i></span></label>
                                                     <input type="text" placeholder="No. of Bathroom" value=""/>												
-                                                    <label>Garage: <span class="dec-icon"><i class="far fa-warehouse"></i></span></label>
-                                                    <input type="text" placeholder="Number of cars" value=""/>														
+                                                   											
                                                 </div>
                                             </div>
                                         </div>
@@ -307,33 +396,11 @@
                                                 <input id="check-c4" type="checkbox" name="check">
                                                 <label for="check-c4">Air Conditioning</label>
                                             </li>
-                                            <li>
-                                                <input id="check-c18" type="checkbox" name="check">
-                                                <label for="check-c18">Parking</label>
-                                            </li>
+                                           
                                         </ul>
                                         <!-- Checkboxes end -->												
                                     </div>
-                                    <div class="clearfix"></div>
-                                    <label>Furnished: </label>
-                                    <div class=" add-list-tags fl-wrap">
-                                        <!-- Checkboxes -->
-                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
-                                            <li>
-                                                <input id="check-c4" type="checkbox" name="check">
-                                                <label for="check-c4">Fully Furnished</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-c18" type="checkbox" name="check">
-                                                <label for="check-c18">Semi-Furnished</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-c18" type="checkbox" name="check">
-                                                <label for="check-c18">Non-Furnished</label>
-                                            </li>
-                                        </ul>
-                                        <!-- Checkboxes end -->												
-                                    </div>
+                                    
                                     <div class="clearfix"></div>
                                     <label>Reserved Parking: </label>
                                     <div class=" add-list-tags fl-wrap">
@@ -370,30 +437,7 @@
                                         </ul>
                                         <!-- Checkboxes end -->												
                                     </div>
-                                    <div class="clearfix"></div>
-                                    <label>Age of property: </label>
-                                    <div class=" add-list-tags fl-wrap">
-                                        <!-- Checkboxes -->
-                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
-                                            <li>
-                                                <input id="check-c4" type="checkbox" name="check">
-                                                <label for="check-c4">0-1 Years</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-c18" type="checkbox" name="check">
-                                                <label for="check-c18">1-5 Years</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-c18" type="checkbox" name="check">
-                                                <label for="check-c18">5-10 years</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-c18" type="checkbox" name="check">
-                                                <label for="check-c18">10+ years</label>
-                                            </li>
-                                        </ul>
-                                        <!-- Checkboxes end -->												
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <!-- dasboard-widget-box  end-->
@@ -434,11 +478,118 @@
                                             <label>Locality </label>
                                             <input style="padding-left: 10px !important" type="text" placeholder="Start typing Locality name...." value=""/>
                                         </div>
+                                        <div class="col-sm-6">
+                                            <label>Available From : </label>
+                                            <input style="padding-left: 10px !important" type="text"  value=""/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- dasboard-widget-box  end-->	
                            						
+
+                                <!-- dasboard-widget-title -->
+                                <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec7">
+                                    <h5><i class="fas fa-sliders-h"></i>Pricing Details</h5>
+                                </div>
+                                <!-- dasboard-widget-title end -->													
+                                <!-- dasboard-widget-box  -->
+                                <div class="dasboard-widget-box   fl-wrap">
+                                    <div class="custom-form add_room-item-wrap">
+                                        <div class="add_room-container fl-wrap">
+                                            <!-- add_room-item   -->
+                                            <div class="add_room-item fl-wrap" >
+                                                <span class="remove-rp tolt" data-microtip-position="left"  data-tooltip="Remove"><i class="fal fa-times-circle"></i></span>
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <label>Price Details: <span class="dec-icon"><i class="far fa-rupee-sign"></i></span></label>
+                                                                <input type="text" placeholder=" Expected Price " value=""/>	
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="row">
+                                                            <div class="col-md-9">
+                                                                <label> Maintainance Charges (per month) <span class="dec-icon"><i class="far fa-rupee-sign"></i></span></label>
+                                                                <input type="text" placeholder=" Enter Amount " value=""/>	
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class=" add-list-tags fl-wrap">
+                                                    <!-- Checkboxes -->
+                                                         <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                                           <li>
+                                                            <input id="check-2aaa5" type="checkbox" name="check" checked>
+                                                            <label for="check-2aaa5">All inclusive price</label>
+                                                            </li>
+                                                        <li>
+                                                            <input id="check-2bb5" type="checkbox" name="check" checked>
+                                                            <label for="check-2bb5">Tax and Govt. Charges excluded</label>
+                                                        </li>
+                                                        <li>
+                                                            <input id="check-2dd5" type="checkbox" name="check">
+                                                            <label for="check-2dd5"> Price Negotiable</label>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Checkboxes end -->												
+                                                </div>
+                                                    </div>
+
+                                                    
+
+                                                </div>
+                                                <div class="clearfix"></div>
+                                    <label>Do You Charge Brokerage </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">No</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">15 days</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c18" type="checkbox" name="check">
+                                                <label for="check-c18">30 days</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c30" type="checkbox" name="check" onclick="customInput2()">
+                                                <label for="check-c30">Custom</label>
+                                            </li>
+                                           
+ 
+                                        </ul>
+                                       
+                                            <div class="col-md-7" id="customBrkg" style="display: none;">
+                                                <label> <span class="dec-icon"><i class="far fa-rupee-sign"></i></span></label>
+                                                <input type="text" placeholder=" Brokerage (in rupees) " value="" style="width: 21rem;"/>	
+                                            </div>
+                                       
+                                        <!-- Checkboxes end -->												
+                                    </div>
+
+                                        <label>Built Up Area: <span class="dec-icon"><i class="far fa-sort-size-down-alt"></i></span></label>
+                                        <input type="text" style=" width: 32%;" placeholder="in SqFt." value=""/>	
+
+                                </div>
+                                            <!-- <label>Plan Details</label>
+                                                        <div class="listsearch-input-item">
+                                                            <textarea cols="40" rows="3" style="height: 85px;" placeholder="Datails" spellcheck="false"></textarea>
+                                                        </div> -->
+                                            <!--add_room-item end  -->
+                                        </div>
+                                    </div>
+                                </div>
+    
+
                             <!-- dasboard-widget-title -->
                             <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec3">
                                 <h5><i class="fas fa-image"></i>Property Picture</h5>
@@ -592,61 +743,10 @@
                                 </div>
                             </div>
                             <!-- dasboard-widget-box  end-->
-                            <!-- dasboard-widget-title -->
-                            <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec7">
-                                <h5><i class="fas fa-sliders-h"></i>Pricing Details</h5>
-                            </div>
-                            <!-- dasboard-widget-title end -->													
-                            <!-- dasboard-widget-box  -->
-                            <div class="dasboard-widget-box   fl-wrap">
-                                <div class="custom-form add_room-item-wrap">
-                                    <div class="add_room-container fl-wrap">
-                                        <!-- add_room-item   -->
-                                        <div class="add_room-item fl-wrap" >
-                                            <span class="remove-rp tolt" data-microtip-position="left"  data-tooltip="Remove"><i class="fal fa-times-circle"></i></span>
-                                            <div class="row">
-                                                <div class="col-sm-7">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <label>Price Details: <span class="dec-icon"><i class="far fa-rupee-sign"></i></span></label>
-                                                            <input type="text" placeholder=" Expected Price " value=""/>	
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="col-sm-6">
-                                            <div class=" add-list-tags fl-wrap">
-                                                <!-- Checkboxes -->
-                                                <ul class="fl-wrap filter-tags no-list-style ds-tg">
-                                                    <li>
-                                                        <input id="check-2aaa5" type="checkbox" name="check" checked>
-                                                        <label for="check-2aaa5">All inclusive price</label>
-                                                    </li>
-                                                    <li>
-                                                        <input id="check-2bb5" type="checkbox" name="check" checked>
-                                                        <label for="check-2bb5">Tax and Govt. Charges excluded</label>
-                                                    </li>
-                                                    <li>
-                                                        <input id="check-2dd5" type="checkbox" name="check">
-                                                        <label for="check-2dd5"> Price Negotiable</label>
-                                                    </li>
-                                                </ul>
-                                                <!-- Checkboxes end -->												
-                                            </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <label>Plan Details</label>
-                                                    <div class="listsearch-input-item">
-                                                        <textarea cols="40" rows="3" style="height: 85px;" placeholder="Datails" spellcheck="false"></textarea>
-                                                    </div>
-                                        <!--add_room-item end  -->
-                                    </div>
-                                </div>
-
-
+                            
                             <a href="#" class="btn  color-bg float-btn">Save Changes </a>
                         </div>
+                        
                         
                     </div>
                     <div class="limit-box fl-wrap"></div>
@@ -699,6 +799,29 @@
                     document.getElementById("commercialType").style.display = "none";
                 }
             }
+
+            function customInput1(){
+                var check20 = document.getElementById("check-c20");
+                var customBhk = document.getElementById("customBhk");
+
+                if (check20.checked == true){
+                    customBhk.style.display = "block";
+                  } else {
+                    customBhk.style.display = "none";
+                  }
+            }
+
+            function customInput2(){
+                var check30 = document.getElementById("check-c30");
+                var customBrokerage = document.getElementById("customBrkg");
+
+                if (check30.checked == true){
+                    customBrokerage.style.display = "block";
+                  } else {
+                    customBrokerage.style.display = "none";
+                  }
+            }
+
             </script>
 
     </body>

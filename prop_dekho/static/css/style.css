@@ -2027,7 +2027,7 @@ nav li ul a:before , nav li ul a:after {
 /*------hero ------------------------------------------------*/
 .hero-title h2{
 	color: #000;
-	font-size: 40px;
+	font-size: 37px;
 	line-height: 50px;
 	text-align: left;
 	font-weight: 600;
@@ -2402,7 +2402,7 @@ section.single-par2 {
 	padding: 150px 0 90px;
 }
 .hero-section {
-	padding: 160px 0;
+	padding: 70px 0 190px 0;
 	z-index: 20;
 }
 .small-padding {
