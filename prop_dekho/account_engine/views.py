@@ -83,6 +83,9 @@ def about(request):
 def pg_Guest(request):
     return render(request, 'pgGuest.html')
 
+def rent(request):
+    return render(request, 'rent.html')
+
 
 def dashboard_mypropfile(request):
     return render(request, 'dashboard-myprofile.html')
