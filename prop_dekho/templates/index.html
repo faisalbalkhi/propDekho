@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-{% extends 'base.html' %} {% block content %}
-=======
 {% extends 'base.html' %} 
 {% load humanize %}
 {% load static %}
 {% block content %}
->>>>>>> 19d5d10106b8bdc49faa0e02991229494e618b3b
 <!-- <div class="bg-wrap">
         <div class="bg par-elem " style="background: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg'); "
             data-scrollax="properties: { translateY: '30%' }">
@@ -19,7 +15,7 @@
   .house-statuses {
     background-color: transparent;
     display: flex;
-    width: 35%;
+    width: 37%;
     height: 3rem;
     justify-content: space-around;
     align-items: center;
@@ -27,14 +23,28 @@
     margin-left: 7rem;
     position: relative;
     top: 36px;
-    border: 1px solid black;
+    border: 1px solid white;
   }
   .status{
     cursor: pointer;
     font-size: large;
     font-weight: 700;
   }
- 
+  .houseBtnStyle{
+    margin-top: 0rem;
+    font-size: x-large;
+    font-weight: 900;
+    color: black;
+    font-family: monospace;
+  }
+  .houseBtnStyle:hover{
+    color: White;
+    text-decoration: underline;
+    background: transparent !important;
+  }
+  .houseastyle:hover{
+    background: transparent !important;
+  }
 
   .dropdown-menu li {
     position: relative;
@@ -70,7 +80,7 @@
       </h2>
     </div>
     <div class="house-statuses" >
-      <div class="status" id="buy" data-label="Buy" onclick="func1()">
+      <!-- <div class="status" id="buy" data-label="Buy" onclick="func1()">
         Sell
       </div>
       <div>|</div>
@@ -80,7 +90,14 @@
       <div>|</div>
       <div class="status" id="pg" data-label="PG" onclick="func3()" >
        <a href="{% url 'pg_Guest' %}" style="color : Black">PG/Guest</a> 
-      </div>
+      </div> -->
+      <button type="button" class="btn houseBtnStyle">Sell</button>
+      <div>|</div>
+      <button type="button" class="btn houseBtnStyle">Rent</button>
+      <div>|</div>
+      <a class="houseastyle" href="{% url 'pg_Guest' %}" >
+      <button type="button" class="btn houseBtnStyle">PG/Guest</button>
+      </a>
     </div>
     <div class="main-search-input-wrap">
       <div class="main-search-input fl-wrap">
