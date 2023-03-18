@@ -87,3 +87,6 @@ def pg_Guest(request):
 def dashboard_mypropfile(request):
     return render(request, 'dashboard-myprofile.html')
 
+
+
+
