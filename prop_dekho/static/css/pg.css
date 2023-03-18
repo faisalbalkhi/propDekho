@@ -1,0 +1,61 @@
+.firstsight{
+   padding-bottom: 2rem;
+}
+.homehead{
+    color: white;
+    font-size: 32px;
+}
+.para{
+    color: white;
+    text-align: left !important;
+    font-size: 25px;
+}
+.section-cont{
+    display: flex;
+}
+
+.bg-img{
+    height: 30rem;
+    width: 125%;
+    margin-top: -8rem;
+}
+.homefirstsight{
+    text-align: left;
+}
+.setpic{
+    margin: 8px 12px;
+    text-align: left;
+    /* font-size: 23px; */
+}
+
+.bold{
+    color: white;
+    font-weight: bold;
+}
+.beneimg{
+    width: 60%;
+    height: 70%;
+   
+}
+.benehead{
+    
+    color: white;
+    font-size: 32px;
+}
+.benecont1 {
+    color: white;
+}
+.benecont{
+    width: 25%;
+    margin-top: 46px;
+    justify-content: center;
+}
+.pgBenefits{
+    width: 100%;
+    margin: 0 auto;
+   
+}
+.section-content{
+    margin-top: 0;
+    display: flex;
+}
