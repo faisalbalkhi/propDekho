@@ -83,11 +83,10 @@ def about(request):
 def pg_Guest(request):
     return render(request, 'pgGuest.html')
 
+def rent(request):
+    return render(request, 'rent.html')
+
 
 def dashboard_mypropfile(request):
     return render(request, 'dashboard-myprofile.html')
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 757aee4e204405d4d833647231c9605431d85e99

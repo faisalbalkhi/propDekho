@@ -11,6 +11,7 @@ urlpatterns = [
     path('contacts/', views.contacts, name='contacts'),
     path('about/', views.about, name='about'),
     path('pg-Guest/',views.pg_Guest, name='pg_Guest'),
+    path('rent/',views.rent, name='rent'),
     path('dashboard-myprofile/', views.dashboard_mypropfile, name='dashboard_mypropfile'),
 
 ]
