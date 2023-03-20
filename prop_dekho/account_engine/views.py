@@ -90,3 +90,6 @@ def rent(request):
 def dashboard_mypropfile(request):
     return render(request, 'dashboard-myprofile.html')
 
+
+
+
