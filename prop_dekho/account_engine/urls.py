@@ -10,7 +10,7 @@ urlpatterns = [
     path('dashboard-add-listing/', views.dashboard_add_listing, name='dashboard_add_listing'),
     path('contacts/', views.contacts, name='contacts'),
     path('about/', views.about, name='about'),
-    path('pg-Guest/',views.pg_Guest, name='pg_Guest'),
+    path('pg-Coliving/',views.pg_Coliving, name='pg_Coliving'),
     path('rent/',views.rent, name='rent'),
     path('dashboard-myprofile/', views.dashboard_mypropfile, name='dashboard_mypropfile'),
 

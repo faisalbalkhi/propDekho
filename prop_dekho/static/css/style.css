@@ -3119,7 +3119,7 @@ section.single-par2  .scroll-down-wrap{
 	display: block;
 }
 .geodir-category-img_item .overlay {
-	opacity:0.25;
+	opacity:0.15;
 	transition: all 200ms linear;
 }
 .geodir-category-img:hover .overlay {
