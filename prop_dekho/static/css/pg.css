@@ -1,5 +1,6 @@
 .firstsight{
    padding-bottom: 2rem;
+   padding-top: 0rem;
 }
 .homehead{
     color: white;
@@ -42,7 +43,7 @@
     font-weight: bold;
 }
 .beneimg{
-    width: 85%;
+    width: 90%;
     height: 70%;
     border-radius: 1rem; 
    
@@ -78,4 +79,9 @@
     width: 16rem !important;
     height: 12rem;
     border-radius: 2rem;    
+}
+
+.ourproperties{
+    padding-top: 0rem;
+
 }
