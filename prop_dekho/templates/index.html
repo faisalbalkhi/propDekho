@@ -71,6 +71,13 @@
   .dropdown-menu > li:hover > .dropdown-submenu {
     display: block;
   }
+
+
+  .listingimgsize{
+    height: 12rem !important;
+    width: 100% !important;
+  }  
+  
 </style>
 
 <section
@@ -95,8 +102,8 @@
       <button type="button" class="btn houseBtnStyle">Rent</button>
       </a>
 
-      <a class="houseastyle" href="{% url 'pg_Guest' %}" >
-      <button type="button" class="btn houseBtnStyle">PG/Guest</button>
+      <a class="houseastyle" href="{% url 'pg_Coliving' %}" >
+      <button type="button" class="btn houseBtnStyle">PG/Co-living</button>
       </a>
     </div>
     <div class="main-search-input-wrap">
@@ -233,7 +240,7 @@
             <div class="geodir-category-img fl-wrap">
              
               <a href="#" class="geodir-category-img_item">
-                <img src="{{ each.feature_image.url }}" alt="" />
+                <img class="listingimgsize"  src="{{ each.feature_image.url }}" alt="" />
                 <div class="overlay"></div>
               </a>
               <div class="geodir-category-location">
@@ -288,7 +295,7 @@
               </div>
               <div class="geodir-category-footer fl-wrap">
                 <a href="agent-single.html" class="gcf-company"
-                  ><img src="{% if each.author_image %}{{each.author_image.url}}{% else %}{% static 'images/avatar/7.png' %}{% endif %}" alt="" /><span
+                  ><img  src="{% if each.author_image %}{{each.author_image.url}}{% else %}{% static 'images/avatar/7.png' %}{% endif %}" alt="" /><span
                     >{{each.author_name}}</span
                   ></a
                 >

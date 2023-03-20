@@ -80,8 +80,8 @@ def about(request):
     return render(request, 'about.html')
 
 
-def pg_Guest(request):
-    return render(request, 'pgGuest.html')
+def pg_Coliving(request):
+    return render(request, 'pgColiving.html')
 
 def rent(request):
     return render(request, 'rent.html')
