@@ -1,17 +1,27 @@
 .firstsight{
    padding-bottom: 2rem;
+   padding-top: 0rem;
 }
 .homehead{
     color: white;
-    font-size: 32px;
+    font-size: 35px;
+   text-align: center;
+}
+.sectcoll1{
+    color: white;
+    font-size: 20px;
+    margin-top: 1rem;
+    text-align: center;
 }
 .para{
     color: white;
     text-align: left !important;
-    font-size: 25px;
+    font-size: 20px;
 }
 .section-cont{
     display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
 }
 
 .bg-img{
@@ -33,16 +43,21 @@
     font-weight: bold;
 }
 .beneimg{
-    width: 70%;
+    width: 90%;
     height: 70%;
+    border-radius: 1rem; 
    
 }
 .colblue{
     color: #0095ff !important;
+    font-size: 20px;
+    width: 17rem;
+    text-align: center;
 }
 .benecont1 {
     color: white;
-    font-size: x-large;
+    font-size: 12px;
+    margin-top: 1rem;
 }
 .benecont{
     width: 25%;
@@ -66,8 +81,7 @@
     border-radius: 2rem;    
 }
 
-.sectcoll1{
-    color: white;
-    font-size: x-large;
-    margin-top: 1rem;
+.ourproperties{
+    padding-top: 0rem;
+
 }
