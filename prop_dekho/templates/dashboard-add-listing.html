@@ -14,6 +14,8 @@
         <link type="text/css" rel="stylesheet" href="/static/css/dashboard-style.css">
 		<link type="text/css" rel="stylesheet" href="/static/css/dark-style.css">		
         <link type="text/css" rel="stylesheet" href="/static/css/color.css">
+        <link type="text/css" rel="stylesheet" href="/static/css/dashboard-add-listing.css">
+
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
 
@@ -157,7 +159,7 @@
                         </div>
                         <!-- dashboard-title end -->		
                         <div class="dasboard-wrapper fl-wrap no-pag">
-                            <!-- dasboard-widget-title -->
+                          <!-- dasboard-widget-title -->
                             <div class="dasboard-widget-title fl-wrap" id="sec1">
                                 <h5><i class="fas fa-info"></i>Provide details about the Property</h5>
                             </div>
@@ -173,10 +175,11 @@
                                         <div class="col-sm-4">
                                             <label>Property Listing for</label>
                                             <div class="listsearch-input-item">
-                                                <select data-placeholder="All Types" class="chosen-select no-search-select" >
-                                                    <option>All Types</option>
-                                                    <option> Rent</option>
-                                                    <option>Sale</option>
+                                                <select data-placeholder="All Types" class="chosen-select no-search-select" onchange="togglePropertyFor(this.value)" >
+                                                    <option disabled>All Types</option>
+                                                    <option value="Rent"> Rent</option>
+                                                    <option value="Sell">Sell</option>
+                                                    <option value="PG/Co-Living">PG/Co-Living</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -194,11 +197,11 @@
                                         <div id="residentialType" class="col-sm-4" style="display: none;">
                                             <label>Property Type</label>
                                             <div class="listsearch-input-item">
-                                                <select data-placeholder="Apartments" class="chosen-select no-search-select">
+                                                <select data-placeholder="Apartments" class="chosen-select no-search-select" >
                                                     <option disabled selected>All Categories</option>
                                                     <option>Independent House</option>
                                                     <option>Apartment</option>
-                                                    <option>Plot</option>
+                                                    <option id="propCtgPlot" style="display: none !important;">Plot</option>
                                                     <option>Villa</option>
                                                     <option>Pent House</option>
                                                 </select>
@@ -449,7 +452,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <label>Available From : </label>
-                                            <input style="padding-left: 10px !important" type="text"  value=""/>
+                                            <input class="divdate" type="date"  value=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -768,6 +771,17 @@
                     document.getElementById("commercialType").style.display = "none";
                 }
             }
+
+            function togglePropertyFor(value) {
+                if (value === "Sell") {
+                  
+                    document.getElementById("propCtgPlot").style.display = "block";
+                }  else {
+                    document.getElementById("propCtgPlot").style.display = "none";
+                }
+            }
+
+
 
             function customInput1(){
                 var check20 = document.getElementById("check-c20");
