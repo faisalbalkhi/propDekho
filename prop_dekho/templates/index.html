@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load humanize %}
 {% load static %}
 {% block content %}
@@ -11,7 +11,6 @@
 <!-- <div class="overlay"></div> -->
 
 <style>
-
   .house-statuses {
     display: flex;
     width: 75%;
@@ -26,63 +25,95 @@
     background-color: white;
     opacity: 0.7;
   }
-  .status{
+
+  .status {
     cursor: pointer;
     font-size: large;
     font-weight: 700;
   }
 
-  .searchHouseType{
+  .searchHouseType {
     margin: auto;
     width: 50%;
     padding-top: 3rem;
   }
 
-  .houseBtnStyle{
+  .houseBtnStyle {
     margin-top: 0rem;
     font-size: x-large;
     font-weight: 900;
     color: black;
     font-family: monospace;
   }
-  .houseBtnStyle:hover{
+
+  .houseBtnStyle:hover {
     color: black;
     opacity: 1;
     text-decoration: underline;
     background: transparent !important;
   }
-  .houseastyle:hover{
+
+  .houseastyle:hover {
     background: transparent !important;
   }
 
   .dropdown-menu li {
     position: relative;
   }
+
   .dropdown-menu .dropdown-submenu {
     display: none;
     position: absolute;
     left: 100%;
     top: -7px;
   }
+
   .dropdown-menu .dropdown-submenu-left {
     right: 100%;
     left: auto;
   }
-  .dropdown-menu > li:hover > .dropdown-submenu {
+
+  .dropdown-menu>li:hover>.dropdown-submenu {
     display: block;
   }
 
 
-  .listingimgsize{
+  .listingimgsize {
     height: 12rem !important;
     width: 100% !important;
-  }  
-  
+  }
+</style>
+<!-- carousel link js and bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- carousel styling start -->
+<style>
+  .col-sm-4 div {
+    padding: 50px;
+  }
+
+  .col-sm-4 div p {
+    text-align: justify;
+  }
+
+  .col-sm-4 div h3 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  .carousel-inner .item:nth-child(1) {
+    background: #f30c12;
+
+  }
 </style>
 
-<section
-  class="hero-section hero-section_dec"
-  style="
+<!-- carousel styling start -->
+
+
+<section class="hero-section hero-section_dec" style="
     background-image: url('https://wallpaperaccess.com/full/1899342.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -93,17 +124,17 @@
         Welcome, {{request.user|upper}} <br />Find Your Dream House
       </h2>
     </div>
-    </div>
-    <div class="container searchHouseType">
-    <div class="house-statuses" >
+  </div>
+  <div class="container searchHouseType">
+    <div class="house-statuses">
       <button type="button" class="btn houseBtnStyle">Sell</button>
-      
-      <a class="houseastyle" href="{% url 'rent' %}" >
-      <button type="button" class="btn houseBtnStyle">Rent</button>
+
+      <a class="houseastyle" href="{% url 'rent' %}">
+        <button type="button" class="btn houseBtnStyle">Rent</button>
       </a>
 
-      <a class="houseastyle" href="{% url 'pg_Coliving' %}" >
-      <button type="button" class="btn houseBtnStyle">PG/Co-living</button>
+      <a class="houseastyle" href="{% url 'pg_Coliving' %}">
+        <button type="button" class="btn houseBtnStyle">PG/Co-living</button>
       </a>
     </div>
     <div class="main-search-input-wrap">
@@ -122,12 +153,7 @@
           </select>
         </div>
         <div class="main-search-input-item">
-          <input
-            type="text"
-            placeholder="What are you looking for?"
-            value=""
-            style="color: white"
-          />
+          <input type="text" placeholder="What are you looking for?" value="" style="color: white" />
         </div>
         <!-- <div class="main-search-input-item">
           <div class="dropdown">
@@ -168,10 +194,7 @@
           </div>
         </div> -->
 
-        <button
-          class="main-search-button color-bg"
-          onclick="window.location.href='listing.html'"
-        >
+        <button class="main-search-button color-bg" onclick="window.location.href='listing.html'">
           Search <i class="far fa-search"></i>
         </button>
       </div>
@@ -212,19 +235,12 @@
       </div>
       <div class="col-md-8">
         <div class="listing-filters gallery-filters">
-          <a
-            href="#"
-            class="gallery-filter gallery-filter-active"
-            data-filter="*"
-          >
-            <span>All Categories</span></a
-          >
+          <a href="#" class="gallery-filter gallery-filter-active" data-filter="*">
+            <span>All Categories</span></a>
           <a href="#" class="gallery-filter" data-filter=".for_sale">
-            <span>For Sale</span></a
-          >
+            <span>For Sale</span></a>
           <a href="#" class="gallery-filter" data-filter=".for_rent">
-            <span>For Rent</span></a
-          >
+            <span>For Rent</span></a>
         </div>
       </div>
     </div>
@@ -238,22 +254,15 @@
         <div class="listing-item">
           <article class="geodir-category-listing fl-wrap">
             <div class="geodir-category-img fl-wrap">
-             
+
               <a href="#" class="geodir-category-img_item">
-                <img class="listingimgsize"  src="{{ each.feature_image.url }}" alt="" />
+                <img class="listingimgsize" src="{{ each.feature_image.url }}" alt="" />
                 <div class="overlay"></div>
               </a>
               <div class="geodir-category-location">
-                <a
-                  href="#"
-                  class="single-map-item tolt"
-                  data-newlatitude="40.72956781"
-                  data-newlongitude="-73.99726866"
-                  data-microtip-position="top-left"
-                  data-tooltip="On the map"
-                  ><i class="fas fa-map-marker-alt"></i>
-                  <span>{{each.location}}</span></a
-                >
+                <a href="#" class="single-map-item tolt" data-newlatitude="40.72956781" data-newlongitude="-73.99726866"
+                  data-microtip-position="top-left" data-tooltip="On the map"><i class="fas fa-map-marker-alt"></i>
+                  <span>{{each.location}}</span></a>
               </div>
               <ul class="list-single-opt_header_cat">
                 <li>
@@ -262,20 +271,10 @@
                   {% endfor %}
                 </li>
               </ul>
-              <a
-                href="#"
-                class="geodir_save-btn tolt"
-                data-microtip-position="left"
-                data-tooltip="Save"
-                ><span><i class="fal fa-heart"></i></span
-              ></a>
-              <a
-                href="#"
-                class="compare-btn tolt"
-                data-microtip-position="left"
-                data-tooltip="Compare"
-                ><span><i class="fal fa-random"></i></span
-              ></a>
+              <a href="#" class="geodir_save-btn tolt" data-microtip-position="left" data-tooltip="Save"><span><i
+                    class="fal fa-heart"></i></span></a>
+              <a href="#" class="compare-btn tolt" data-microtip-position="left" data-tooltip="Compare"><span><i
+                    class="fal fa-random"></i></span></a>
               <div class="geodir-category-listing_media-list">
                 <span><i class="fas fa-camera"></i> 8</span>
               </div>
@@ -294,17 +293,11 @@
                 </ul>
               </div>
               <div class="geodir-category-footer fl-wrap">
-                <a href="agent-single.html" class="gcf-company"
-                  ><img  src="{% if each.author_image %}{{each.author_image.url}}{% else %}{% static 'images/avatar/7.png' %}{% endif %}" alt="" /><span
-                    >{{each.author_name}}</span
-                  ></a
-                >
-                <div
-                  class="listing-rating card-popup-rainingvis tolt"
-                  data-microtip-position="top"
-                  data-tooltip="Good"
-                  data-starrating2="{{each.rating}}"
-                ></div>
+                <a href="agent-single.html" class="gcf-company"><img
+                    src="{% if each.author_image %}{{each.author_image.url}}{% else %}{% static 'images/avatar/7.png' %}{% endif %}"
+                    alt="" /><span>{{each.author_name}}</span></a>
+                <div class="listing-rating card-popup-rainingvis tolt" data-microtip-position="top" data-tooltip="Good"
+                  data-starrating2="{{each.rating}}"></div>
               </div>
             </div>
           </article>
@@ -315,12 +308,94 @@
       <!-- gallery-item end-->
     </div>
     <!-- grid-item-holder-->
-    <a href="about.html" class="btn float-btn small-btn color-bg"
-      >View All Properties</a
-    >
+    <a href="about.html" class="btn float-btn small-btn color-bg">View All Properties</a>
   </div>
 </section>
 <!-- section end-->
+
+<!-- carousel slider start -->
+<section>
+  <div class="container">
+    <h1 style="font-weight: 700; margin-top: 100px; margin-bottom: 50px;">Carousel with text in slides</h1>
+    <div id="slider" class="carousel slide" data-ride="carousel">
+      <!-- carousel indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#silder" data-slider-to="0" class="active"></li>
+        <li data-target="#silder" data-slider-to="0"></li>
+        <li data-target="#silder" data-slider-to="0"></li>
+
+      </ol>
+      <div class="carousel-inner">
+        <div class="item-active">
+          <div class="row">
+            <div class="col-sm-4">
+              <div>
+                <h3>What is Lorem ipsum dolor </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, cumque? Repellat corrupti adipisci
+                  magnam eius assumenda dolore nulla sed? Nisi, eius. Illum, exercitationem voluptatum? Vitae architecto
+                  in dicta autem ipsam?'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, explicabo.</p>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <img
+                src="https://property.magicbricks.com/microsite/new-banners/big-shot/ambience-creacions-ambience-group/images/img-04.png"  alt="" style="width: 90%;">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <div class="col-sm-4" style="padding: 50px;">
+              <div>
+                <h3>What is Lorem ipsum dolor </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, cumque? Repellat corrupti adipisci
+                  magnam eius assumenda dolore nulla sed? Nisi, eius. Illum, exercitationem voluptatum? Vitae architecto
+                  in dicta autem ipsam?'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, explicabo.</p>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <img
+                src="https://is1-3.housingcdn.com/4f2250e8/d815aeb60da07a400f4736b7230e48bc/v0/fs/m3m_crown-sector_109_gurgaon-gurgaon-m3m_india_pvt_ltd.jpeg.webp" alt="">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <div class="col-sm-4">
+              <div>
+                <h3>What is Lorem ipsum dolor </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, cumque? Repellat corrupti adipisci
+                  magnam eius assumenda dolore nulla sed? Nisi, eius. Illum, exercitationem voluptatum? Vitae architecto
+                  in dicta autem ipsam?'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, explicabo.</p>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <img
+                src="https://is1-2.housingcdn.com/4f2250e8/35a3a92e1266ee7387601b075bd52ebd/v0/fs/m3m_antalya_hills-sector_79-gurgaon-m3m_india_pvt_ltd.jpg.webp"
+                alt="">
+
+            </div>
+          </div>
+        </div><!-- CAROUSEL INNER ENDS HERE -->
+
+        <!-- LEFT AND RIGHT CONTROLS -->
+        <a class="left carousel-control" href="#slider" data-silde="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#slider" data-silde="Next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> <!-- CAROUSEL ENDS HERE -->
+    </div> <!-- CONTAINER ENDS HERE -->
+  </div>
+</section>
+<!-- Carousel slider Ends -->
 
 <!-- section  -->
 <section class="hidden-section no-padding-section">
