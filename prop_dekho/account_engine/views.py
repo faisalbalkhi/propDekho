@@ -4,7 +4,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.hashers import make_password
 
-from  properties_engine .models import  Property
+from  properties_engine .models import  Property,Latestpg
 from .models import User
 
 
@@ -81,7 +81,10 @@ def about(request):
 
 
 def pg_Coliving(request):
-    return render(request, 'pgColiving.html')
+    pg = Latestpg.objects.all()
+    return render(request, 'pgColiving.html', {
+        'pg' : pg,
+    })
 
 def rent(request):
     return render(request, 'rent.html')

@@ -39,5 +39,31 @@ class Property(models.Model):
         return self.title.name
 
 
+class PgFacility(models.Model):
+    ac = models.CharField(max_length=200)
+    washroom = models.CharField(max_length=200)
+    Balcony = models.CharField(max_length=200)
+    cupboard = models.CharField(max_length=200)
+    tv = models.CharField(max_length=200)
+    dth = models.CharField(max_length=200)
+    wifi = models.CharField(max_length=200)
+    side_table = models.CharField(max_length=200)
+    mattress = models.CharField(max_length=200)
+
+
+class Latestpg(models.Model):
+    MY_CHOICES = [
+        ('for girls&boys', 'for girls&boys'),
+        ('All prepared', 'All prepared'),
+    ]
+    pg_image = models.ImageField('Pg Image', upload_to='latestpg/latestpg_image/')
+    pg_location = models.CharField(max_length=255)
+    pg_rent = models.FloatField()
+    pg_name = models.CharField(max_length=255)
+    girls_boys = models.CharField(choices=MY_CHOICES, max_length=20)
+
+
+
+
 
 
