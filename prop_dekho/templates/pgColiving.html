@@ -511,10 +511,11 @@
                         </div>
                         <div class="clearfix"></div>
                         <!-- grid-item-holder-->
+                        <div class="gallery-cont">
                         <div class="grid-item-holder gallery-items gisp fl-wrap">
                             <!-- gallery-item-->
                             {% for each in pg %}
-                            <div class="gallery-item for_sale">
+                            <div class="gallery-item for_sale" style="width:27% !important">
                               <!-- listing-item -->
                               <div class="listing-item">
                                 <article class="geodir-category-listing fl-wrap">
@@ -542,14 +543,21 @@
                                         <span><i class="fal fa-random"></i></span>
                                       <span><i class="fa-thin fa-wifi"></i></i></span>
                                     </a>
-                                    <div class="geodir-category-listing_media-list">
-                                    </div>
+                                    
                                   </div>
                                   <div class="geodir-category-content fl-wrap">
                                     <div class="geodir-category-content_price">₹ {{ each.pg_rent }}</div>
                                     <h3 class="my-heading">{{each.pg_name}}</h3>
-                                    
                                   </div>
+                                  <div class="geodir-category-listing_media-list">
+                                    <p>Key Facilities
+                                        <i class="fal fa-wifi"></i>
+                                        <i class="fal fa-snowflake"></i>
+                                        <i class="fal fa-utensils"></i>
+                                        <a href="#">+11 More</a>
+                                      </p>
+                                </div>
+                                  
                                 </article>
                               </div>
                               <!-- listing-item end-->
@@ -558,6 +566,7 @@
                             <!-- gallery-item end-->
                             <!-- gallery-item-->
                         </div>
+                    </div>
                         <!-- grid-item-holder-->
                         <a href="listing.html" class="btn float-btn small-btn color-bg">View All Properties</a>
                     </div>

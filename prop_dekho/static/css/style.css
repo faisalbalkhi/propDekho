@@ -3861,13 +3861,13 @@ section.single-par2  .scroll-down-wrap{
 	padding: 2px;
 }
 .gallery-item  {
-	width: 33.3%;
+	width: 27% !important;
 	position:relative;
 	float:left;
 	padding: 2px;
 }
 .gisp .gallery-item {
-	padding: 8px 16px 8px 0;
+	padding: 8px 0px 8px 0;
 }
 .gisp .gallery-item .listing-item {
 	padding: 0;
