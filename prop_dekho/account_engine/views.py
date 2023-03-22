@@ -86,6 +86,15 @@ def pg_Coliving(request):
         'pg' : pg,
     })
 
+
+def plot(request):
+    return render(request, 'plot.html')
+
+
+def commercial(request):
+    return render(request, 'commercial.html')
+
+
 def rent(request):
     return render(request, 'rent.html')
 

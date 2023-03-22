@@ -13,5 +13,7 @@ urlpatterns = [
     path('pg-Coliving/',views.pg_Coliving, name='pg_Coliving'),
     path('rent/',views.rent, name='rent'),
     path('dashboard-myprofile/', views.dashboard_mypropfile, name='dashboard_mypropfile'),
+    path('plot/',views.plot, name='plot'),
+    path('commercial/',views.commercial, name='commercial'),
 
 ]
