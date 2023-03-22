@@ -5,3 +5,6 @@ from .models import *
 admin.site.register(Category)
 admin.site.register(PropertyType)
 admin.site.register(Property)
+admin.site.register(PgFacility)
+admin.site.register(Latestpg)
+
