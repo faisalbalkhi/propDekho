@@ -52,7 +52,7 @@ class PgFacility(models.Model):
 
 
 class Latestpg(models.Model):
-    MY_CHOICES = [
+    PG_CHOICES = [
         ('for girls&boys', 'for girls&boys'),
         ('All prepared', 'All prepared'),
     ]
@@ -60,7 +60,7 @@ class Latestpg(models.Model):
     pg_location = models.CharField(max_length=255)
     pg_rent = models.FloatField()
     pg_name = models.CharField(max_length=255)
-    girls_boys = models.CharField(choices=MY_CHOICES, max_length=20)
+    pgtype = models.CharField(choices=PG_CHOICES, max_length=20)
 
 
 
