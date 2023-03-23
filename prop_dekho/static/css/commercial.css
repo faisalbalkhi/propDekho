@@ -6,30 +6,19 @@
     color: #0095ff;
     font-weight: bold;
 }
-.plotpick{
-    color: white;
-    font-size: 17px;
-}
-
 .section-content1{
     display: flex;
     justify-content: space-evenly;
     margin-top: 4rem;
     
 }
-.collection-image{
+.commercial-image{
     width: 16rem !important;
     height: 12rem;
     border-radius: 1rem;  
 }
-.coll1{
+.com1{
     color: white;
     font-size: x-large;
     margin-top: 1rem;
-}
-.textowner{
-    color: white !important;
-}
-.textname{
-    color: white;
 }
