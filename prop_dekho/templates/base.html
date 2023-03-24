@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
+    {% load static %}
 <head>
     <!-- basic   -->
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     <link type="text/css" rel="stylesheet" href="/static/css/dark-style.css">
     <link type="text/css" rel="stylesheet" href="/static/css/color.css">
     <!--  favicons  -->
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <link rel="shortcut icon" href="/static/images/favicon.png">
 
     <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
         <!-- header -->
         <header class="main-header">
             <!--  logo  -->
-            <div class="logo-holder"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt=""></a></div>
+            <div class="logo-holder"><a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a></div>
             <!-- logo end  -->
             <!-- nav-button-wrap-->
             <div class="nav-button-wrap color-bg nvminit">
@@ -55,9 +55,9 @@
             </div>
             <!-- nav-button-wrap end-->
             <!-- header-search button  -->
-            <div class="col-sm-2">
-                <label>City</label>
-                <div class="listsearch-input-item">
+            <div class="col-sm-2" style="margin-top: 10px;">
+            
+                <div class="listsearch-input-item" style="border: none;">
                     <select data-placeholder="Apartments" class="chosen-select no-search-select" >
                         <option>All Cities</option>
                         <option>New York</option>
