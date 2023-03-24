@@ -92,3 +92,12 @@ class LatesFlat(models.Model):
     flat_rent = models.CharField(max_length=200)
     area = models.IntegerField()
     flat_location = models.CharField(max_length=200)
+
+
+class PropertyForSale(models.Model):
+    property_name = models.CharField(max_length=200)
+    owner_name = models.CharField(max_length=200)
+    sale_image = models.ImageField("Sale Image", upload_to='propertysale/sale_image')
+    sale_price = models.FloatField()
+    sale_address = models.CharField(max_length=200)
+    sale_area = models.IntegerField()

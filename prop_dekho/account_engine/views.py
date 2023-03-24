@@ -4,7 +4,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.hashers import make_password
 
-from  properties_engine .models import  Property,LatestPg,LatesFlat
+from  properties_engine .models import  Property,LatestPg,LatesFlat,PropertyForSale
 from .models import User
 
 
@@ -92,7 +92,11 @@ def plot(request):
 
 
 def commercial(request):
-    return render(request, 'commercial.html')
+    sale = PropertyForSale.objects.all()
+    print(sale)
+    return render(request, 'commercial.html',{
+        'sale':sale
+    })
 
 
 def rent(request):
