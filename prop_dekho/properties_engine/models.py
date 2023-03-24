@@ -93,6 +93,9 @@ class LatesFlat(models.Model):
     area = models.IntegerField()
     flat_location = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.flat_name
+
 
 class PropertyForSale(models.Model):
     property_name = models.CharField(max_length=200)
@@ -101,3 +104,10 @@ class PropertyForSale(models.Model):
     sale_price = models.FloatField()
     sale_address = models.CharField(max_length=200)
     sale_area = models.IntegerField()
+
+    def __str__(self):
+        return self.property_name
+
+
+
+    
