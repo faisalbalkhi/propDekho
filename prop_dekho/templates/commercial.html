@@ -1,50 +1,51 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <!--=============== basic  ===============-->
-        <meta charset="UTF-8">
-        <title>Homeradar - Real Estate Listing Template</title>
-        <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content=""/>
-        <meta name="description" content=""/>
-        <!--=============== css  ===============-->	
-        <link type="text/css" rel="stylesheet" href="/static/css/plugins.css">
-        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
-		<link type="text/css" rel="stylesheet" href="/static/css/dark-style.css">		
-        <link type="text/css" rel="stylesheet" href="/static/css/color.css">
-        <link type="text/css" rel="stylesheet" href="/static/css/plots.css">
-        <link type="text/css" rel="stylesheet" href="/static/css/commercial.css">
-        <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="/static/images/favicon.ico">
-    </head>
-    <body>
-        <!--loader-->
-        <div class="loader-wrap">
-            <div class="loader-inner">
-                <svg>
-                    <defs>
-                        <filter id="goo">
-                            <fegaussianblur in="SourceGraphic" stdDeviation="2" result="blur" />
-                            <fecolormatrix in="blur"   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 5 -2" result="gooey" />
-                            <fecomposite in="SourceGraphic" in2="gooey" operator="atop"/>
-                        </filter>
-                    </defs>
-                </svg>
-            </div>
+
+<head>
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <title>Homeradar - Real Estate Listing Template</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== css  ===============-->
+    <link type="text/css" rel="stylesheet" href="/static/css/plugins.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/dark-style.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/color.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/plots.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/commercial.css">
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!--loader-->
+    <div class="loader-wrap">
+        <div class="loader-inner">
+            <svg>
+                <defs>
+                    <filter id="goo">
+                        <fegaussianblur in="SourceGraphic" stdDeviation="2" result="blur" />
+                        <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 5 -2" result="gooey" />
+                        <fecomposite in="SourceGraphic" in2="gooey" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
         </div>
-        <!--loader end-->
-        <!-- main -->
-        <div id="main">
-            <!-- header -->
-            <header class="main-header">
-                <!--  logo  -->
-                <div class="logo-holder"><a href="{% url 'index' %}"><img src="/static/images/logo.png" alt=""></a></div>
-                <!-- logo end  -->
-                <!-- nav-button-wrap--> 
-                <div class="nav-button-wrap color-bg nvminit">
-                    <div class="nav-button">
-                        <span></span><span></span><span></span>
-                    </div>
+    </div>
+    <!--loader end-->
+    <!-- main -->
+    <div id="main">
+        <!-- header -->
+        <header class="main-header">
+            <!--  logo  -->
+            <div class="logo-holder"><a href="index.html"><img src="/static/images/logo.png" alt=""></a></div>
+            <!-- logo end  -->
+            <!-- nav-button-wrap-->
+            <div class="nav-button-wrap color-bg nvminit">
+                <div class="nav-button">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
             <!-- nav-button-wrap end-->
@@ -335,206 +336,9 @@
 
                         </div>
 
-                    <!-- section -->
-                    
-                    <section>
-                        
-                        <div class="container">
-                            <!-- section-title -->
-                            <div class="section-title st-center fl-wrap">
-                                <h2>Properties For Sale</h2>
-                            </div>
-                            <!-- section-title end -->
-                            
-                            <div class="clearfix"></div>
-                            <div class="listing-carousel-wrapper lc_hero carousel-wrap fl-wrap">
-                                <div class="listing-carousel carousel ">
-                                    <!-- slick-slide-item -->
-                                    <div class="slick-slide-item">
-                                        <!--  agent card item -->
-                                        {% for each in sale %}
-                                        <div class="listing-item">
-                                            <article class="geodir-category-listing fl-wrap">
-                                                <div class="geodir-category-img fl-wrap  agent_card">
-                                                    <a href="agent-single.html" class="geodir-category-img_item">
-                                                        <img src="{{ each.sale_image.url }}" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="geodir-category-content fl-wrap">
-                                                    <div class="agent_card-title fl-wrap">
-                                                        <h4><a href="agent-single.html">₹13.3 Lac</a></h4>
-                                                        <h5><a href="agency-single.html">Commercial Plot</a></h5>
-                                                    </div>
-                                                    <p>Plot Area 275 <br>
-                                                        Locality: Jagdamba Colony <br>
-                                                        Dimension 63 X 34 ft
-                                                    </p>
-                                                    <div class="geodir-category-footer fl-wrap">
-                                                        <a href="agent-single.html"
-                                                            class="btn float-btn color-bg small-btn">Contact Now</a>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <!--  agent card item end -->
-                                    </div>
-                                    {% endfor %}
-                                    <!-- slick-slide-item end-->
-                                </div>
-                                <div class="swiper-button-prev lc-wbtn lc-wbtn_prev"><i class="far fa-angle-left"></i></div>
-                                <div class="swiper-button-next lc-wbtn lc-wbtn_next"><i class="far fa-angle-right"></i>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                    </section>
-                    <!-- section end-->	
-                    
-                    <section>
-                        <div class="container">
-                            <!-- section-title -->
-                            <div class="section-title st-center fl-wrap">
-                                <h2>Properties For Rent</h2>
-                            </div>
-                            <!-- section-title end -->
-                            <div class="clearfix"></div>
-                            <div class="listing-carousel-wrapper lc_hero carousel-wrap fl-wrap">
-                                <div class="listing-carousel carousel ">
-                                    <!-- slick-slide-item -->
-                                    <div class="slick-slide-item">
-                                        <!--  agent card item -->
-                                        <div class="listing-item">
-                                            <article class="geodir-category-listing fl-wrap">
-                                                <div class="geodir-category-img fl-wrap  agent_card">
-                                                    <a href="agent-single.html" class="geodir-category-img_item">
-                                                        <img src="/static/images/agency/agent/1.jpg" alt="">
-    
-                                                    </a>
-                                                </div>
-                                                <div class="geodir-category-content fl-wrap">
-    
-                                                    <div class="agent_card-title fl-wrap">
-                                                        <h4><a href="agent-single.html">₹13.3 Lac</a></h4>
-                                                        <h5><a href="agency-single.html">Commercial Plot</a></h5>
-                                                    </div>
-                                                    <p>Plot Area 275. <br>
-                                                        Locality: Jagdamba Colony <br>
-                                                        Dimension 63 X 34 ft
-                                                    </p>
-                                                    <div class="geodir-category-footer fl-wrap">
-                                                        <a href="agent-single.html"
-                                                            class="btn float-btn color-bg small-btn">Contact Now</a>
-                                                            
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <!--  agent card item end -->
-                                    </div>
-                                    <!-- slick-slide-item end-->
-                                    <!-- slick-slide-item -->
-                                    <div class="slick-slide-item">
-                                        <!--  agent card item -->
-                                        <div class="listing-item">
-                                            <article class="geodir-category-listing fl-wrap">
-                                                <div class="geodir-category-img fl-wrap  agent_card">
-                                                    <a href="agent-single.html" class="geodir-category-img_item">
-                                                        <img src="/static/images/agency/agent/1.jpg" alt="">
-    
-                                                    </a>
-                                                </div>
-                                                <div class="geodir-category-content fl-wrap">
-    
-                                                    <div class="agent_card-title fl-wrap">
-                                                        <h4><a href="agent-single.html">₹39 Lac</a></h4>
-                                                        <h5><a href="agency-single.html">Commercial Plot</a></h5>
-                                                    </div>
-                                                    <p>
-                                                        Plot Area 2142 <br>
-                                                        Dimension 63 X 34 ft <br>
-                                                        Locality: Ajmer Road.</p>
-                                                    <div class="geodir-category-footer fl-wrap">
-                                                        <a href="agent-single.html"
-                                                            class="btn float-btn color-bg small-btn">Contact Now
-                                                        </a>
-                                                    
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <!--  agent card item end -->
-                                    </div>
-                                    <!-- slick-slide-item end-->
-                                    <!-- slick-slide-item -->
-                                    <div class="slick-slide-item">
-                                        <!--  agent card item -->
-                                        <div class="listing-item">
-                                            <article class="geodir-category-listing fl-wrap">
-                                                <div class="geodir-category-img fl-wrap  agent_card">
-                                                    <a href="agent-single.html" class="geodir-category-img_item">
-                                                        <img src="/static/images/agency/agent/1.jpg" alt="">
-                                                    </a>
-    
-                                                </div>
-                                                <div class="geodir-category-content fl-wrap">
-    
-                                                    <div class="agent_card-title fl-wrap">
-                                                        <h4><a href="agent-single.html">₹63.8 Lac</a></h4>
-                                                        <h5><a href="agency-single.html">Commercial Plot</a></h5>
-                                                    </div>
-                                                    <p>
-                                                        Plot Area 133 <br>
-                                                        Dimension 16.63 X 8 yrd <br>
-                                                        Locality: Jagatpura</p>
-                                                    <div class="geodir-category-footer fl-wrap">
-                                                        <a href="agent-single.html"
-                                                            class="btn float-btn color-bg small-btn">Contact Now</a>
-                                    
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <!--  agent card item end -->
-                                    </div>
-                                    <!-- slick-slide-item end-->
-                                    <!-- slick-slide-item -->
-                                    <div class="slick-slide-item">
-                                        <!--  agent card item -->
-                                        <div class="listing-item">
-                                            <article class="geodir-category-listing fl-wrap">
-                                                <div class="geodir-category-img fl-wrap  agent_card">
-                                                    <a href="agent-single.html" class="geodir-category-img_item">
-                                                        <img src="/static/images/agency/agent/1.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="geodir-category-content fl-wrap">
-                                                    <div class="agent_card-title fl-wrap">
-                                                        <h4><a href="agent-single.html">Martin</a></h4>
-                                                        <h5><a href="agency-single.html">Mavers RealEstate agency</a></h5>
-                                                    </div>
-                                                    <p>
-                                                        Plot Area 133 Dimension 16.63 X 8 yrd Locality: Jagatpura
-                                                    </p>
-                                                    <div class="geodir-category-footer fl-wrap">
-                                                        <a href="agent-single.html"
-                                                            class="btn float-btn color-bg small-btn">Contact Now</a>
-    
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <!--  agent card item end -->
-                                    </div>
-                                    <!-- slick-slide-item end-->
-                                </div>
-                                <div class="swiper-button-prev lc-wbtn lc-wbtn_prev"><i class="far fa-angle-left"></i></div>
-                                <div class="swiper-button-next lc-wbtn lc-wbtn_next"><i class="far fa-angle-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
+                    </div>
+                </section>
+                <!--  section  end-->
 
 
                 <section data-q="collections">

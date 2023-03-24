@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="/static/css/pg.css">
     <link type="text/css" rel="stylesheet" href="/static/css/rent.css">
     <link type="text/css" rel="stylesheet" href="/static/css/plots.css">
-   
+
     <!--=============== favicons ===============-->
     <link rel="shortcut icon" href="/static/images/favicon.ico">
 </head>
@@ -43,7 +43,8 @@
         <!-- header -->
         <header class="main-header">
             <!--  logo  -->
-            <div class="logo-holder"><a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a></div>
+            <div class="logo-holder"><a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+            </div>
             <!-- logo end  -->
             <!-- nav-button-wrap-->
             <div class="nav-button-wrap color-bg nvminit">
@@ -485,7 +486,8 @@
                                     <article class="geodir-category-listing fl-wrap">
                                         <div class="geodir-category-img fl-wrap">
                                             <a href="listing-single.html" class="geodir-category-img_item">
-                                                <img src="{{ each.flat_image.url }}" alt="">
+                                                <img src="{{ each.flat_image.url }}" alt=""
+                                                    style="width:392px; height:219px;">
                                                 <div class="overlay"></div>
                                             </a>
                                             <div class="geodir-category-location">
@@ -503,14 +505,15 @@
                                             </div>
                                         </div>
                                         <div class="geodir-category-content fl-wrap">
-                                            <h3 class="title-sin_item"><a href="listing-single.html">{{ each.flat_name }}BHK</a></h3>
-                                            <div class="geodir-category-content_price">₹ {{each.flat_rent}} | {{each.area}}sqft</div>
+                                            <h3 class="title-sin_item"><a href="listing-single.html">{{ each.flat_name
+                                                    }}BHK</a></h3>
+                                            <div class="geodir-category-content_price">₹ {{each.flat_rent}} |
+                                                {{each.area}}sqft</div>
                                             <div class="geodir-category-content-details">
                                             </div>
                                             <div class="geodir-category-footer fl-wrap">
-                                                <a href="agent-single.html" class="gcf-company">
-                                                        <span>Ready to move
-                                                        </span></a>
+
+                                                <a href="" class="btn float-btn color-bg small-btn">Contact Now</a>
                                             </div>
                                         </div>
                                     </article>
@@ -519,9 +522,9 @@
                             </div>
                             {% endfor %}
                             <!-- gallery-item-->
-                        <!-- grid-item-holder-->
-                        <a href="listing.html" class="btn float-btn small-btn color-bg">View All Properties</a>
-                    </div>
+                            <!-- grid-item-holder-->
+                            <a href="listing.html" class="btn float-btn small-btn color-bg">View All Properties</a>
+                        </div>
                 </section>
                 <!-- section end-->
 
@@ -543,7 +546,8 @@
                         <div class="fectcont">
                             <a target="_blank" class="fectcont1" href="#">
                                 <div class="sectcoll">
-                                    <img class="collection-image" src="../static/images/rent/forbachelors.jpg" alt="For Bachelors">
+                                    <img class="collection-image" src="../static/images/rent/forbachelors.jpg"
+                                        alt="For Bachelors">
                                 </div>
                                 <div data-q="title" class="coll1">For Bachelors</div>
                                 <div class="coll2">House Hunting can be tough. We understand your pain.</div>
@@ -553,7 +557,8 @@
                         <div class="fectcont">
                             <a target="_blank" class="fectcont1" href="#">
                                 <div class="sectcoll">
-                                    <img class="collection-image" src="../static/images/rent/GreatNightlife.jpg" alt="Great Nightlife">
+                                    <img class="collection-image" src="../static/images/rent/GreatNightlife.jpg"
+                                        alt="Great Nightlife">
                                 </div>
                                 <div data-q="title" class="coll1">Great Nightlife</div>
                                 <div class="coll2">Looking for chill Vibe? We've got you covered</div>
@@ -563,7 +568,8 @@
                         <div class="fectcont">
                             <a target="_blank" class="fectcont1" href="#">
                                 <div class="sectcoll">
-                                    <img class="collection-image" src="../static/images/rent/GreatCommute.jpg" alt="FGreat Commute">
+                                    <img class="collection-image" src="../static/images/rent/GreatCommute.jpg"
+                                        alt="FGreat Commute">
                                 </div>
                                 <div data-q="title" class="coll1">Great Commute</div>
                                 <div class="coll2">Tired of all that traffic? Here are the flats offering great public
@@ -574,7 +580,8 @@
                         <div class="fectcont">
                             <a target="_blank" class="fectcont1" href="#">
                                 <div class="sectcoll">
-                                    <img class="collection-image" src="../static/images/rent/OwnerFlats.jpg" alt="Owner Flat">
+                                    <img class="collection-image" src="../static/images/rent/OwnerFlats.jpg"
+                                        alt="Owner Flat">
                                 </div>
                                 <div data-q="title" class="coll1">Owner Flats</div>
                                 <div class="coll2">Tired of paying brokerage over and over again? Look no further</div>
