@@ -4,7 +4,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.hashers import make_password
 
-from  properties_engine .models import  Property
+from  properties_engine .models import  Property,LatestPg,LatesFlat,PropertyForSale
 from .models import User
 
 
@@ -81,10 +81,29 @@ def about(request):
 
 
 def pg_Coliving(request):
-    return render(request, 'pgColiving.html')
+    pg = LatestPg.objects.all()
+    return render(request, 'pgColiving.html', {
+        'pg' : pg,
+    })
+
+
+def plot(request):
+    return render(request, 'plot.html')
+
+
+def commercial(request):
+    sale = PropertyForSale.objects.all()
+    print(sale)
+    return render(request, 'commercial.html',{
+        'sale':sale
+    })
+
 
 def rent(request):
-    return render(request, 'rent.html')
+    rent = LatesFlat.objects.all()
+    return render(request, 'rent.html',{
+        'rent':rent
+    })
 
 
 def dashboard_mypropfile(request):
