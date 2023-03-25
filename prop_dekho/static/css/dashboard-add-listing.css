@@ -7,3 +7,7 @@
     border: none;
     border-radius: 4px;
 }
+
+.buildingtype{
+    gap: 1rem !important;
+}
