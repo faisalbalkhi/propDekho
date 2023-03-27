@@ -182,35 +182,6 @@
                     <div class="dasboard-widget-title fl-wrap" id="sec1">
                         <h5><i class="fas fa-info"></i>Provide details about the Property</h5>
                     </div>
-                    <!-- dasboard-widget-title end -->
-                    <!-- dasboard-widget-box  -->
-                    <!-- <div class="dasboard-widget-box fl-wrap">
-                        <div class="custom-form">
-                            <div class="row">
-                                {% comment %} <div class="col-sm-4">
-                                    <label>Listing Title <span class="dec-icon"><i
-                                                class="far fa-briefcase"></i></span></label>
-                                    <input type="text" placeholder="Name of your business" value="" />
-                                </div> {% endcomment %}
-
-                                <div class="btn-group btn-group-toggle buildingtype" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                        <input type="radio" name="optionsbuildtype" value="buildingtyperesidential"
-                                            id="option1" autocomplete="off" checked="checked"  > Residential
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                        <input type="radio" name="options" id="option2" value="buildingtypecommercial"
-                                            style="display: none;" autocomplete="off"> Commercial
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                        <input type="radio" name="options" id="option3" value="buildingtypepgcoliving"
-                                            autocomplete="off"> PG/Co-Living
-                                    </label>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> -->
 
                     <div class="dasboard-widget-box fl-wrap">
                         <div class="custom-form">
@@ -224,15 +195,15 @@
                                 {% endcomment %}
 
                                 <div class="btn-group btn-group-toggle buildingtype" data-toggle="buttons">
-                                    <label class="btn btn-secondary active clickablebtn" id="option1resi" onclick="funct1()">
+                                    <label class="btn btn-secondary active clickablebtn" style="--bs-btn-active-bg: #0095ff; " id="option1resi" onclick="funct1()">
                                         <input type="radio" style="display: none;" name="options" autocomplete="off">
                                         Residential
                                     </label>
-                                    <label class="btn btn-secondary clickablebtn" id="option2comm" onclick="funct3()">
+                                    <label class="btn btn-secondary clickablebtn" style="--bs-btn-active-bg: #0095ff; " id="option2comm" onclick="funct3()">
                                         <input type="radio" style="display: none;" name="options" autocomplete="off">
                                         Commercial
                                     </label>
-                                    <label class="btn btn-secondary clickablebtn" id="option3pg" onclick="funct2()">
+                                    <label class="btn btn-secondary clickablebtn" style="--bs-btn-active-bg: #0095ff; " id="option3pg" onclick="funct2()">
                                         <input type="radio" style="display: none;" name="options" autocomplete="off">
                                         PG/Co-Living
                                     </label>
@@ -241,29 +212,6 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- <div class="dashboard-widget-box fl-wrap">
-                        <div class="custom-form">
-                            <div class="row">
-                                <div class="btn-group btn-group-toggle buildingtype" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                        <input type="radio" name="options"  id="option1resi"
-                                            autocomplete="off" onclick="funct1()"> Residential
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                        <input type="radio" name="options" id="option2" 
-                                             autocomplete="off"> Commercial
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                        <input type="radio" name="options" id="option3pg" 
-                                            autocomplete="off" onclick="funct2()"> PG/Co-Living
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- dasboard-widget-box  end-->
 
                     <div id="reidentialdetails" style="display: block;">
 
@@ -301,7 +249,7 @@
                                             <option value="plot">Plot</option>
                                             <option value="villa">Villa</option>
                                             <option value="independenthouse">Independent House</option>
-                                            <option value="penthouse">Pent House</option>
+                                            <option value="independentfloor">Independent floor</option>
                                         </select>
                                     </div>
                                 </div>
@@ -313,32 +261,55 @@
                                     <label>Property Type</label>
                                     <select data-placeholder="Apartments" class="chosen-select no-search-select">
                                         <option disabled selected>All Categories</option>
-                                        <option>Apartment</option>
-                                        <option>Villa</option>
-                                        <option>Independent House</option>
-                                        <option>Pent House</option>
+                                        <option value="apartment">Apartment</option>
+                                        <option value="villa">Villa</option>
+                                        <option value="independenthouse">Independent House</option>
+                                        <option value="independentfloor">Independent Floor</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="custom-form" id="residentialspropertydetails1">
 
-                                <div class="clearfix"></div>
-                                <label>Transaction Type: </label>
-                                <div class=" add-list-tags fl-wrap">
-                                    <!-- Checkboxes -->
-                                    <ul class="fl-wrap filter-tags no-list-style ds-tg">
-                                        <li>
-                                            <input id="restransactiontype1" type="radio" name="restransactiontype">
-                                            <label for="restransactiontype">New Booking</label>
-                                        </li>
-                                        <li>
-                                            <input id="restransactiontype2" type="radio" name="restransactiontype2">
-                                            <label for="restransactiontype2">Resale</label>
-                                        </li>
-                                    </ul>
-                                    <!-- Checkboxes end -->
+                                <div id="transactiontype" style="display: none;">
+                                    <div class="clearfix"></div>
+                                    <label>Transaction Type: </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="restransactiontype1" type="radio" name="restransactiontype">
+                                                <label for="restransactiontype">New Booking</label>
+                                            </li>
+                                            <li>
+                                                <input id="restransactiontype2" type="radio" name="restransactiontype2">
+                                                <label for="restransactiontype2">Resale</label>
+                                            </li>
+                                        </ul>
+                                        <!-- Checkboxes end -->
+                                    </div>
                                 </div>
+    
+                               
+                                <div id="constructiontype" style="display: none;">
+                                    <div class="clearfix"></div>
+                                    <label>Constuction Status: </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="constructiontype1" type="radio" name="constructiontype">
+                                                <label for="constructiontype1">Ready To Move</label>
+                                            </li>
+                                            <li>
+                                                <input id="constructiontype2" type="radio" name="constructiontype">
+                                                <label for="constructiontype2">Under Construction</label>
+                                            </li>
+                                        </ul>
+                                        <!-- Checkboxes end -->
+                                    </div>
+                                    </div>
+                                    
 
                                 <div id="propertyage" style="display: none;">
                                     <div class="clearfix"></div>
@@ -347,25 +318,26 @@
                                         <!-- Checkboxes -->
                                         <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                             <li>
-                                                <input id="check-c4" type="radio" name="check">
-                                                <label for="check-c4">0-1 Years</label>
+                                                <input id="propertyage1" type="radio" name="propertyage">
+                                                <label for="propertyage1">0-1 Years</label>
                                             </li>
                                             <li>
-                                                <input id="check-c18" type="radio" name="check">
-                                                <label for="check-c18">1-5 Years</label>
+                                                <input id="propertyage2" type="radio" name="propertyage">
+                                                <label for="propertyage2">1-5 Years</label>
                                             </li>
                                             <li>
-                                                <input id="check-c18" type="radio" name="check">
-                                                <label for="check-c18">5-10 years</label>
+                                                <input id="propertyage3" type="radio" name="propertyage">
+                                                <label for="propertyage3">5-10 years</label>
                                             </li>
                                             <li>
-                                                <input id="check-c18" type="radio" name="check">
-                                                <label for="check-c18">10+ years</label>
+                                                <input id="propertyage4" type="radio" name="propertyage">
+                                                <label for="propertyage4">10+ years</label>
                                             </li>
                                         </ul>
                                         <!-- Checkboxes end -->
                                     </div>
                                 </div>
+
                                 <div class="clearfix"></div>
                                 <label>Furnished: </label>
                                 <div class=" add-list-tags fl-wrap">
@@ -410,8 +382,9 @@
                                             <label for="bhksize4">4 BHK</label>
                                         </li>
                                         <li>
-                                            <input id="bhksize5" type="radio" name="bhksize" onclick="customInput1()">
-                                            <label for="bhksize5">Custom</label>
+                                            <input id="check-c20" type="radio" name="bhksize" onclick="customInput1()">
+                                            <label for="check-c
+                                            20">Custom</label>
 
 
                                         </li>
@@ -430,28 +403,28 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="amenitiestype1" type="radio" name="amenitiestype" checked>
+                                            <input id="amenitiestype1" type="checkbox" name="amenitiestype" checked>
                                             <label for="amenitiestype1"> Wi Fi</label>
                                         </li>
                                         <li>
-                                            <input id="check-bb5" type="radio" name="check" checked>
-                                            <label for="check-bb5">Pool</label>
+                                            <input id="amenitiestype2" type="checkbox" name="amenitiestype" checked>
+                                            <label for="amenitiestype2">Pool</label>
                                         </li>
                                         <li>
-                                            <input id="check-dd5" type="radio" name="check">
-                                            <label for="check-dd5"> Security</label>
+                                            <input id="amenitiestype3" type="checkbox" name="amenitiestype">
+                                            <label for="amenitiestype3"> Security</label>
                                         </li>
                                         <li>
-                                            <input id="check-cc5" type="radio" name="check">
-                                            <label for="check-cc5"> Laundry Room</label>
+                                            <input id="amenitiestype4" type="checkbox" name="amenitiestype">
+                                            <label for="amenitiestype4"> Laundry Room</label>
                                         </li>
                                         <li>
-                                            <input id="check-ff5" type="radio" name="check" checked>
-                                            <label for="check-ff5"> Equipped Kitchen</label>
+                                            <input id="amenitiestype5" type="checkbox" name="amenitiestype" checked>
+                                            <label for="amenitiestype5"> Equipped Kitchen</label>
                                         </li>
                                         <li>
-                                            <input id="check-c4" type="radio" name="check">
-                                            <label for="check-c4">Air Conditioning</label>
+                                            <input id="amenitiestype6" type="checkbox" name="amenitiestype">
+                                            <label for="amenitiestype6">Air Conditioning</label>
                                         </li>
 
                                     </ul>
@@ -464,16 +437,16 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-cccc1" type="radio" name="parking">
-                                            <label for="check-cccc1">Covered Parking</label>
+                                            <input id="parkingtype1" type="radio" name="parkingtype">
+                                            <label for="parkingtype1">Covered Parking</label>
                                         </li>
                                         <li>
-                                            <input id="check-cccc2" type="radio" name="parking">
-                                            <label for="check-cccc2">Open Parking</label>
+                                            <input id="parkingtype2" type="radio" name="parkingtype">
+                                            <label for="parkingtype2">Open Parking</label>
                                         </li>
                                         <li>
-                                            <input id="check-cccc3" type="radio" name="parking">
-                                            <label for="check-cccc3">Both</label>
+                                            <input id="parkingtype3" type="radio" name="parkingtype">
+                                            <label for="parkingtype3">Both</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -485,14 +458,49 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="radio" name="check">
-                                            <label for="check-c4">Ready to move</label>
+                                            <input id="availablestatus1" type="radio" name="availablestatus" onclick="propertyavailable1()">
+                                            <label for="availablestatus1">Ready to move</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="radio" name="check">
-                                            <label for="check-c18">Under Construction</label>
+                                            <input id="availablestatus2" type="radio" name="availablestatus"  onclick="propertyavailable1()">
+                                            <label for="availablestatus2">Under Construction</label>
                                         </li>
                                     </ul>
+
+                                    <div id="sellpropertyage2" style="display: none;">
+                                        <div class="clearfix"></div>
+                                        <label>Age of property: </label>
+                                        <div class=" add-list-tags fl-wrap">
+                                            <!-- Checkboxes -->
+                                            <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                                <li>
+                                                    <input id="propertyage2.1" type="radio" name="propertyage2">
+                                                    <label for="propertyage2.1">0-1 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input id="propertyage2.2" type="radio" name="propertyage2">
+                                                    <label for="propertyage2.2">1-5 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input id="propertyage3.2" type="radio" name="propertyage2">
+                                                    <label for="propertyage3.2">5-10 years</label>
+                                                </li>
+                                                <li>
+                                                    <input id="propertyage4.2" type="radio" name="propertyage2">
+                                                    <label for="propertyage4.2">10+ years</label>
+                                                </li>
+                                            </ul>
+                                            <!-- Checkboxes end -->
+                                        </div>
+                                    </div>
+
+                                    <div id="possessiondate" style="display: none;">
+                                    <div class="col-sm-6">
+                                        <label>Possession Date : </label>
+                                        <input class="divdate" type="date" value="" />
+                                    </div>
+                                   </div>
+
                                     <!-- Checkboxes end -->
                                 </div>
 
@@ -502,16 +510,16 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check1">
-                                            <label for="check-c4">Family</label>
+                                            <input id="tenanttype1" type="radio" name="tenanttype">
+                                            <label for="tenanttype">Family</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check2">
-                                            <label for="check-c18">Bachelors</label>
+                                            <input id="tenanttype2" type="radio" name="tenanttype">
+                                            <label for="tenanttype2">Bachelors</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check3">
-                                            <label for="check-c18">Company</label>
+                                            <input id="tenanttype3" type="radio" name="tenanttype">
+                                            <label for="tenanttype3">Company</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -580,6 +588,23 @@
                                         <label>Available From : </label>
                                         <input class="divdate" type="date" value="" />
                                     </div>
+                                    <div id="locationdetails" style="display: none;">
+                                    <div class="col-sm-6">
+                                        <label>Flat No.</label>
+                                        <input style="padding-left: 10px !important" type="text"
+                                            placeholder="Enter Your Flat No." value="" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label> Floor No. </label>
+                                        <input style="padding-left: 10px !important" type="text"
+                                            placeholder=" Enter Your Floor No." value="" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Total Floors </label>
+                                        <input style="padding-left: 10px !important" type="text"
+                                            placeholder="Enter Total Floors" value="" />
+                                    </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -587,13 +612,42 @@
 
                             <!-- plot details start -->
                             <div class="custom-form" id="residentialspropertydetails2" style="display: none;">
+
+                                    <div class="clearfix"></div>
+                                    <label>Transaction Type: </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="restransactiontype1" type="radio" name="restransactiontype">
+                                                <label for="restransactiontype">New Booking</label>
+                                            </li>
+                                            <li>
+                                                <input id="restransactiontype2" type="radio" name="restransactiontype2">
+                                                <label for="restransactiontype2">Resale</label>
+                                            </li>
+                                        </ul>
+                                        <!-- Checkboxes end -->
+                                    </div>
+
                               <div class="row">
                                 <div class="col-sm-6">
                                 <div class="row">                      
-                                    <div class="col-sm-6">
-                                        <label>Available From : </label>
-                                        <input class="divdate2" type="date" value="" />
-                                    </div>         
+                                    <label>Possession Status: </label>
+                                    <div class=" add-list-tags fl-wrap">
+                                        <!-- Checkboxes -->
+                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                            <li>
+                                                <input id="resipossessionstatus1" type="radio" name="resipossessionstatus">
+                                                <label for="resipossessionstatus1">Immediate</label>
+                                            </li>
+                                            <li>
+                                                <input id="resipossessionstatus2" type="radio" name="resipossessionstatus">
+                                                <label for="resipossessionstatus2">In Future</label>
+                                            </li>
+                                        </ul>
+                                        <!-- Checkboxes end -->
+                                    </div>        
                                     <div class="col-sm-6">
                                         <label>Plot Area: <span class="dec-icon"><i
                                                             class="far fa-rupee-sign"></i></span></label>
@@ -681,18 +735,18 @@
                                                     <!-- Checkboxes -->
                                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                                         <li>
-                                                            <input id="check-2aaa5" type="checkbox" name="check"
+                                                            <input id="inclusivePrice1" type="checkbox" name="inclusivePrice"
                                                                 checked>
-                                                            <label for="check-2aaa5">All inclusive price</label>
+                                                            <label for="inclusivePrice1">All inclusive price</label>
                                                         </li>
                                                         <li>
-                                                            <input id="check-2bb5" type="checkbox" name="check" checked>
-                                                            <label for="check-2bb5">Tax and Govt. Charges
+                                                            <input id="taxadded1" type="checkbox" name="taxadded" checked>
+                                                            <label for="taxadded1">Tax and Govt. Charges
                                                                 excluded</label>
                                                         </li>
                                                         <li>
-                                                            <input id="check-2dd5" type="checkbox" name="check">
-                                                            <label for="check-2dd5"> Price Negotiable</label>
+                                                            <input id="pricenegotiable" type="checkbox" name="pricenegotiable">
+                                                            <label for="pricenegotiable"> Price Negotiable</label>
                                                         </li>
                                                     </ul>
                                                     <!-- Checkboxes end -->
@@ -708,22 +762,22 @@
                                             <!-- Checkboxes -->
                                             <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check"
+                                                    <input id="brokeragetype1" type="radio" name="brokeragetype"
                                                         onclick="customInput2()">
-                                                    <label for="check-c18">No</label>
+                                                    <label for="brokeragetype1">No</label>
                                                 </li>
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check"
+                                                    <input id="brokeragetype2" type="radio" name="brokeragetype"
                                                         onclick="customInput2()">
-                                                    <label for="check-c18">15 days</label>
+                                                    <label for="brokeragetype2">15 days</label>
                                                 </li>
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check"
+                                                    <input id="brokeragetype3" type="radio" name="brokeragetype"
                                                         onclick="customInput2()">
-                                                    <label for="check-c18">30 days</label>
+                                                    <label for="brokeragetype3">30 days</label>
                                                 </li>
                                                 <li>
-                                                    <input id="check-c30" type="checkbox" name="check"
+                                                    <input id="check-c30" type="radio" name="brokeragetype"
                                                         onclick="customInput2()">
                                                     <label for="check-c30">Custom</label>
                                                 </li>
@@ -796,12 +850,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Girls</label>
+                                            <input id="pgfor1" type="checkbox" name="pgfor">
+                                            <label for="pgfor1">Girls</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">Boys</label>
+                                            <input id="pgfor2" type="checkbox" name="pgfor">
+                                            <label for="pgfor2">Boys</label>
                                         </li>
 
                                     </ul>
@@ -814,12 +868,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Students</label>
+                                            <input id="pgbestfor1" type="checkbox" name="pgbestfor">
+                                            <label for="pgbestfor1">Students</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">Professionals</label>
+                                            <input id="pgbestfor" type="checkbox" name="pgbestfor">
+                                            <label for="pgbestfor">Professionals</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -831,12 +885,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="mealsavailable1" type="radio" name="mealsavailable">
+                                            <label for="mealsavailable1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="mealsavailable2" type="radio" name="mealsavailable">
+                                            <label for="mealsavailable2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -848,11 +902,11 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="pgwifidetails1" type="checkbox" name="pgwifidetails">
+                                            <input id="pgwifidetails1" type="radio" name="pgwifidetails">
                                             <label for="pgwifidetails1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="pgwifidetails2" type="checkbox" name="pgwifidetails">
+                                            <input id="pgwifidetails2" type="radio" name="pgwifidetails">
                                             <label for="pgwifidetails2">No</label>
                                         </li>
                                     </ul>
@@ -884,24 +938,24 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Living Room</label>
+                                            <input id="commomareas1" type="checkbox" name="commomareas">
+                                            <label for="commomareas1">Living Room</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">Kitchen</label>
+                                            <input id="commomareas2" type="checkbox" name="commomareas">
+                                            <label for="commomareas2">Kitchen</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">Dining Hall</label>
+                                            <input id="commomareas3" type="checkbox" name="commomareas">
+                                            <label for="commomareas3">Dining Hall</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">Study Room / Library</label>
+                                            <input id="commomareas4" type="checkbox" name="commomareas">
+                                            <label for="commomareas4">Study Room / Library</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">Breakout Room</label>
+                                            <input id="commomareas5" type="checkbox" name="commomareas">
+                                            <label for="commomareas5">Bpropertymanagedut Room</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -912,16 +966,16 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-aaa5" type="checkbox" name="check" checked>
-                                            <label for="check-aaa5"> Landlord</label>
+                                            <input id="propertymanaged1" type="radio" name="propertymanaged" checked>
+                                            <label for="propertymanaged1"> Landlord</label>
                                         </li>
                                         <li>
-                                            <input id="check-bb5" type="checkbox" name="check" checked>
-                                            <label for="check-bb5">Caretaker</label>
+                                            <input id="propertymanaged2" type="radio" name="propertymanaged" checked>
+                                            <label for="propertymanaged2">Caretaker</label>
                                         </li>
                                         <li>
-                                            <input id="check-dd5" type="checkbox" name="check">
-                                            <label for="check-dd5"> Dedicated Professional</label>
+                                            <input id="propertymanaged3" type="radio" name="propertymanaged">
+                                            <label for="propertymanaged3"> Dedicated Professional</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -933,12 +987,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="managerstays1" type="radio" name="managerstays">
+                                            <label for="managerstays1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="managerstays2" type="radio" name="managerstays">
+                                            <label for="managerstays2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -952,12 +1006,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="nonvegallowed1" type="radio" name="nonvegallowed">
+                                            <label for="nonvegallowed1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="nonvegallowed2" type="radio" name="nonvegallowed">
+                                            <label for="nonvegallowed2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -968,12 +1022,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="genderallowed1" type="radio" name="genderallowed">
+                                            <label for="genderallowed1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="genderallowed2" type="radio" name="genderallowed">
+                                            <label for="genderallowed2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -984,12 +1038,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="timeallowed1" type="radio" name="timeallowed">
+                                            <label for="timeallowed1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="timeallowed2" type="radio" name="timeallowed">
+                                            <label for="timeallowed2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -1000,12 +1054,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="visitorsallowed1" type="radio" name="visitorsallowed">
+                                            <label for="visitorsallowed1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="visitorsallowed2" type="radio" name="visitorsallowed">
+                                            <label for="visitorsallowed2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -1016,12 +1070,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="guardiansallowed1" type="radio" name="guardiansallowed">
+                                            <label for="guardiansallowed1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="guardiansallowed2" type="radio" name="guardiansallowed">
+                                            <label for="guardiansallowed2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -1032,12 +1086,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="drinkingallowed1" type="radio" name="drinkingallowed">
+                                            <label for="drinkingallowed1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="drinkingallowed2" type="radio" name="drinkingallowed">
+                                            <label for="drinkingallowed2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -1048,12 +1102,12 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="check-c4" type="checkbox" name="check">
-                                            <label for="check-c4">Yes</label>
+                                            <input id="smokingallowed1" type="radio" name="smokingallowed">
+                                            <label for="smokingallowed1">Yes</label>
                                         </li>
                                         <li>
-                                            <input id="check-c18" type="checkbox" name="check">
-                                            <label for="check-c18">No</label>
+                                            <input id="smokingallowed2" type="radio" name="smokingallowed">
+                                            <label for="smokingallowed2">No</label>
                                         </li>
                                     </ul>
                                     <!-- Checkboxes end -->
@@ -1114,15 +1168,50 @@
                                     <!-- Checkboxes -->
                                     <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                         <li>
-                                            <input id="commposessionstatus1" type="radio" name="commposessionstatus">
+                                            <input id="commposessionstatus1" type="radio" name="commposessionstatus" onclick="propertyavailable2()">
                                             <label for="commposessionstatus1">Ready to Move</label>
                                         </li>
                                         <li>
-                                            <input id="commposessionstatus2" type="radio" name="commposessionstatus">
+                                            <input id="commposessionstatus2" type="radio" name="commposessionstatus" onclick="propertyavailable2()">
                                             <label for="commposessionstatus2">Under Construction</label>
                                         </li>
 
-                                    </ul>
+                                    </ul>   
+                                    <div id="commsellpropertyage2" style="display: none;">
+                                        <div class="clearfix"></div>
+                                        <label>Age of property: </label>
+                                        <div class=" add-list-tags fl-wrap">
+                                            <!-- Checkboxes -->
+                                            <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                                <li>
+                                                    <input id="commpropertyage2.1" type="radio" name="propertyage2">
+                                                    <label for="commpropertyage2.1">0-1 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input id="commpropertyage2.2" type="radio" name="propertyage2">
+                                                    <label for="commpropertyage2.2">1-5 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input id="commpropertyage3.2" type="radio" name="propertyage2">
+                                                    <label for="commpropertyage3.2">5-10 years</label>
+                                                </li>
+                                                <li>
+                                                    <input id="commpropertyage4.2" type="radio" name="propertyage2">
+                                                    <label for="commpropertyage4.2">10+ years</label>
+                                                </li>
+                                            </ul>
+                                            <!-- Checkboxes end -->
+                                        </div>
+                                    </div>
+
+                                    <div id="commpossessiondate" style="display: none;">
+                                    <div class="col-sm-6">
+                                        <label>Possession Date : </label>
+                                        <input class="divdate" type="date" value="" />
+                                    </div>
+                                   </div>
+
+                                   
                                     <!-- Checkboxes end -->
                                 </div>
 
@@ -1139,8 +1228,8 @@
                                         <!-- Checkboxes -->
                                         <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                             <li>
-                                                <input id="commprofstatus1" type="radio" name="zonestatus">
-                                                <label for="commprofstatus1">Industrial</label>
+                                                <input id="zonestatus1" type="radio" name="zonestatus">
+                                                <label for="zonestatus1">Industrial</label>
                                             </li>
                                             <li>
                                                 <input id="zonestatus2" type="radio" name="zonestatus">
@@ -1191,19 +1280,19 @@
                                                 <label for="cshoptype4">Clinic</label>
                                             </li>
                                             <li>
-                                                <input id="cshoptype5" type="radio" name="commprofstatus">
+                                                <input id="cshoptype5" type="radio" name="cshoptype">
                                                 <label for="cshoptype5">Footwear</label>
                                             </li>
                                             <li>
-                                                <input id="cshoptype6" type="radio" name="commprofstatus">
+                                                <input id="cshoptype6" type="radio" name="cshoptype">
                                                 <label for="cshoptype6">Electronics</label>
                                             </li>
                                             <li>
-                                                <input id="cshoptype7" type="radio" name="commprofstatus">
+                                                <input id="cshoptype7" type="radio" name="cshoptype">
                                                 <label for="cshoptype7">Clothing</label>
                                             </li>
                                             <li>
-                                                <input id="cshoptype8" type="radio" name="commprofstatus">
+                                                <input id="cshoptype8" type="radio" name="cshoptype">
                                                 <label for="cshoptype8">Others</label>
                                             </li>
                                         </ul>
@@ -1322,19 +1411,19 @@
                                         <!-- Checkboxes -->
                                         <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                             <li>
-                                                <input id="commconststatus1" type="radio" name="commprofstatus">
+                                                <input id="commconststatus1" type="radio" name="commconststatus">
                                                 <label for="commconststatus1">No walls</label>
                                             </li>
                                             <li>
-                                                <input id="commconststatus2" type="radio" name="commprofstatus">
+                                                <input id="commconststatus2" type="radio" name="commconststatus">
                                                 <label for="commconststatus2">Brick Walls</label>
                                             </li>
                                             <li>
-                                                <input id="commconststatus3" type="radio" name="commprofstatus">
+                                                <input id="commconststatus3" type="radio" name="commconststatus">
                                                 <label for="commconststatus3">Cemented Walls</label>
                                             </li>
                                             <li>
-                                                <input id="commconststatus4" type="radio" name="commprofstatus">
+                                                <input id="commconststatus4" type="radio" name="commconststatus">
                                                 <label for="commconststatus4">Plastered Walls</label>
                                             </li>
 
@@ -1347,24 +1436,24 @@
                                         <!-- Checkboxes -->
                                         <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                             <li>
-                                                <input id="commflooringstatus1" type="radio" name="commprofstatus">
+                                                <input id="commflooringstatus1" type="radio" name="commflooringstatus">
                                                 <label for="commflooringstatus1">Marbel</label>
                                             </li>
                                             <li>
-                                                <input id="commflooringstatus2" type="radio" name="commprofstatus">
+                                                <input id="commflooringstatus2" type="radio" name="commflooringstatus">
                                                 <label for="commflooringstatus2">Concrete</label>
                                             </li>
                                             <li>
-                                                <input id="commflooringstatus3" type="radio" name="commprofstatus">
+                                                <input id="commflooringstatus3" type="radio" name="commflooringstatus">
                                                 <label for="commflooringstatus3">Granite</label>
                                             </li>
                                             <li>
-                                                <input id="commflooringstatus4" type="radio" name="commprofstatus">
+                                                <input id="commflooringstatus4" type="radio" name="commflooringstatus">
                                                 <label for="commflooringstatus4">Ceremic</label>
                                             </li>
 
                                             <li>
-                                                <input id="commflooringstatus5" type="radio" name="commprofstatus">
+                                                <input id="commflooringstatus5" type="radio" name="commflooringstatus">
                                                 <label for="commflooringstatus5">Cement</label>
                                             </li>
                                         </ul>
@@ -1425,12 +1514,12 @@
                                             <!-- Checkboxes -->
                                             <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">Yes</label>
+                                                    <input id="commpricenegotiable1" type="radio" name="commpricenegotiable">
+                                                    <label for="commpricenegotiable1">Yes</label>
                                                 </li>
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">No</label>
+                                                    <input id="commpricenegotiable2" type="radio" name="commpricenegotiable">
+                                                    <label for="commpricenegotiable2">No</label>
                                                 </li>
                                             </ul>
                                             <!-- Checkboxes end -->
@@ -1442,12 +1531,12 @@
                                             <!-- Checkboxes -->
                                             <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">Yes</label>
+                                                    <input id="upschargesinclude1" type="radio" name="upschargesinclude">
+                                                    <label for="upschargesinclude1">Yes</label>
                                                 </li>
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">No</label>
+                                                    <input id="upschargesinclude2" type="radio" name="upschargesinclude">
+                                                    <label for="upschargesinclude2">No</label>
                                                 </li>
                                             </ul>
                                             <!-- Checkboxes end -->
@@ -1459,12 +1548,12 @@
                                             <!-- Checkboxes -->
                                             <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">Yes</label>
+                                                    <input id="electricitycharges1" type="radio" name="electricitycharges">
+                                                    <label for="electricitycharges1">Yes</label>
                                                 </li>
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">No</label>
+                                                    <input id="electricitycharges2" type="radio" name="electricitycharges">
+                                                    <label for="electricitycharges2">No</label>
                                                 </li>
                                             </ul>
                                             <!-- Checkboxes end -->
@@ -1476,12 +1565,12 @@
                                             <!-- Checkboxes -->
                                             <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">Yes</label>
+                                                    <input id="watercharges1" type="radio" name="watercharges">
+                                                    <label for="watercharges1">Yes</label>
                                                 </li>
                                                 <li>
-                                                    <input id="check-c18" type="checkbox" name="check">
-                                                    <label for="check-c18">No</label>
+                                                    <input id="watercharges2" type="radio" name="watercharges">
+                                                    <label for="watercharges2">No</label>
                                                 </li>
                                             </ul>
                                             <!-- Checkboxes end -->
@@ -1491,7 +1580,7 @@
                                             <div class="col-md-7">
                                                 <div class="row">
                                                     <div class="col-md-7">
-                                                        <label id="rentsellprice">Look in Period <span
+                                                        <label id="lookinperiod">Look in Period <span
                                                                 class="dec-icon"><i
                                                                     class="far fa-rupee-sign"></i></span></label>
                                                         <input type="text" placeholder=" Enter Price " value="" />
@@ -1820,6 +1909,7 @@
         function togglePropertyFor(value) {
             if (value === "Rent") {
                 document.getElementById("residentialType2").style.display = "block";
+                document.getElementById("transactiontype").style.display = "none";
                 document.getElementById("residentialType1").style.display = "none";
                 document.getElementById("propertyage").style.display = "block";
                 document.getElementById("rentsellprice").innerText = "Monthly Rent";
@@ -1827,6 +1917,7 @@
             }
             else if (value === "Sell") {
                 document.getElementById("residentialType1").style.display = "block";
+                document.getElementById("transactiontype").style.display = "block";
                 document.getElementById("residentialType2").style.display = "none";
                 document.getElementById("propertyage").style.display = "none";
                 document.getElementById("rentsellprice").innerText = "Cost";
@@ -1837,12 +1928,21 @@
             if(value === "plot"){
                 document.getElementById("residentialspropertydetails2").style.display = "block";
                 document.getElementById("residentialspropertydetails1").style.display = "none";
+                document.getElementById("locationdetails").style.display = "none";
                 console.log("plot view");
             }
-            else {
+            else if(value === "villa" || value === "independenthouse") {
                 document.getElementById("residentialspropertydetails2").style.display = "none";
                 document.getElementById("residentialspropertydetails1").style.display = "block";
-                console.log("other views");
+                document.getElementById("locationdetails").style.display = "none";
+                console.log("other views1");
+            }
+
+           else if(value === "apartment" || value === "independentfloor"){
+                document.getElementById("residentialspropertydetails2").style.display = "none";
+                document.getElementById("residentialspropertydetails1").style.display = "block";
+                document.getElementById("locationdetails").style.display = "block";
+                console.log("other views2");
             }
         }
 
@@ -1893,6 +1993,40 @@
                 customBhk.style.display = "block";
             } else if (check20.checked == false) {
                 customBhk.style.display = "none";
+            }
+        }
+
+        function propertyavailable1(){
+            var availablestatus1 = document.getElementById("availablestatus1");
+            var sellpropertyage2 = document.getElementById("sellpropertyage2");
+            var availablestatus2 = document.getElementById("availablestatus2");
+            var possessiondate = document.getElementById("possessiondate");
+
+            if (availablestatus1.checked == true) {
+                sellpropertyage2.style.display = "block";
+                possessiondate.style.display = "none";
+                console.log("age show");
+            } else if (availablestatus2.checked == true) {
+                possessiondate.style.display = "block";
+                sellpropertyage2.style.display = "none";
+                console.log("age hide");
+            }
+        }
+
+          function propertyavailable2(){
+            var commavailablestatus1 = document.getElementById("commposessionstatus1");
+            var commsellpropertyage2 = document.getElementById("commsellpropertyage2");
+            var commavailablestatus2 = document.getElementById("commposessionstatus2");
+            var commpossessiondate = document.getElementById("commpossessiondate");
+
+            if (commavailablestatus1.checked == true) {
+                commsellpropertyage2.style.display = "block";
+                commpossessiondate.style.display = "none";
+                console.log("comm age show");
+            } else if (commavailablestatus2.checked == true) {
+                commpossessiondate.style.display = "block";
+                commsellpropertyage2.style.display = "none";
+                console.log(" comm age hide");
             }
         }
 
