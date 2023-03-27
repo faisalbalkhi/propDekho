@@ -1,15 +1,20 @@
 {% extends 'base.html' %} 
+
 {% load humanize %}
 {% load static %}
 {% block content %}
-<!-- <div class="bg-wrap">
-        <div class="bg par-elem " style="background: url('https://4.bp.blogspot.com/-SMHoyMJnHeU/UvtH_zfe0sI/AAAAAAAAAWE/xeSNRhvpHQc/s1600/locationbig1.jpg'); "
-            data-scrollax="properties: { translateY: '30%' }">
-        </div>
-        data-scrollax-parent="true"
-    </div> -->
-<!-- <div class="overlay"></div> -->
 
+<div id="wrapper">
+  <!-- content -->
+  <div class="content">
+      <!-- start message framework -->
+      {% if messages %}
+          {% for message in messages %}
+              <div class="alert {{ message.tags }}">
+                  {{ message }}
+              </div>
+          {% endfor %}
+      {% endif %} 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -80,7 +85,21 @@
   .listingimgsize{
     height: 12rem !important;
     width: 100% !important;
-  }  
+  }
+  section .card .image{
+    height: 140px;
+    width: 140px;
+
+  }
+  section .card .image img{
+   height:100%;
+   width: 100%;
+   object-fit: cover;
+  }
+  .card{
+    width: 150px;
+    border-radius: 10px;
+  }
   
 </style>
 
@@ -457,6 +476,21 @@
   </div>
 </section>
 <!--section end-->
+
+<section>
+  <div class="container">
+    <div class="content">
+      <div class="card">
+        <div class="card-content">
+          <div class="image">
+            <img src="https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801__480.jpg" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
   function func1() {
     document.getElementById("buy").style.color = "red";
@@ -464,6 +498,7 @@
 </script>
 
 {% include "widgets/meet_our_agents.html" %}
-{% include "widgets/counter.html" %}
-{% include "widgets/testimonials.html" %}
-{% endblock %}
+ {% include "widgets/counter.html"%}
+{% include "why_choose_our_properties.html" %}
+ {% include "widgets/testimonials.html" %} 
+ {% endblock %}
