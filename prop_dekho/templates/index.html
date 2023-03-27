@@ -275,13 +275,13 @@
     <div class="grid-item-holder gallery-items gisp fl-wrap">
       <!-- gallery-item-->
       {% for each in properties %}
-      <div class="gallery-item for_sale">
+      <div class="gallery-item for_sale" style= "left: 800px !important;" >
         <!-- listing-item -->
         <div class="listing-item">
           <article class="geodir-category-listing fl-wrap">
             <div class="geodir-category-img fl-wrap">
              
-              <a href="#" class="geodir-category-img_item">
+              <a href="{% url 'property' %}" class="geodir-category-img_item">
                 <img class="listingimgsize"  src="{{ each.feature_image.url }}" alt="" />
                 <div class="overlay"></div>
               </a>
