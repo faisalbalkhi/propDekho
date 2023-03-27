@@ -34,36 +34,80 @@ class Property(models.Model):
     rating = models.IntegerField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     description = models.TextField()
+    area = models.IntegerField()
+
 
     def __str__(self):
         return self.title.name
 
 
 class PgFacility(models.Model):
-    ac = models.CharField(max_length=200)
-    washroom = models.CharField(max_length=200)
-    Balcony = models.CharField(max_length=200)
-    cupboard = models.CharField(max_length=200)
-    tv = models.CharField(max_length=200)
-    dth = models.CharField(max_length=200)
-    wifi = models.CharField(max_length=200)
-    side_table = models.CharField(max_length=200)
-    mattress = models.CharField(max_length=200)
+    name = models.CharField(max_length=100)
+    facility_type = models.BooleanField(default=0)
 
+    def __str__(self):
+        return self.name
 
-class Latestpg(models.Model):
-    PG_CHOICES = [
-        ('for girls&boys', 'for girls&boys'),
-        ('All prepared', 'All prepared'),
-    ]
+class PgType(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+    
+KEY_FACILITIES = [
+    (True, "Yes"),
+    (False, "No"),
+]
+class LatestPg(models.Model):
     pg_image = models.ImageField('Pg Image', upload_to='latestpg/latestpg_image/')
     pg_location = models.CharField(max_length=255)
     pg_rent = models.FloatField()
     pg_name = models.CharField(max_length=255)
-    pgtype = models.CharField(choices=PG_CHOICES, max_length=20)
+    pgtype = models.ManyToManyField(PgType, related_name='pg_type')
+    # pg_facility = models.ManyToManyField(PgFacility, related_name='pgfacility')
+    ac = models.BooleanField(choices=KEY_FACILITIES)
+    washroom = models.BooleanField(choices=KEY_FACILITIES)
+    dth = models.BooleanField(choices=KEY_FACILITIES)
+    wifi = models.BooleanField(choices=KEY_FACILITIES)
+    matress = models.BooleanField(choices=KEY_FACILITIES)
+    cupboard = models.BooleanField(choices=KEY_FACILITIES)
+    side_table = models.BooleanField(choices=KEY_FACILITIES)
+    balcony = models.BooleanField(choices=KEY_FACILITIES)
+
+    def __str__(self):
+        return self.pg_name
 
 
 
 
+FLAT_TYPE=[
+    (1, '1BHK'),
+    (2, '2BHK'),
+    (3, '3BHK'),
+    (4, '4BHK'),
+]
+class LatesFlat(models.Model):
+    flat_name = models.IntegerField(choices=FLAT_TYPE)
+    flat_image = models.ImageField("Flat Image", upload_to='latest/flat_image/')
+    flat_rent = models.CharField(max_length=200)
+    area = models.IntegerField()
+    flat_location = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.flat_name
 
 
+class PropertyForSale(models.Model):
+    property_name = models.CharField(max_length=200)
+    owner_name = models.CharField(max_length=200)
+    sale_image = models.ImageField("Sale Image", upload_to='propertysale/sale_image')
+    sale_price = models.FloatField()
+    sale_address = models.CharField(max_length=200)
+    sale_area = models.IntegerField()
+
+    def __str__(self):
+        return self.property_name
+
+
+
+    

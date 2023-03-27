@@ -8,6 +8,6 @@
     border-radius: 4px;
 }
 
-.hidden-option {
-    display: none !important;
-  }
+.buildingtype{
+    gap: 1rem !important;
+}
