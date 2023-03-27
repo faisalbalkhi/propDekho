@@ -15,5 +15,6 @@ urlpatterns = [
     path('dashboard-myprofile/', views.dashboard_mypropfile, name='dashboard_mypropfile'),
     path('plot/',views.plot, name='plot'),
     path('commercial/',views.commercial, name='commercial'),
+    path('property/',views.property, name='property'),
 
 ]
