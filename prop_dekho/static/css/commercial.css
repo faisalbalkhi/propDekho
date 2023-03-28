@@ -37,3 +37,6 @@
 .removeline{
     text-decoration: none;
 }
+.header-text{
+    text-align: center !important;
+}
