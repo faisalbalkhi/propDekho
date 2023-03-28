@@ -1,4 +1,4 @@
-.plothead{
+.headtext{
     color: white;
     font-size: 32px;
 }
@@ -24,4 +24,7 @@
 }
 .textsale{
     color: white;
+}
+.commercial-small-btn{
+    color: white !important;
 }

@@ -198,6 +198,7 @@ blockquote p {
 	background: #000;
 	opacity: 0.4;
 	z-index: 3;
+	/* padding-top: 0rem; */
 }
 .overlay.op5 {
 	opacity: 0.5;
