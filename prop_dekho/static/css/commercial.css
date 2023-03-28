@@ -26,5 +26,14 @@
     color: white;
 }
 .commercial-small-btn{
-    color: white !important;
+    color: #3e7be5 !important;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.div-height{
+    height: 33rem !important;
+}
+
+.removeline{
+    text-decoration: none;
 }

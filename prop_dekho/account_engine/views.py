@@ -111,5 +111,9 @@ def property(request):
     return render(request, 'property.html')
 
 
+def pgDetails(request):
+    return render(request, 'pgDetails.html')
+
+
 
 

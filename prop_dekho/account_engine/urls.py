@@ -16,5 +16,6 @@ urlpatterns = [
     path('plot/',views.plot, name='plot'),
     path('commercial/',views.commercial, name='commercial'),
     path('property/',views.property, name='property'),
+    path('pgDetails/',views.pgDetails, name='pgDetails'),
 
 ]
