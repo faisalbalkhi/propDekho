@@ -1635,26 +1635,24 @@
                     <!-- dasboard-widget-title -->
                     <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec3">
                         <h5><i class="fas fa-image"></i>Property Picture</h5>
-                    </div>
-                    <!-- dasboard-widget-title end -->
-                    <!-- dasboard-widget-box  -->
-                    <div class="dasboard-widget-box   fl-wrap">
+                      </div>
+                      <!-- dasboard-widget-title end -->
+                      <!-- dasboard-widget-box  -->
+                      <div class="dasboard-widget-box fl-wrap">
                         <div class="custom-form">
-                            <span style="color: white; ">Accepted formats are .jpg, .gif, .bmp & .png and Maximum size
-                                allowed 10 MB</span>
-                            <div class="clearfix"></div>
-                            <div class="listsearch-input-item fl-wrap">
-                                <form class="fuzone">
-                                    <div class="fu-text">
-                                        <span><i class="far fa-cloud-upload-alt"></i> Click here or drop files to
-                                            upload</span>
-                                        <div class="photoUpload-files fl-wrap"></div>
-                                    </div>
-                                    <input type="file" class="upload" multiple>
-                                </form>
-                            </div>
+                          <span style="color: white;">Accepted formats are .jpg, .gif, .bmp, .JPG, .JPEG, .PNG & .png and Maximum size allowed 10 MB</span>
+                          <div class="clearfix"></div>
+                          <div class="listsearch-input-item fl-wrap">
+                            <form class="fuzone">
+                              <div class="fu-text">
+                                <span><i class="far fa-cloud-upload-alt"></i> Click here or drop files to upload</span>
+                                <div class="photoUpload-files fl-wrap"></div>
+                              </div>
+                              <input type="file" class="upload" accept=".jpg, .jpeg, .png, .gif, .bmp" multiple>
+                            </form>
+                          </div>
                         </div>
-                    </div>
+                      </div>
                     <!-- dasboard-widget-box  end-->
 
 
@@ -2071,6 +2069,36 @@
 
     </script>
 
+    <script>
+        const fileInput = document.querySelector(".upload");
+        const photoUploadFiles = document.querySelector(".photoUpload-files");
+      
+        fileInput.addEventListener("change", function () {
+          const files = fileInput.files;
+          for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const fileName = file.name;
+            const fileSize = file.size;
+            const fileExt = fileName.split(".").pop().toLowerCase();
+            const allowedExtensions = ["jpg", "jpeg", "png", "gif", "bmp"];
+      
+            if (!allowedExtensions.includes(fileExt)) {
+              alert("Invalid file type. Only .jpg, .jpeg, .png, .gif, .bmp files are allowed.");
+              continue;
+            }
+      
+            if (fileSize > 10 * 1024 * 1024) {
+              alert("File size exceeded. Maximum file size allowed is 10 MB.");
+              continue;
+            }
+      
+            const photoUploadFilesItem = document.createElement("div");
+            photoUploadFilesItem.innerHTML = `<span>${fileName}</span>`;
+            photoUploadFiles.appendChild(photoUploadFilesItem);
+          }
+        });
+      </script>
+      
 </body>
 
 </html>
