@@ -2359,6 +2359,36 @@
 
     </script>
 
+    <script>
+        const fileInput = document.querySelector(".upload");
+        const photoUploadFiles = document.querySelector(".photoUpload-files");
+      
+        fileInput.addEventListener("change", function () {
+          const files = fileInput.files;
+          for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const fileName = file.name;
+            const fileSize = file.size;
+            const fileExt = fileName.split(".").pop().toLowerCase();
+            const allowedExtensions = ["jpg", "jpeg", "png", "gif", "bmp"];
+      
+            if (!allowedExtensions.includes(fileExt)) {
+              alert("Invalid file type. Only .jpg, .jpeg, .png, .gif, .bmp files are allowed.");
+              continue;
+            }
+      
+            if (fileSize > 10 * 1024 * 1024) {
+              alert("File size exceeded. Maximum file size allowed is 10 MB.");
+              continue;
+            }
+      
+            const photoUploadFilesItem = document.createElement("div");
+            photoUploadFilesItem.innerHTML = `<span>${fileName}</span>`;
+            photoUploadFiles.appendChild(photoUploadFilesItem);
+          }
+        });
+      </script>
+      
 </body>
 
 </html>
