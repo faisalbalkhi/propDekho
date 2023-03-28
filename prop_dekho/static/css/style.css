@@ -198,6 +198,7 @@ blockquote p {
 	background: #000;
 	opacity: 0.4;
 	z-index: 3;
+	/* padding-top: 0rem; */
 }
 .overlay.op5 {
 	opacity: 0.5;
@@ -2319,7 +2320,7 @@ nav li ul a:before , nav li ul a:after {
     background: linear-gradient(to left, #3C6AFD, #57C7FA);
 }
 .hero-slider-wrap {
-	padding: 280px 0;
+	/* padding: 280px 0; */
 }
 .hero-slider {
 	position: absolute;

@@ -28,5 +28,16 @@
 }
 
 .btnbgcolor{
-    color: #0095ff !important;
+    color: #fff2f2 !important;
+    background-color: #0095ff !important;
+}
+
+.picturesetting{
+    border: 1px dotted #0095ff;
+    margin-top: 2rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
