@@ -49,6 +49,31 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 
+            <style>
+                .preview-item {
+                    display: inline-block;
+                    position: relative;
+                    margin: 5px;
+                  }
+                  
+                  .preview-image {
+                    max-width: 150px;
+                    max-height: 150px;
+                  }
+                  
+                  .delete-button {
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    background-color: red;
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                  }
+            </style>
     </head>
 
 <body>
@@ -1000,17 +1025,41 @@
                                     </div>
 
                                     <div class="clearfix"></div>
-                                    <label>Wi-Fi Available: </label>
+                                    <label>Amenities: </label>
                                     <div class=" add-list-tags fl-wrap">
                                         <!-- Checkboxes -->
                                         <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                             <li>
-                                                <input id="pgwifidetails1" type="radio" name="pgwifidetails">
-                                                <label for="pgwifidetails1">Yes</label>
+                                                <input id="pgamenities1" type="checkbox" name="pgamenities" checked>
+                                                <label for="pgamenities1">Air conditioner</label>
                                             </li>
                                             <li>
-                                                <input id="pgwifidetails2" type="radio" name="pgwifidetails">
-                                                <label for="pgwifidetails2">No</label>
+                                                <input id="pgamenities2" type="checkbox" name="pgamenities" checked>
+                                                <label for="pgamenities2">Air conditioner</label>
+                                            </li>
+                                            <li>
+                                                <input id="pgamenities3" type="checkbox" name="pgamenities" checked>
+                                                <label for="pgamenities3">Water Cooler</label>
+                                            </li>
+                                            <li>
+                                                <input id="pgamenities4" type="checkbox" name="pgamenities">
+                                                <label for="pgamenities4">Laundry</label>
+                                            </li>
+                                            <li>
+                                                <input id="pgamenities5" type="checkbox" name="pgamenities">
+                                                <label for="pgamenities5"> GYM</label>
+                                            </li>
+                                            <li>
+                                                <input id="pgamenities6" type="checkbox" name="pgamenities">
+                                                <label for="pgamenities6">Fridge</label>
+                                            </li>
+                                            <li>
+                                                <input id="pgamenities7" type="checkbox" name="pgamenities" checked>
+                                                <label for="pgamenities7">Room Cleaning</label>
+                                            </li>
+                                            <li>
+                                                <input id="pgamenities8" type="checkbox" name="pgamenities">
+                                                <label for="pgamenities8">Parking</label>
                                             </li>
                                         </ul>
                                         <!-- Checkboxes end -->
@@ -1217,7 +1266,162 @@
                                         </ul>
                                         <!-- Checkboxes end -->
                                     </div>
+
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>City</label>
+                                            <div class="listsearch-input-item">
+                                                <select data-placeholder="Apartments"
+                                                    class="chosen-select no-search-select">
+                                                    <option>All Cities</option>
+                                                    <option>New York</option>
+                                                    <option>London</option>
+                                                    <option>Paris</option>
+                                                    <option>Kiev</option>
+                                                    <option>Moscow</option>
+                                                    <option>Dubai</option>
+                                                    <option>Rome</option>
+                                                    <option>Beijing</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Project/Building Name </label>
+                                            <input style="padding-left: 10px !important" type="text"
+                                                placeholder="Start typing building/project name...." value="" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Locality </label>
+                                            <input style="padding-left: 10px !important" type="text"
+                                                placeholder="Start typing Locality name...." value="" />
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <!-- dasboard-widget-title -->
+                                <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec6">
+                                    <h5><i class="fas fa-ruler-combined"></i>Rooms Details </h5>
+
+                                </div>
+                                <!-- dasboard-widget-title end -->
+                                <!-- dasboard-widget-box  -->
+                                <div class="dasboard-widget-box   fl-wrap">
+                                    <div class="custom-form add_room-item-wrap">
+                                        <div class="add_room-container fl-wrap">
+                                            <!-- add_room-item   -->
+                                            <div class="add_room-item fl-wrap">
+                                                <span class="remove-rp tolt" data-microtip-position="left"
+                                                    data-tooltip="Remove"><i class="fal fa-times-circle"></i></span>
+                                                <div class="row">
+                                                    <div class="col-sm-7">
+                                                        <div class="row">
+                                                            <label>Room Type: </label>
+                                                            <div class=" add-list-tags fl-wrap">
+                                                                <!-- Checkboxes -->
+                                                                <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                                                    <li>
+                                                                        <input id="pgroomtype1" type="radio"
+                                                                            name="pgroomtype">
+                                                                        <label for="pgroomtype1">Single</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input id="pgroomtype2" type="radio"
+                                                                            name="pgroomtype">
+                                                                        <label for="pgroomtype2">Double</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input id="pgroomtype3" type="radio"
+                                                                            name="pgroomtype">
+                                                                        <label for="pgroomtype3">Triple</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input id="pgroomtype4" type="radio"
+                                                                            name="pgroomtype">
+                                                                        <label for="pgroomtype4">3+ Sharing</label>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- Checkboxes end -->
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <label id="rentsellprice">Expected Rent <span
+                                                                                class="dec-icon"><i
+                                                                                    class="far fa-rupee-sign"></i></span></label>
+                                                                        <input type="text" placeholder=" Enter Price "
+                                                                            value="" />
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="row">
+                                                                    <div class="col-md-10">
+                                                                        <label> Security Deposit <span
+                                                                                class="dec-icon"><i
+                                                                                    class="far fa-rupee-sign"></i></span></label>
+                                                                        <input type="text" placeholder=" Enter Amount "
+                                                                            value="" />
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <label>Facilities Offered: </label>
+                                                        <div class=" add-list-tags fl-wrap">
+                                                            <!-- Checkboxes -->
+                                                            <ul class="fl-wrap filter-tags no-list-style ds-tg">
+                                                                <li>
+                                                                    <input id="pgfeatures1" type="checkbox"
+                                                                        name="pgfeatures" checked>
+                                                                    <label for="pgfeatures1">Personal Cupboard</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input id="pgfeatures2" type="checkbox"
+                                                                        name="pgfeatures">
+                                                                    <label for="pgfeatures2">Tv in Room</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input id="pgfeatures3" type="checkbox"
+                                                                        name="pgfeatures" checked>
+                                                                    <label for="pgamenities3"> Table Chair</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input id="pgfeatures4" type="checkbox"
+                                                                        name="pgfeatures" checked>
+                                                                    <label for="pgfeatures4">Attached Bathroom</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input id="pgfeatures5" type="checkbox"
+                                                                        name="pgfeatures">
+                                                                    <label for="pgfeatures5">AC</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input id="pgfeatures6" type="checkbox"
+                                                                        name="pgfeatures">
+                                                                    <label for="pgfeatures6">Meals Included</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input id="pgfeatures7" type="checkbox"
+                                                                        name="pgfeatures">
+                                                                    <label for="pgfeatures7">Attached Balcony</label>
+                                                                </li>
+
+                                                            </ul>
+                                                            <!-- Checkboxes end -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--add_room-item end  -->
+                                        </div>
+                                        <a href="#" class="add-room-item">Add New <i class="fal fa-plus"></i> </a>
+                                    </div>
+                                </div>
+                                <!-- dasboard-widget-box  end-->
+
                             </div>
                             <!-- dasboard-widget-box  end-->
 
@@ -1574,6 +1778,43 @@
                                         </div>
                                     </div>
 
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>City</label>
+                                            <div class="listsearch-input-item">
+                                                <select data-placeholder="Apartments"
+                                                    class="chosen-select no-search-select">
+                                                    <option>All Cities</option>
+                                                    <option>New York</option>
+                                                    <option>London</option>
+                                                    <option>Paris</option>
+                                                    <option>Kiev</option>
+                                                    <option>Moscow</option>
+                                                    <option>Dubai</option>
+                                                    <option>Rome</option>
+                                                    <option>Beijing</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Locality </label>
+                                            <input style="padding-left: 10px !important" type="text"
+                                                placeholder="Start typing Locality name...." value="" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Project Name </label>
+                                            <input style="padding-left: 10px !important" type="text"
+                                                placeholder="Start typing project name...." value="" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>Mall/Market Name </label>
+                                            <input style="padding-left: 10px !important" type="text"
+                                                placeholder="Start typing Mall/Market name...." value="" />
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
 
@@ -1737,173 +1978,32 @@
                         <!-- commercial end -->
 
                         <!-- dasboard-widget-title -->
-                        <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec3">
+                        <div class="dasboard-widget-title dwb-mar fl-wrap" >
                             <h5><i class="fas fa-image"></i>Property Picture</h5>
-                        </div>
-                        <!-- dasboard-widget-title end -->
-                        <!-- dasboard-widget-box  -->
-                        <div class="dasboard-widget-box   fl-wrap">
+                          </div>
+                        <div class="dasboard-widget-box fl-wrap ">
                             <div class="custom-form">
-                                <span style="color: white; ">Accepted formats are .jpg, .gif, .bmp & .png and Maximum
-                                    size
-                                    allowed 10 MB</span>
-                                <div class="clearfix"></div>
-                                <div class="listsearch-input-item fl-wrap">
-                                    <form class="fuzone">
-                                        <div class="fu-text">
-                                            <span><i class="far fa-cloud-upload-alt"></i> Click here or drop files to
-                                                upload</span>
-                                            <div class="photoUpload-files fl-wrap"></div>
-                                        </div>
-                                        <input type="file" class="upload" multiple>
-                                    </form>
-                                </div>
+                              <span style="color: white;">Accepted formats are .jpg, .gif, .bmp, .JPG, .JPEG, .PNG & .png and Maximum size allowed 10 MB 
+                                <strong style="color: #0095ff;"> (Upload Minimum 5 Photos) </strong></span>
+                              <div class="clearfix"></div>
+                              <div class="listsearch-input-item fl-wrap picturesetting">
+                                <form class="fuzone">
+                                  <div class="fu-text">
+                                    
+                                    <div class="photoUpload-files fl-wrap"></div>
+                                  </div>
+                                  <input type="file" style="color: white;" class="upload" accept=".jpg, .jpeg, .png, .gif, .bmp" multiple>
+                                  <span style="color: white;"><i  class="far fa-cloud-upload-alt"></i> Click here or drop files to upload</span>
+                                </form>
+                              </div>
                             </div>
-                        </div>
+                            <div class="image-preview"></div>
+                          </div>
                         <!-- dasboard-widget-box  end-->
 
-
-                        <!-- dasboard-widget-title -->
-                        <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec5">
-                            <h5><i class="fas fa-home-lg-alt"></i>Rooms</h5>
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
-                                    id="myonoffswitch5" checked>
-                                <label class="onoffswitch-label" for="myonoffswitch5">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <!-- dasboard-widget-title end -->
-                        <!-- dasboard-widget-box  -->
-                        <div class="dasboard-widget-box   fl-wrap">
-                            <div class="custom-form add_room-item-wrap">
-                                <div class="add_room-container fl-wrap">
-                                    <!-- add_room-item   -->
-                                    <div class="add_room-item fl-wrap">
-                                        <span class="remove-rp tolt" data-microtip-position="left"
-                                            data-tooltip="Remove Room"><i class="fal fa-times-circle"></i></span>
-                                        <div class="col-sm-4" style="padding: 0px;">
-                                            <label>Additional Rooms</label>
-                                            <div class="listsearch-input-item">
-                                                <select data-placeholder="Select Extra Room"
-                                                    class="chosen-select no-search-select">
-                                                    <option>none of these</option>
-                                                    <option>Pooja Room</option>
-                                                    <option>Servant Room</option>
-                                                    <option>Study Room</option>
-                                                    <option>Extra Room</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <label>Room Details</label>
-                                            <div class="listsearch-input-item">
-                                                <textarea cols="40" rows="3" style="height: 175px;margin-bottom: 10px"
-                                                    placeholder="Datails" spellcheck="false"></textarea>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <label>Amenities: </label>
-                                    <div class=" add-list-tags fl-wrap">
-                                        <!-- Checkboxes -->
-                                        <ul class="fl-wrap filter-tags no-list-style ds-tg">
-                                            <li>
-                                                <input id="check-2aaa5" type="checkbox" name="check" checked>
-                                                <label for="check-2aaa5">Air conditioner</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-2bb5" type="checkbox" name="check" checked>
-                                                <label for="check-2bb5">Tv Inside</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-2dd5" type="checkbox" name="check">
-                                                <label for="check-2dd5"> Ceramic bath</label>
-                                            </li>
-                                            <li>
-                                                <input id="check-2cc5" type="checkbox" name="check" checked>
-                                                <label for="check-2cc5">Microwave</label>
-                                            </li>
-                                        </ul>
-                                        <!-- Checkboxes end -->
-                                    </div>
-                                </div>
-                                <!--add_room-item end  -->
-                            </div>
-                            <a href="#" class="add-room-item">Add New <i class="fal fa-plus"></i> </a>
-                        </div>
-                    </div>
-
-                    <!-- dasboard-widget-box  end-->
-                    <!-- dasboard-widget-title -->
-                    <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec6">
-                        <h5><i class="fas fa-ruler-combined"></i>House Plans </h5>
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch22">
-                            <label class="onoffswitch-label" for="myonoffswitch22">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- dasboard-widget-title end -->
-                    <!-- dasboard-widget-box  -->
-                    <div class="dasboard-widget-box   fl-wrap">
-                        <div class="custom-form add_room-item-wrap">
-                            <div class="add_room-container fl-wrap">
-                                <!-- add_room-item   -->
-                                <div class="add_room-item fl-wrap">
-                                    <span class="remove-rp tolt" data-microtip-position="left" data-tooltip="Remove"><i
-                                            class="fal fa-times-circle"></i></span>
-                                    <div class="row">
-                                        <div class="col-sm-7">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Plan Title: <span class="dec-icon"><i
-                                                                class="far fa-ruler-horizontal"></i></span></label>
-                                                    <input type="text" placeholder=" First Floor Plan " value="" />
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <label>Plan Optional info: <span class="dec-icon"><i
-                                                                class="far fa-ruler-horizontal"></i></span></label>
-                                                    <input type="text" placeholder="Example: 286 sq ft" value="" />
-                                                </div>
-                                            </div>
-                                            <label>Plan Details</label>
-                                            <div class="listsearch-input-item">
-                                                <textarea cols="40" rows="3" style="height: 85px;" placeholder="Datails"
-                                                    spellcheck="false"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <label>Upload Images</label>
-                                            <div class="listsearch-input-item fl-wrap">
-                                                <form class="fuzone">
-                                                    <div class="fu-text">
-                                                        <span><i class="far fa-cloud-upload-alt"></i> Click here or drop
-                                                            files to upload</span>
-                                                        <div class="photoUpload-files fl-wrap"></div>
-                                                    </div>
-                                                    <input type="file" class="upload">
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--add_room-item end  -->
-                            </div>
-                            <a href="#" class="add-room-item">Add New <i class="fal fa-plus"></i> </a>
-                        </div>
-                    </div>
-                    <!-- dasboard-widget-box  end-->
-
-                    <a href="#" type="submit" style="color: #0095ff;" class="btn btnbgcolor float-btn">Save Changes </a>
+                        <a href="#" type="submit"  class="btn btnbgcolor float-btn">Save Changes
+                        </a>
+                    </div>    
                 </form>
             </div>
 
@@ -2202,6 +2302,60 @@
                 console.log("hubhide");
             }
         }
+
+
+        const fileInput = document.querySelector(".upload");
+        const photoUploadFiles = document.querySelector(".photoUpload-files");
+        const imagePreview = document.querySelector(".image-preview");
+        
+        fileInput.addEventListener("change", function () {
+          const files = fileInput.files;
+          for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const fileName = file.name;
+            const fileSize = file.size;
+            const fileExt = fileName.split(".").pop().toLowerCase();
+            const allowedExtensions = ["jpg", "jpeg", "png", "gif", "bmp"];
+        
+            if (!allowedExtensions.includes(fileExt)) {
+              alert("Invalid file type. Only .jpg, .jpeg, .png, .gif, .bmp files are allowed.");
+              continue;
+            }
+        
+            if (fileSize > 10 * 1024 * 1024) {
+              alert("File size exceeded. Maximum file size allowed is 10 MB.");
+              continue;
+            }
+        
+            const photoUploadFilesItem = document.createElement("div");
+         
+            photoUploadFiles.appendChild(photoUploadFilesItem);
+        
+            // create preview element for each image
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+              const previewItem = document.createElement("div");
+              previewItem.classList.add("preview-item");
+        
+              const previewImage = document.createElement("img");
+              previewImage.src = reader.result;
+              previewImage.classList.add("preview-image");
+              previewItem.appendChild(previewImage);
+        
+              const deleteButton = document.createElement("button");
+              deleteButton.innerText = "X";
+              deleteButton.classList.add("delete-button");
+              deleteButton.addEventListener("click", function () {
+                previewItem.remove();
+                photoUploadFilesItem.remove();
+              });
+              previewItem.appendChild(deleteButton);
+        
+              imagePreview.appendChild(previewItem);
+            };
+          }
+        });
 
     </script>
 
