@@ -17,6 +17,7 @@ urlpatterns = [
     path('commercial/',views.commercial, name='commercial'),
     path('property/',views.property, name='property'),
     path('pgDetails/',views.pgDetails, name='pgDetails'),
-    path('rentAllListing/',views.rentAllListing, name='rentAllListing'),
+    path('rent-All-Listing/',views.rent_All_Listing, name='rent_All_Listing'),
+    path('sell-All-Listing/',views.sell_All_Listing, name='sell_All_Listing'),
 
 ]

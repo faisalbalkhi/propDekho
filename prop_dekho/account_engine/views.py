@@ -115,8 +115,12 @@ def pgDetails(request):
     return render(request, 'pgDetails.html')
 
 
-def rentAllListing(request):
+def rent_All_Listing(request):
     return render(request, 'rentAllListing.html')
+
+
+def sell_All_Listing(request):
+    return render(request, 'sellAllListing.html')
 
 
 
