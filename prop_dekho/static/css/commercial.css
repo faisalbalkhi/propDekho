@@ -40,6 +40,16 @@
 .header-text{
     text-align: center !important;
 }
+<<<<<<< HEAD
+.bordertext{
+    color: #fff !important;
+    background-color: #3e7be5;
+    border: 1px solid 3e7be5;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 15px 40px;
+=======
 .plotcont1{
 text-decoration: none !important;
+>>>>>>> 2a29b9ed780cf09bdfe70c9778b1c7ac4bdb0dde
 }
