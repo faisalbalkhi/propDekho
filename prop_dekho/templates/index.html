@@ -99,6 +99,21 @@
     width: 150px;
     border-radius: 10px;
   }
+
+  .sellDivSetting{
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 1000px !important;
+  }
+
+  .sellItemSetting{
+    position: relative !important;
+    left: 0px !important;
+    top: 0px !important;
+  }
   
 </style>
 
@@ -254,10 +269,10 @@
     </div>
     <div class="clearfix"></div>
     <!-- grid-item-holder-->
-    <div class="grid-item-holder gallery-items gisp fl-wrap">
+    <div class="grid-item-holder gallery-items sellDivSetting gisp fl-wrap"  >
       <!-- gallery-item-->
       {% for each in properties %}
-      <div class="gallery-item for_sale" style="position: relative !important; left:0px !important; top:0px !important;" >
+      <div class="gallery-item sellItemSetting for_sale" >
         <!-- listing-item -->
         <div class="listing-item">
           <article class="geodir-category-listing fl-wrap">
