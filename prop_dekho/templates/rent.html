@@ -7,13 +7,13 @@
             <!-- content -->
             <div class="content">
                 <!--  section  -->
-        <section class="no-padding-section">
+        <section class="no-padding-section rentbg-image">
             <div class="hero-slider-wrap carousel-wrap fl-wrap">
                 <div class="hero-slider carousel">
                     <!-- hero-slider-item -->
-                    <div class="hero-slider-item hero-slider-item_first fl-wrap">
-                        <div class="bg" data-bg="/static/images/bg/1.jpg"></div>
-                        <div class="overlay"></div>
+                    <div class="hero-slider-item hero-slider-item_first fl-wrap rentbg-image">
+                        <div class="bg rentbg-image" data-bg="../static/images/rent/rent2.png"></div>
+                        <div class="overlay rentbg-image"></div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6">
@@ -75,11 +75,11 @@
                     <!--  hero-slider-item end  -->
                     <!-- hero-slider-item -->
                     <div class="hero-slider-item fl-wrap">
-                        <div class="bg" data-bg="/static/images/bg/1.jpg"></div>
+                        <div class="bg" data-bg="../static/images/rent/rent1.png"></div>
                         <div class="overlay"></div>
                         <div class="hero-listing-item">
                             <div class="container">
-                                <h2><a href="listing-single.html">House in Financial District</a></h2>
+                                <h2><a href="#">House in Financial District</a></h2>
                                 <div class="geodir-category-location fl-wrap">
                                     <a href="#"><i class="fas fa-map-marker-alt"></i> 70 Bright St New York,
                                         USA</a>
@@ -90,7 +90,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar
                                     neque. Nulla finibus lobortis pulvinar.</p>
                                 <div class="clearfix"></div>
-                                <a href="listing-single.html" class="btn color-bg float-btn">View Details</a>
+                                <a href="#" class="btn color-bg float-btn">View Details</a>
                                 <div class="list-single-header-price">
                                     <strong>Price:</strong><span>₹</span>50.500
                                 </div>
@@ -150,19 +150,19 @@
                         <div class="listing-item">
                             <article class="geodir-category-listing fl-wrap">
                                 <div class="geodir-category-img fl-wrap">
-                                    <a href="listing-single.html" class="geodir-category-img_item">
+                                    <a href="{% url 'rentAllListing' %}" class="geodir-category-img_item">
                                         <img src="{{ each.flat_image.url }}" alt="" style="width:392px; height:219px;">
                                         <div class="overlay"></div>
                                     </a>
                                     <div class="geodir-category-location">
-                                        <a href="#" class="single-map-item tolt" data-newlatitude="40.72956781"
+                                        <a href="{% url 'rentAllListing' %}" class="single-map-item tolt" data-newlatitude="40.72956781"
                                             data-newlongitude="-73.99726866" data-microtip-position="top-left"
                                             data-tooltip="On the map"><i class="fas fa-map-marker-alt"></i>
                                             <span>{{ each.flat_location}}</span></a>
                                     </div>
-                                    <a href="#" class="geodir_save-btn tolt" data-microtip-position="left"
+                                    <a href="{% url 'rentAllListing' %}" class="geodir_save-btn tolt" data-microtip-position="left"
                                         data-tooltip="Save"><span><i class="fal fa-heart"></i></span></a>
-                                    <a href="#" class="compare-btn tolt" data-microtip-position="left"
+                                    <a href="{% url 'rentAllListing' %}" class="compare-btn tolt" data-microtip-position="left"
                                         data-tooltip="Compare"><span><i class="fal fa-random"></i></span></a>
                                     <div class="geodir-category-listing_media-list">
                                         <span><i class="fas fa-camera"></i> 8</span>

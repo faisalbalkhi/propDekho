@@ -40,3 +40,11 @@
 .header-text{
     text-align: center !important;
 }
+.bordertext{
+    color: #fff !important;
+    background-color: #3e7be5;
+    border: 1px solid 3e7be5;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 15px 40px;
+}

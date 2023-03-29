@@ -115,5 +115,9 @@ def pgDetails(request):
     return render(request, 'pgDetails.html')
 
 
+def rentAllListing(request):
+    return render(request, 'rentAllListing.html')
+
+
 
 
