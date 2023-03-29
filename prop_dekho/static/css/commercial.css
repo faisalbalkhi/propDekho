@@ -29,6 +29,10 @@
     color: #3e7be5 !important;
     border-radius: 10px;
     text-decoration: none;
+    background-color: #3e7be5 !important;
+    border: 1px solid 3e7be5 !important;
+    border-radius: 10px;
+    margin-top: 2rem;
 }
 .div-height{
     height: 33rem !important;
@@ -37,14 +41,25 @@
 .removeline{
     text-decoration: none;
 }
+.removeline1{
+    text-decoration: none;
+    margin-bottom: 0rem !important;
+}
 .header-text{
     text-align: center !important;
 }
 .bordertext{
     color: #fff !important;
-    background-color: #3e7be5 !important;
-    border: 1px solid 3e7be5 !important;
-    border-radius: 10px;
     text-decoration: none;
     padding: 13px 40px !important;
+    margin-top: 2rem !important;
+}
+.dtls-flex-row2 {
+    width: 100% !important;
+    height: auto;
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    position: relative !important;
+    margin-top: 1rem;
 }
