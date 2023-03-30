@@ -700,13 +700,13 @@ initIsotope();
         }, 50);
         $(".grid-opt li span").removeClass("act-grid-opt");
         $(this).addClass("act-grid-opt");
-        if ($(this).hasClass("two-col-grid")) {
+        if ($(this).hasClass("one-col-grid")) {
             $(".listing-item").removeClass("has_one_column");
-            $(".listing-item").addClass("has_two_column");
+            $(".listing-item").addClass("has_one_column");
         } else if ($(this).hasClass("one-col-grid")) {
             $(".listing-item").addClass("has_one_column");
         } else {
-            $(".listing-item").removeClass("has_one_column").removeClass("has_two_column");
+            $(".listing-item").removeClass("has_one_column").removeClass("has_one_column");
         }
     });
     $(".notification-close").on("click", function (e) {
