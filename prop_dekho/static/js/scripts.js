@@ -692,23 +692,24 @@ initIsotope();
     $(".listing-item").matchHeight({});
     $(".one-column-grid-wrap .listing-item").addClass("has_one_column");
     $(".grid-opt li span").on("click", function () {
-        $(".listing-item").matchHeight({
-            remove: true
-        });
-        setTimeout(function () {
-            $(".listing-item").matchHeight();
-        }, 50);
-        $(".grid-opt li span").removeClass("act-grid-opt");
-        $(this).addClass("act-grid-opt");
-        if ($(this).hasClass("one-col-grid")) {
-            $(".listing-item").removeClass("has_one_column");
-            $(".listing-item").addClass("has_one_column");
-        } else if ($(this).hasClass("one-col-grid")) {
-            $(".listing-item").addClass("has_one_column");
-        } else {
-            $(".listing-item").removeClass("has_one_column").removeClass("has_one_column");
-        }
-    });
+      $(".listing-item").matchHeight({
+        remove: true
+      });
+      setTimeout(function () {
+        $(".listing-item").matchHeight();
+      }, 50);
+      $(".grid-opt li span").removeClass("act-grid-opt");
+      $(this).addClass("act-grid-opt");
+      if ($(this).hasClass("two-col-grid")) {
+        $(".listing-item").removeClass("has_one_column");
+        $(".listing-item").addClass("has_two_column");
+      } else if ($(this).hasClass("one-col-grid")) {
+        $(".listing-item").addClass("has_one_column");
+      } else {
+        $(".listing-item").removeClass("has_one_column").removeClass("has_two_column");
+      }
+    }).first().click(); // Set the List View as the default view
+    
     $(".notification-close").on("click", function (e) {
         e.preventDefault();
         $(this).parent(".notification").slideUp(500);
