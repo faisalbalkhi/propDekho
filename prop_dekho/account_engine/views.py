@@ -135,5 +135,9 @@ def commercial_Rent_All_Listing(request):
     return render(request, 'commercialRentAllListing.html')
 
 
+def pg_All_Listing(request):
+    return render(request, 'pgAllListing.html')
+
+
 
 

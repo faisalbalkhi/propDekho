@@ -22,5 +22,6 @@ urlpatterns = [
     path('plot-All-Listing/',views.plot_All_Listing, name='plot_All_Listing'),
     path('commercial-Sale-All-Listing/',views.commercial_Sale_All_Listing, name='commercial_Sale_All_Listing'),
     path('commercial-Rent-All-Listing/',views.commercial_Rent_All_Listing, name='commercial_Rent_All_Listing'),
+    path('pg-All-Listing/',views.pg_All_Listing, name='pg_All_Listing'),
 
 ]
