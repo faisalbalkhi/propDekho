@@ -33,6 +33,18 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/17483d7dfc" crossorigin="anonymous"></script>
+    <style>
+        .logosetting{
+            position: relative !important;
+            left: 0px;
+            top: 0px;
+            margin-left: 4rem;
+        }
+        .logoimgsetting{
+            height: 10vh !important;
+            width: 10vw !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,7 +68,7 @@
         <!-- header -->
         <header class="main-header">
             <!--  logo  -->
-            <div class="logo-holder"><a href="/"><img src="/static/images/logo.png" alt=""></a></div>
+            <div class="logo-holder logosetting"><a href="/"><img class="logoimgsetting" src="/static/images/logo.png" alt=""></a></div>
             <!-- logo end  -->
             <!-- nav-button-wrap-->
             <div class="nav-button-wrap color-bg nvminit">
@@ -262,34 +274,6 @@
                 </div>
             </div>
             <!--wishlist-wrap end -->
-            <!--header-opt-modal-->
-            <div class="header-opt-modal novis_header-mod">
-                <div class="header-opt-modal-container hopmc_init">
-                    <div class="header-opt-modal-item lang-item fl-wrap">
-                        <h4>Language: <span>EN</span></h4>
-                        <div class="header-opt-modal-list fl-wrap">
-                            <ul>
-                                <li><a href="#" class="current-lan" data-lantext="EN">English</a></li>
-                                <li><a href="#" data-lantext="FR">Franais</a></li>
-                                <li><a href="#" data-lantext="ES">Espaol</a></li>
-                                <li><a href="#" data-lantext="DE">Deutsch</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="header-opt-modal-item currency-item fl-wrap">
-                        <h4>Currency: <span>USD</span></h4>
-                        <div class="header-opt-modal-list fl-wrap">
-                            <ul>
-                                <li><a href="#" class="current-lan" data-lantext="USD">USD</a></li>
-                                <li><a href="#" data-lantext="EUR">EUR</a></li>
-                                <li><a href="#" data-lantext="GBP">GBP</a></li>
-                                <li><a href="#" data-lantext="RUR">RUR</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--header-opt-modal end -->
         </header>
         <!-- navigation  end -->
         <!-- header-search-wrapper -->
