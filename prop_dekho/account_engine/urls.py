@@ -19,5 +19,7 @@ urlpatterns = [
     path('pgDetails/',views.pgDetails, name='pgDetails'),
     path('rent-All-Listing/',views.rent_All_Listing, name='rent_All_Listing'),
     path('sell-All-Listing/',views.sell_All_Listing, name='sell_All_Listing'),
+    path('plot-All-Listing/',views.plot_All_Listing, name='plot_All_Listing'),
+     path('commercial-Sale-All-Listing/',views.commercial_Sale_All_Listing, name='commercial_Sale_All_Listing'),
 
 ]

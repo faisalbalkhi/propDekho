@@ -123,5 +123,13 @@ def sell_All_Listing(request):
     return render(request, 'sellAllListing.html')
 
 
+def plot_All_Listing(request):
+    return render(request, 'plotAllListing.html')
+
+
+def commercial_Sale_All_Listing(request):
+    return render(request, 'commercialSaleAllListing.html')
+
+
 
 

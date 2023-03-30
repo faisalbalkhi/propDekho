@@ -1,4 +1,4 @@
-.dtls-body-list1{
+.dtls-body-list3{
     margin-bottom: -2rem;
     width: 100%;
     height: auto;
@@ -10,14 +10,14 @@
 
 }
 
-.dtls-body-list-item1{
+.dtls-body-list-item3{
     width: 33.33333%;
     height: auto;
     padding-bottom: 28px;
     padding-right: 12px;
 }
 
-.dtls-body-list-label1 {
+.dtls-body-list-label3 {
     color: #f7f7f7;
     font-size: 14px;
     font-weight: 400;
@@ -26,47 +26,48 @@
     text-transform: capitalize;
 }
 
-.dtls-body-list-value1 {
+.dtls-body-list-value3{
     color: #ededed;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
 }
 
-.dtls-flex-row1 {
+.dtls-flex-row3 {
     width: 100% !important;
     height: auto;
     display: flex;
     justify-content: flex-start !important;
     align-items: center !important;
     position: relative !important;
-    margin-top: 3rem;
+   
 }
 
-.dtls-action1 {
+.dtls-action3 {
     width: 90%;
     height: auto;
-    border-top: 1px solid gray !important;
     padding-top: 20px;
     display: flex;
 }
 
-.dtls-action-inline1 {
+.dtls-action-inline3 {
     width: auto;
     flex: 1;
 }
 
-.action-large1 {
+.action-large3 {
     padding: 0 22px;
     height: 40px;
     line-height: 38px;
     border-radius: 10px;
     text-decoration: none;
     padding: 13px 30px;
+    background-color: #3e7be5 !important;
+    color: white;
 }
 
 
-.action-large1.btn-blue {
+.action-large1.btn-blue2 {
     color: #fff !important;
     background-color: #3e7be5 !important;
     border: 1px solid 3e7be5 !important;
@@ -75,7 +76,7 @@
     padding: 13px 30px;
 }
 
-.action-large1.btn-white1 {
+.action-large1.btn-white3 {
     color: 3e7be5 !important;
     background-color: #fff !important;
     border: 1px solid 3e7be5 !important;
