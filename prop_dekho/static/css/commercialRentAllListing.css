@@ -1,16 +1,16 @@
-.dtls-action5 {
+.dtls-action6 {
     width: 90%;
     height: auto;
     padding-top: 20px;
     display: flex;
 }
 
-.dtls-action-inline5 {
+.dtls-action-inline6 {
     width: auto;
     flex: 1;
 }
 
-.action-large5{
+.action-large6{
     padding: 13px 30px;
     height: 40px;
     line-height: 38px;
@@ -20,7 +20,7 @@
     color: white;
 }
 
-.action-large1.btn-blue4 {
+.action-large1.btn-blue5 {
     background-color: #3e7be5 !important;
     color: white;
     border: 1px solid 3e7be5;
@@ -29,7 +29,7 @@
     padding: 13px 30px;
 }
 
-.action-large1.btn-white5 {
+.action-large1.btn-white6 {
     color: 3e7be5;
     background-color: #fff !important;
     border: 1px solid 3e7be5;

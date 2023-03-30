@@ -131,5 +131,9 @@ def commercial_Sale_All_Listing(request):
     return render(request, 'commercialSaleAllListing.html')
 
 
+def commercial_Rent_All_Listing(request):
+    return render(request, 'commercialRentAllListing.html')
+
+
 
 
