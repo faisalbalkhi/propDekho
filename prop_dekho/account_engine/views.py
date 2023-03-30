@@ -139,5 +139,6 @@ def pg_All_Listing(request):
     return render(request, 'pgAllListing.html')
 
 
-
+def rent_Single_Listing(request):
+    return render(request, 'rentSingleListing.html')
 

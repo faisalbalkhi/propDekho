@@ -23,5 +23,6 @@ urlpatterns = [
     path('commercial-Sale-All-Listing/',views.commercial_Sale_All_Listing, name='commercial_Sale_All_Listing'),
     path('commercial-Rent-All-Listing/',views.commercial_Rent_All_Listing, name='commercial_Rent_All_Listing'),
     path('pg-All-Listing/',views.pg_All_Listing, name='pg_All_Listing'),
+    path('rent-Single-Listing/',views.rent_Single_Listing, name='rent_Single_Listing'),
 
 ]
