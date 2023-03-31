@@ -1157,6 +1157,7 @@ nav li ul a:before , nav li ul a:after {
 }
 .footer-social li {
     margin-right: 6px;
+	text-align: center;
 }
 .footer-social li a {
     float:left;
@@ -1211,6 +1212,7 @@ nav li ul a:before , nav li ul a:after {
 	border-radius:2px;
 	transform: translate3d(0,0,0);
     box-shadow: 0 5px 5px rgba(0,0,0,0.23);
+	text-align: center !important;
 }
 .to-top i {
     position:relative;
@@ -3148,6 +3150,7 @@ section.single-par2  .scroll-down-wrap{
 	left: 20px;
 	top: 30px;
 	z-index: 5;
+	padding-left: 0px !important;
 }
 .geodir_save-btn , .compare-btn {
 	position:absolute;
