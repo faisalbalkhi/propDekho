@@ -300,6 +300,7 @@ blockquote p {
 	top:15px;
 	font-size:12px;
 	margin-left: 34px;
+	text-align: center;
 }
 .add-list i {
 	margin-right:10px;
@@ -3157,6 +3158,7 @@ section.single-par2  .scroll-down-wrap{
 	color:#fff;
 	font-size: 13px;
 	border-radius: 4px;
+	text-align: center;
 }
 .compare-btn {
 	top:75px;
@@ -3219,6 +3221,7 @@ section.single-par2  .scroll-down-wrap{
 	top: 30px;
 	width: 30px;
 	z-index: 10;
+	text-align: center !important;
 }
 .agent-card-social li {
 	float:left;
@@ -3496,6 +3499,9 @@ section.single-par2  .scroll-down-wrap{
     float: left;
     margin: 0 10px 0 0;
 } 
+.list-single-opt_header_cat{
+    margin-left: 0px !important;
+}
 .cat-opt {
     padding:7px 20px;
     border-radius: 2px;
