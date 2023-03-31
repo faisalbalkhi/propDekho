@@ -708,8 +708,7 @@ initIsotope();
       } else {
         $(".listing-item").removeClass("has_one_column").removeClass("has_two_column");
       }
-    }).first().click(); // Set the List View as the default view
-    
+    }).first().click(); // Set the List View as the default view 
     $(".notification-close").on("click", function (e) {
         e.preventDefault();
         $(this).parent(".notification").slideUp(500);
