@@ -218,8 +218,6 @@
                 </div>
                 <!-- dashboard-title end -->
 
-
-                <form action="#" method="post" name="alldetails">
                     <div class="dasboard-wrapper fl-wrap no-pag">
                         <!-- dasboard-widget-title -->
                         <div class="dasboard-widget-title fl-wrap" id="sec1">
@@ -242,7 +240,7 @@
                                             style="--bs-btn-active-bg: #0095ff; " id="option1resi" onclick="funct1()">
                                             <input type="radio" style="display: none;" name="options"
                                                 autocomplete="off">
-                                            Residential
+                                            Residential 
                                         </label>
                                         <label class="btn btn-secondary clickablebtn"
                                             style="--bs-btn-active-bg: #0095ff; " id="option2comm" onclick="funct3()">
@@ -261,8 +259,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Residential  Start -->
 
-                        <form method="post" action="#" name="residentialdetails">
+                    <form method="post" enctype="multipart/form-data" name="residentialdetails">{% csrf_token %}
                         <div id="reidentialdetails" style="display: block;">
 
                             <!-- dasboard-widget-title -->
@@ -381,20 +380,20 @@
                                     </div>
 
                                     <div class="clearfix"></div>
-                                    <label>Furnished: </label>
+                                    <label>Furnished:</label>
                                     <div class=" add-list-tags fl-wrap">
                                         <!-- Checkboxes -->
                                         <ul class="fl-wrap filter-tags no-list-style ds-tg">
                                             <li>
-                                                <input id="furnishedtype1" type="radio" name="furnishedtype">
+                                                <input id="furnishedtype1" type="radio" value="1" name="furnished">
                                                 <label for="furnishedtype1">Fully Furnished</label>
                                             </li>
                                             <li>
-                                                <input id="furnishedtype2" type="radio" name="furnishedtype">
+                                                <input id="furnishedtype2" type="radio" value="2" name="furnished">
                                                 <label for="furnishedtype2">Semi-Furnished</label>
                                             </li>
                                             <li>
-                                                <input id="furnishedtype3" type="radio" name="furnishedtype">
+                                                <input id="furnishedtype3" type="radio" value="3" name="furnished">
                                                 <label for="furnishedtype3">Non-Furnished</label>
                                             </li>
                                         </ul>
@@ -632,7 +631,7 @@
                                             <label>Available From : </label>
                                             <input class="divdate" type="date" value="" />
                                         </div>
-                                        <div id="locationdetails" style="display: none;">
+                                        <!-- <div id="locationdetails" style="display: none;">
                                             <div class="col-sm-6">
                                                 <label>Flat No.</label>
                                                 <input style="padding-left: 10px !important" type="text"
@@ -648,7 +647,7 @@
                                                 <input style="padding-left: 10px !important" type="text"
                                                     placeholder="Enter Total Floors" value="" />
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                 </div>
@@ -905,14 +904,11 @@
                                                     <input type="text" placeholder=" Brokerage (in rupees) " value=""
                                                         style="width: 21rem;" />
                                                 </div>
-
                                                 <!-- Checkboxes end -->
                                             </div>
-
                                             <label>Built Up Area: <span class="dec-icon"><i
                                                         class="far fa-sort-size-down-alt"></i></span></label>
                                             <input type="text" style=" width: 32%;" placeholder="in SqFt." value="" />
-
                                         </div>
                                         <!-- <label>Plan Details</label>
                             <div class="listsearch-input-item">
@@ -922,15 +918,31 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- dashboard pricing part end -->
-
-
+                            <div class="dasboard-widget-title dwb-mar fl-wrap" >
+                                <h5><i class="fas fa-image"></i>Property Picture</h5>
+                              </div>
+                            <div class="dasboard-widget-box fl-wrap ">
+                                <div class="custom-form">
+                                  <span style="color: white;">Accepted formats are .jpg, .gif, .bmp, .JPG, .JPEG, .PNG & .png and Maximum size allowed 10 MB 
+                                    <strong style="color: #0095ff;"> (Upload Minimum 5 Photos) </strong></span>
+                                  <div class="clearfix"></div>
+                                  <div class="listsearch-input-item fl-wrap picturesetting">
+                                      <div class="fu-text">
+                                        <div class="photoUpload-files fl-wrap"></div>
+                                      </div>
+                                      <input type="file" name="prop_img" style="color: white;" class="upload" accept=".jpg, .jpeg, .png, .gif, .bmp" multiple>
+                                      <span style="color: white;"><i  class="far fa-cloud-upload-alt"></i> Click here or drop files to upload</span>
+                                  </div>
+                                </div>
+                                <div class="image-preview"></div>
+                              </div>
+                              <button type="submit" class="btn btnbgcolor float-btn">Save Changes
+                              </button>
                         </div>
                         </form>
-
+                        <!-- Residential  End -->
                         <!-- PG-CoLiving Start -->
-                        <form action="#" method="post" name="pgdetails">
+                        <form method="post" enctype="multipart/form-data" name="pgdetails">
                         <div id="pgcolivingdetails" style="display: none;">
 
                             <div class="dasboard-widget-title dwb-mar fl-wrap" id="sec4">
@@ -1968,31 +1980,8 @@
                         <!-- commercial end -->
 
                         <!-- dasboard-widget-title -->
-                        <div class="dasboard-widget-title dwb-mar fl-wrap" >
-                            <h5><i class="fas fa-image"></i>Property Picture</h5>
-                          </div>
-                        <div class="dasboard-widget-box fl-wrap ">
-                            <div class="custom-form">
-                              <span style="color: white;">Accepted formats are .jpg, .gif, .bmp, .JPG, .JPEG, .PNG & .png and Maximum size allowed 10 MB 
-                                <strong style="color: #0095ff;"> (Upload Minimum 5 Photos) </strong></span>
-                              <div class="clearfix"></div>
-                              <div class="listsearch-input-item fl-wrap picturesetting">
-                                <form class="fuzone">
-                                  <div class="fu-text">
-                                    
-                                    <div class="photoUpload-files fl-wrap"></div>
-                                  </div>
-                                  <input type="file" style="color: white;" class="upload" accept=".jpg, .jpeg, .png, .gif, .bmp" multiple>
-                                  <span style="color: white;"><i  class="far fa-cloud-upload-alt"></i> Click here or drop files to upload</span>
-                                </form>
-                              </div>
-                            </div>
-                            <div class="image-preview"></div>
-                          </div>
+                        
                         <!-- dasboard-widget-box  end-->
-
-                        <a href="#" type="submit"  class="btn btnbgcolor float-btn">Save Changes
-                        </a>
                     </div>    
                 </form>
             </div>
