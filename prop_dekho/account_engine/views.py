@@ -123,5 +123,22 @@ def sell_All_Listing(request):
     return render(request, 'sellAllListing.html')
 
 
+def plot_All_Listing(request):
+    return render(request, 'plotAllListing.html')
 
+
+def commercial_Sale_All_Listing(request):
+    return render(request, 'commercialSaleAllListing.html')
+
+
+def commercial_Rent_All_Listing(request):
+    return render(request, 'commercialRentAllListing.html')
+
+
+def pg_All_Listing(request):
+    return render(request, 'pgAllListing.html')
+
+
+def rent_Single_Listing(request):
+    return render(request, 'rentSingleListing.html')
 
