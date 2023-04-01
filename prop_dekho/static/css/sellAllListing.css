@@ -42,19 +42,11 @@
     padding-bottom: 0px;
 }
 .btn-style{
-   display: flex;
+    gap: 1vw;
 }
-.btn-bg1{
-    background: #0095ff;
-    color: #fff;
-    width: 0rem;
-    border: 1px solid black;
-}
+
 .btn-bg2{
     background : white;
     color: #0095ff;
-    border: 1px solid black;
-    margin-right: 7rem;
-    width: 0.5rem;
-    margin-left: 1rem;
-}
+  
+} 
