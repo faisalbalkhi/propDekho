@@ -15,71 +15,91 @@
                             <div class="hero-slider-item hero-slider-item_first fl-wrap plotbg-image">
                                 <div class="bg plotbg-image" data-bg="../static/images/plots/plotbg.jpg"></div>
                                 <div class="overlay plotbg-image"></div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="hero-title ht-column fl-wrap">
-                                                <h4>Real Estate Searching Platform</h4>
-                                                <h2>Find The House of Your Dream <br>
-                                                    Using Our Platform
-                                                </h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in
-                                                    pulvinar neque. Nulla finibus lobortis pulvinar.</p>
-                                            </div>
+                                <div class="container" style="margin-top : 2rem">
+                                    <div class="hero-title hero-title_small">
+                                      <h2 style="font-size : 41px; margin-left:15rem; color: white;">
+                                      Plots For Sale In Delhi
+                                      </h2>
+                                    </div>
+                                    </div>
+                                    <div class="container searchHouseType">
+                                    <div class="house-statuses" >
+                                        <a class="houseastyle" href="{% url 'index' %}" >
+                                      <button type="button" class="btn houseBtnStyle">Sell</button>
+                                    </a>
+                                      <a class="houseastyle" href="{% url 'rent' %}" >
+                                      <button type="button" class="btn houseBtnStyle">Rent</button>
+                                      </a>
+                                
+                                      <a class="houseastyle" href="{% url 'pg_Coliving' %}" >
+                                      <button type="button" class="btn houseBtnStyle">PG/Co-living</button>
+                                      </a>
+                                
+                                      <a class="houseastyle" href="{% url 'commercial' %}" >
+                                        <button type="button" class="btn houseBtnStyle">Commercial</button>
+                                        </a>
+                                
+                                         <a class="houseastyle" href="{% url 'plot' %}" >
+                                        <button type="button" class="btn houseBtnStyle">Plots</button>
+                                        </a>
+                                    </div>
+                                    <div class="main-search-input-wrap">
+                                      <div class="main-search-input fl-wrap">
+                                        <div class="main-search-input-item">
+                                          <select data-placeholder="All Categories" class="chosen-select">
+                                            <option>All Cities</option>
+                                            <option>Mumbai</option>
+                                            <option>Bengaluru</option>
+                                            <option>Hyderbad</option>
+                                            <option>Pune</option>
+                                            <option>Chennai</option>
+                                            <option>Delhi</option>
+                                            <option>Gurgaon</option>
+                                            <option>Noida</option>
+                                            <option>Kolkata</option>
+                                            <option>Ahmedabad</option>
+                                            <option>Thane</option>
+                                            <option>Navi Mumbai</option>
+                                            <option>OTHER CITIES</option>
+                                            <option>Agra</option>
+                                            <option>Agartala</option>
+                                            <option>Ajmer</option>
+                                            <option>Ahmednagar</option>
+                                            
+                                            <option>Noida</option>
+                                          </select>
                                         </div>
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-4">
-                                            <div class="main-search-input-wrap shadow_msiw msiw-column fl-wrap">
-                                                <div class="msiw-column_title">Use Quick Search</div>
-                                                <div class="main-search-input fl-wrap">
-                                                    <div class="main-search-input-item">
-                                                        <input type="text" placeholder="What are you looking for?"
-                                                            value="" />
-                                                    </div>
-                                                    <div class="main-search-input-item">
-                                                        <select data-placeholder="All Categories"
-                                                            class="chosen-select no-search-select">
-                                                            <option>All Statuses</option>
-                                                            <option>For Rent</option>
-                                                            <option>For Sale</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="main-search-input-item">
-                                                        <select data-placeholder="All Categories" class="chosen-select">
-                                                            <option>All Cities</option>
-                                                            <option>New York</option>
-                                                            <option>London</option>
-                                                            <option>Paris</option>
-                                                            <option>Kiev</option>
-                                                            <option>Moscow</option>
-                                                            <option>Dubai</option>
-                                                            <option>Rome</option>
-                                                            <option>Beijing</option>
-                                                        </select>
-                                                    </div>
-                                                    <button class="main-search-button color-bg"
-                                                        onclick="window.location.href='listing.html'"> Search <i
-                                                            class="far fa-search"></i> </button>
-                                                </div>
-                                            </div>
-                                            <div class="hero-notifer fl-wrap">Need more search options? <a
-                                                    href="listing.html">Advanced Search</a></div>
+                                        <div class="main-search-input-item">
+                                          <input
+                                            type="text"
+                                            placeholder="What are you looking for?"
+                                            value=""
+                                            style="color: white"
+                                          />
                                         </div>
+                                        
+                                        <button
+                                          class="main-search-button color-bg"
+                                          onclick="window.location.href='listing.html'"
+                                        >
+                                          Search <i class="fal fa-search"></i>
+                                        </button>
+                                      </div>
                                     </div>
                                     <div class="scroll-down-wrap">
-                                        <div class="mousey">
-                                            <div class="scroller"></div>
-                                        </div>
-                                        <span>Scroll Down To Discover</span>
+                                      <div class="mousey">
+                                        <div class="scroller"></div>
+                                      </div>
+                                      <span>Scroll Down To Discover</span>
                                     </div>
-                                </div>
+                                  </div>
                             </div>
                             <!--  hero-slider-item end  -->
                            
+                        </div >
+                        <div style="text-align : center" class="hs-btn hs-btn_prev color-bg swiper-button-prev"><i class="fas fa-angle-left"></i>
                         </div>
-                        <div class="hs-btn hs-btn_prev color-bg swiper-button-prev"><i class="far fa-angle-left"></i>
-                        </div>
-                        <div class="hs-btn hs-btn_next color-bg swiper-button-next"><i class="far fa-angle-right"></i>
+                        <div style="text-align : center" class="hs-btn hs-btn_next color-bg swiper-button-next"><i class="fas fa-angle-right"></i>
                         </div>
                     </div>
                 </section>
@@ -301,9 +321,9 @@
                                     <!--  agent card item end -->
                                 </div>
                                 <!-- slick-slide-item end-->
-                            </div>
-                            <div class="swiper-button-prev lc-wbtn lc-wbtn_prev"><i class="far fa-angle-left"></i></div>
-                            <div class="swiper-button-next lc-wbtn lc-wbtn_next"><i class="far fa-angle-right"></i>
+                            </div >
+                            <div style="text-align : center" class="swiper-button-prev lc-wbtn lc-wbtn_prev"><i class="fas fa-angle-left"></i></div>
+                            <div style="text-align : center" class="swiper-button-next lc-wbtn lc-wbtn_next"><i class="fas fa-angle-right"></i>
                             </div>
                         </div>
                     </div>

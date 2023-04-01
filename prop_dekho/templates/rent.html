@@ -24,8 +24,9 @@
                             </div>
                             <div class="container searchHouseType">
                             <div class="house-statuses" >
+                                <a class="houseastyle" href="{% url 'index' %}" >
                               <button type="button" class="btn houseBtnStyle">Sell</button>
-                              
+                            </a>
                               <a class="houseastyle" href="{% url 'rent' %}" >
                               <button type="button" class="btn houseBtnStyle">Rent</button>
                               </a>
@@ -120,9 +121,9 @@
                     </div>
                     <!--  hero-slider-item end  -->
                 </div>
-                <div class="hs-btn hs-btn_prev color-bg swiper-button-prev"><i class="far fa-angle-left"></i>
+                <div style="text-align : center" class="hs-btn hs-btn_prev color-bg swiper-button-prev"><i class="fas fa-angle-left"></i>
                 </div>
-                <div class="hs-btn hs-btn_next color-bg swiper-button-next"><i class="far fa-angle-right"></i>
+                <div style="text-align : center" class="hs-btn hs-btn_next color-bg swiper-button-next"><i class="fas fa-angle-right"></i>
                 </div>
             </div>
         </section>
@@ -149,17 +150,7 @@
                             <h4>Browse Hot Offers</h4>
                             <h2>Latest Properties</h2>
                         </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="listing-filters gallery-filters">
-                            <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*"> <span>All
-                                    Categories</span></a>
-                            <a href="#" class="gallery-filter" data-filter=".for_sale"> <span>For
-                                    Sale</span></a>
-                            <a href="#" class="gallery-filter" data-filter=".for_rent"> <span>For
-                                    Rent</span></a>
-                        </div>
-                    </div>
+                    </div>                
                 </div>
                 <div class="clearfix"></div>
                 <!-- grid-item-holder-->
@@ -208,7 +199,9 @@
                     <!-- grid-item-holder-->
                     
                 </div>
-                <a href="listing.html" class="btn float-btn small-btn color-bg">View All Properties</a>
+                
+            </div>
+            <a href="listing.html" class="btn float-btn small-btn color-bg" style="margin-left: 9vw;">View All Properties</a>
         </section>
         <!-- section end-->
 
@@ -626,189 +619,9 @@
                         </div>
                         <!-- slick-slide-item end-->
                     </div>
-                    <div class="swiper-button-prev lc-wbtn lc-wbtn_prev"><i class="far fa-angle-left"></i></div>
-                    <div class="swiper-button-next lc-wbtn lc-wbtn_next"><i class="far fa-angle-right"></i>
+                    <div style="text-align : center" class="swiper-button-prev lc-wbtn lc-wbtn_prev"><i class="fas fa-angle-left"></i></div>
+                    <div style="text-align : center" class="swiper-button-next lc-wbtn lc-wbtn_next"><i class="fas fa-angle-right"></i>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- section end-->
-        <!-- section -->
-        <section class="color-bg small-padding">
-            <div class="container">
-                <div class="main-facts fl-wrap">
-                    <!-- inline-facts  -->
-                    <div class="inline-facts-wrap">
-                        <div class="inline-facts">
-                            <div class="milestone-counter">
-                                <div class="stats animaper">
-                                    <div class="num" data-content="0" data-num="578">0</div>
-                                </div>
-                            </div>
-                            <h6>Agents and Agencys</h6>
-                        </div>
-                    </div>
-                    <!-- inline-facts end -->
-                    <!-- inline-facts  -->
-                    <div class="inline-facts-wrap">
-                        <div class="inline-facts">
-                            <div class="milestone-counter">
-                                <div class="stats animaper">
-                                    <div class="num" data-content="0" data-num="12168">0</div>
-                                </div>
-                            </div>
-                            <h6>Happy Customers Every Year</h6>
-                        </div>
-                    </div>
-                    <!-- inline-facts end -->
-                    <!-- inline-facts  -->
-                    <div class="inline-facts-wrap">
-                        <div class="inline-facts">
-                            <div class="milestone-counter">
-                                <div class="stats animaper">
-                                    <div class="num" data-content="0" data-num="2172">0</div>
-                                </div>
-                            </div>
-                            <h6>Won Awards</h6>
-                        </div>
-                    </div>
-                    <!-- inline-facts end -->
-                    <!-- inline-facts  -->
-                    <div class="inline-facts-wrap">
-                        <div class="inline-facts">
-                            <div class="milestone-counter">
-                                <div class="stats animaper">
-                                    <div class="num" data-content="0" data-num="732">0</div>
-                                </div>
-                            </div>
-                            <h6>New Listing Every Week</h6>
-                        </div>
-                    </div>
-                    <!-- inline-facts end -->
-                </div>
-            </div>
-            <div class="svg-bg">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                    y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-                    <defs>
-                        <lineargradient id="bg">
-                            <stop offset="0%" style="stop-color:rgba(255, 255, 255, 0.6)"></stop>
-                            <stop offset="50%" style="stop-color:rgba(255, 255, 255, 0.1)"></stop>
-                            <stop offset="100%" style="stop-color:rgba(255, 255, 255, 0.6)"></stop>
-                        </lineargradient>
-                        <path id="wave" stroke="url(#bg)" fill="none"
-                            d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
-                                        s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
-                    </defs>
-                    <g>
-                        <use xlink:href="#wave">
-                            <animatetransform attributeName="transform" attributeType="XML" type="translate" dur="10s"
-                                calcMode="spline" values="270 230; -334 180; 270 230" keyTimes="0; .5; 1"
-                                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
-                        </use>
-                        <use xlink:href="#wave">
-                            <animatetransform attributeName="transform" attributeType="XML" type="translate" dur="8s"
-                                calcMode="spline" values="-270 230;243 220;-270 230" keyTimes="0; .6; 1"
-                                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
-                        </use>
-                        <use xlink:href="#wave">
-                            <animatetransform attributeName="transform" attributeType="XML" type="translate" dur="6s"
-                                calcMode="spline" values="0 230;-140 200;0 230" keyTimes="0; .4; 1"
-                                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
-                        </use>
-                        <use xlink:href="#wave">
-                            <animatetransform attributeName="transform" attributeType="XML" type="translate" dur="12s"
-                                calcMode="spline" values="0 240;140 200;0 230" keyTimes="0; .4; 1"
-                                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
-                        </use>
-                    </g>
-                </svg>
-            </div>
-        </section>
-        <!-- section end-->
-        <!-- section -->
-        <section class="gray-bg ">
-            <div class="container">
-                <div class="section-title st-center fl-wrap">
-                    <h4>Testimonilas</h4>
-                    <h2>What Our Clients Say</h2>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="testimonials-slider-wrap">
-                <div class="testimonials-slider">
-                    <!--slick-item -->
-                    <div class="slick-item">
-                        <div class="text-carousel-item fl-wrap">
-                            <div class="text-carousel-item-header fl-wrap">
-                                <div class="popup-avatar"><img src="/static/images/avatar/1.jpg" alt=""></div>
-                                <div class="review-owner fl-wrap">Jessie Wilcox</div>
-                                <div class="listing-rating card-popup-rainingvis" data-starrating2="5"> </div>
-                            </div>
-                            <div class="text-carousel-content fl-wrap">
-                                <p> "In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis
-                                    cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor
-                                    sit amet, conse ctetuer adipiscing elit, sed diam nonu mmy nibh euismod
-                                    tincidunt ut laoreet dolore luptatum."</p>
-                                <a href="#" class="testim-link color-bg">Via Facebook</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slick-item end -->
-                    <!--slick-item -->
-                    <div class="slick-item">
-                        <div class="text-carousel-item fl-wrap">
-                            <div class="text-carousel-item-header fl-wrap">
-                                <div class="popup-avatar"><img src="images/avatar/1.jpg" alt=""></div>
-                                <div class="review-owner fl-wrap">Austin Harisson</div>
-                                <div class="listing-rating card-popup-rainingvis" data-starrating2="4"> </div>
-                            </div>
-                            <div class="text-carousel-content fl-wrap">
-                                <p> "Feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-                                    qui blandit praesent luptatum zzril delenit augue duis dolore te odio
-                                    dignissim qui blandit praesent blandit praesent luptatum zzril.Vulputate
-                                    urna. Nulla tristique mi a massa convallis."</p>
-                                <a href="#" class="testim-link color-bg">Via Twitter</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slick-item end -->
-                    <!--slick-item -->
-                    <div class="slick-item">
-                        <div class="text-carousel-item fl-wrap">
-                            <div class="text-carousel-item-header fl-wrap">
-                                <div class="popup-avatar"><img src="/static/images/avatar/1.jpg" alt=""></div>
-                                <div class="review-owner fl-wrap">Garry Colonsi</div>
-                                <div class="listing-rating card-popup-rainingvis" data-starrating2="4"> </div>
-                            </div>
-                            <div class="text-carousel-content fl-wrap">
-                                <p> "In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis
-                                    cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor
-                                    sit amet, conse ctetuer adipiscing elit, sed diam nonu mmy nibh euismod
-                                    tincidunt ut laoreet dolore luptatum."</p>
-                                <a href="#" class="testim-link color-bg">Via Facebook</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slick-item end -->
-                    <!--slick-item -->
-                    <div class="slick-item">
-                        <div class="text-carousel-item fl-wrap">
-                            <div class="text-carousel-item-header fl-wrap">
-                                <div class="popup-avatar"><img src="/static/images/avatar/1.jpg" alt=""></div>
-                                <div class="review-owner fl-wrap">Antony Moore</div>
-                                <div class="listing-rating card-popup-rainingvis" data-starrating2="5"> </div>
-                            </div>
-                            <div class="text-carousel-content fl-wrap">
-                                <p> "Feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-                                    qui blandit praesent luptatum zzril delenit augue duis dolore te odio
-                                    dignissim qui blandit praesent blandit praesent luptatum zzril.Vulputate
-                                    urna. Nulla tristique mi a massa convallis."</p>
-                                <a href="#" class="testim-link color-bg">Via Twitter</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--slick-item end -->
                 </div>
             </div>
         </section>
