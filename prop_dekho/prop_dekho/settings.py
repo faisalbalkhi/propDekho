@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ckeditor',
-    # 'ckeditor_uploader',
-    'django.contrib.humanize',
 
+   
+    'ckeditor',
+    'django.contrib.humanize',
     'account_engine',
     'properties_engine',
 ]
@@ -167,3 +166,9 @@ MESSAGE_TAGS = {
 }
 # from django.contrib.messages import constants as message_constants
 # MESSAGE_LEVEL = message_constants.DEBUG 
+
+# CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+# CRISPY_TEMPLATE_PACK = "bootstrap5"
