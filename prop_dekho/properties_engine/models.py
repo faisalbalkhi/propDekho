@@ -1,5 +1,9 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django_extensions.db.fields import AutoSlugField
+from django_extensions.db.models import TimeStampedModel
+
+
 # Create your models here.
 
 class Category(models.Model):
@@ -14,31 +18,41 @@ class PropertyType(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+class City(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
 
 
-class Property(models.Model):
+class Amenities(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class Property(TimeStampedModel):
     cartegory = models.ManyToManyField(Category, related_name="property_category")
     feature_image = models.ImageField("Feature Image", upload_to='property/feature_image/')
-    location = models.CharField(max_length=200)
-    title = models.ForeignKey(PropertyType, on_delete=models.CASCADE)
+    location = models.CharField(max_length=200,null=True,blank=True)
+    property_type = models.ForeignKey(PropertyType, on_delete=models.CASCADE, related_name='property_type',null=True, blank=True)
     price = models.FloatField()
-    li_title1 = RichTextField()
+    maintainance_charges = models.FloatField(null=True,blank=True)
     no_of_bedroom = models.IntegerField("Number of Bedroom", null=True, blank=True)
-    li_title2 = RichTextField()
     no_of_bathroom = models.IntegerField("Number of Bathroom", null=True, blank=True)
-    li_title3 = RichTextField()
     no_of_kitchen = models.IntegerField("Number of Kitchen", null=True, blank=True)
     author_image = models.ImageField("Author Image", null=True, blank=True, upload_to='property/author_image/')
     author_name = models.CharField("Author Name", max_length=233, null=True, blank=True)
     rating = models.IntegerField(null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     area = models.IntegerField()
+   
 
 
     def __str__(self):
-        return self.title.name
+        return self. author_name
 
 
 class PgFacility(models.Model):
@@ -48,16 +62,20 @@ class PgFacility(models.Model):
     def __str__(self):
         return self.name
 
+
 class PgType(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
-    
+
+
 KEY_FACILITIES = [
     (True, "Yes"),
     (False, "No"),
 ]
+
+
 class LatestPg(models.Model):
     pg_image = models.ImageField('Pg Image', upload_to='latestpg/latestpg_image/')
     pg_location = models.CharField(max_length=255)
@@ -78,14 +96,14 @@ class LatestPg(models.Model):
         return self.pg_name
 
 
-
-
-FLAT_TYPE=[
+FLAT_TYPE = [
     (1, '1BHK'),
     (2, '2BHK'),
     (3, '3BHK'),
     (4, '4BHK'),
 ]
+
+
 class LatesFlat(models.Model):
     flat_name = models.IntegerField(choices=FLAT_TYPE)
     flat_image = models.ImageField("Flat Image", upload_to='latest/flat_image/')
@@ -110,4 +128,3 @@ class PropertyForSale(models.Model):
 
 
 
-    

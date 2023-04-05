@@ -1,13 +1,14 @@
 from django.urls import path
 from account_engine import views
-
+from account_engine.views import ListingCreateView, AddListingView
 
 urlpatterns = [
     path('register/', views.register, name='register'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('', views.index, name='index'),
-    path('dashboard-add-listing/', views.dashboard_add_listing, name='dashboard_add_listing'),
+    # path('dashboard-add-listing/', views.dashboard_add_listing, name='dashboard_add_listing'),
+    path('add-listing/', AddListingView.as_view(), name='dashboard_add_listing'),
     path('contacts/', views.contacts, name='contacts'),
     path('about/', views.about, name='about'),
     path('pg-Coliving/',views.pg_Coliving, name='pg_Coliving'),
@@ -24,5 +25,6 @@ urlpatterns = [
     path('commercial-Rent-All-Listing/',views.commercial_Rent_All_Listing, name='commercial_Rent_All_Listing'),
     path('pg-All-Listing/',views.pg_All_Listing, name='pg_All_Listing'),
     path('rent-Single-Listing/',views.rent_Single_Listing, name='rent_Single_Listing'),
+    path('create_listing', ListingCreateView.as_view(), name='create_listing'),
 
 ]
