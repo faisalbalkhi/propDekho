@@ -66,7 +66,7 @@
     <!-- main -->
     <div id="main">
         <!-- header -->
-        <header class="main-header">
+        <header class="main-header" style="display: flex; align-items:center">
             <!--  logo  -->
 
             <div class="logo-holder logosetting"><a href="{% url 'index' %}"><img class="logoimgsetting" src="{% static 'images/logo.png' %}" alt=""></a>
@@ -80,58 +80,21 @@
             </div>
             <!-- nav-button-wrap end-->
             <!-- header-search button  -->
-            <div class="col-sm-2" style="margin-top: 10px;">
+            <div class="col-md-4" >
 
-                <div class="listsearch-input-item" style="border: none;">
-                    <select data-placeholder="Apartments" class="chosen-select no-search-select">
-                        <option>All Cities</option>
-                            <option>Mumbai</option>
-                            <option>Bengaluru</option>
-                            <option>Hyderbad</option>
-                            <option>Pune</option>
-                            <option>Chennai</option>
-                            <option>Delhi</option>
-                            <option>Gurgaon</option>
-                            <option>Noida</option>
-                            <option>Kolkata</option>
-                            <option>Ahmedabad</option>
-                            <option>Thane</option>
-                            <option>Navi Mumbai</option>
-                            <option>OTHER CITIES</option>
-                            <option>Agra</option>
-                            <option>Agartala</option>
-                            <option>Ajmer</option>
-                            <option>Ahmednagar</option>
-                    </select>
+                <div class="row">
+                    <div class="col-md-7">
+                        <select name="state_name" id="state_Name" class="form-select" style="background-color: #292e3a;
+                        color: white; border: none;">
+                            <option value="">Stata Name</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <!-- header-search button end  -->
-            <!--  add new  btn -->
-            <div class="add-list_wrap">
-                
-                <a href="{% url 'dashboard_add_listing' %}" class="add-list color-bg" id="add-listing-btn">
-                    <i class="fal fa-plus"></i> <span>Add Listing</span>
-                </a>
-                
-            </div>
-            <!--  add new  btn end -->
-
-            <!--  cart-btn   -->
-            <div class="cart-btn  tolt show-header-modal" data-microtip-position="bottom"
-                data-tooltip="Your Wishlist / Compare" style="text-align:center;">
-                <i class="fal fa-bell"></i>
-                <span class="cart-btn_counter color-bg">5</span>
-            </div>
-            <!--  cart-btn end -->
-            <!--  login btn -->
-            {% if user.is_authenticated %}
-            <div class="show-reg-form "><i class="fas fa-user"></i><a href="{% url 'logout' %}">Sign Out</a></div>
-            {% else %}
-            <div class="show-reg-form modal-open"><i class="fas fa-user"></i><span>Sign In</span></div>
-            {% endif %}
-            <!--  login btn  end -->
+            
             <!--  navigation -->
-            <div class="nav-holder main-menu">
+            <div class="nav-holder main-menu" style="top:0px!important">
                 <nav>
                     <ul class="no-list-style">
                         <li>
@@ -199,8 +162,33 @@
                     </ul>
                 </nav>
             </div>
+            <!-- navigation  end -->
+            <!--  cart-btn   -->
+            <div class="cart-btn  tolt show-header-modal" data-microtip-position="bottom"
+                data-tooltip="Your Wishlist / Compare" style="text-align:center;">
+                <i class="fal fa-bell"></i>
+                <span class="cart-btn_counter color-bg">5</span>
+            </div>
+            <!--  cart-btn end -->
+            <!--  login btn -->
+            {% if user.is_authenticated %}
+            <div class="show-reg-form "><i class="fas fa-user"></i><a href="{% url 'logout' %}">Sign Out</a></div>
+            {% else %}
+            <div class="show-reg-form modal-open"><i class="fas fa-user"></i><span>Sign In</span></div>
+            {% endif %}
+            <!--  login btn  end -->
+            <!--  add new  btn -->
+            <div class="add-list_wrap">
+                <!-- {% if user.is_authenticated %} -->
+                <a href="{% url 'dashboard_add_listing' %}" class="add-list color-bg" style="top:0px!important">
+                    <i class="fal fa-plus"></i> <span>Add Listing</span>
+                </a>
+                <!-- {% endif %} -->
+            </div>
+            <!--  add new  btn end -->
+           
         </header>
-        <!-- navigation  end -->
+        
         <!-- header-search-wrapper -->
         <div class="header-search-wrapper novis_search">
             <div class="header-serach-menu">
@@ -631,6 +619,7 @@
 
   */
     </script>
+  
 </body>
 
 </html>

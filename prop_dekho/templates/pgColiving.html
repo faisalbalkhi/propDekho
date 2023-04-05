@@ -157,17 +157,17 @@
                 <div class="clearfix"></div>
                 <!-- grid-item-holder-->
                 <div class="gallery-cont">
-                    <div class="grid-item-holder gallery-items gisp fl-wrap">
+                    <div class="grid-item-holder gallery-items gisp fl-wrap pglistingsetting">
                         <!-- gallery-item-->
                         {% for each in pg %}
-                        <div class="gallery-item for_sale" style="width:27% !important">
+                        <div class="gallery-item for_sale pgdivsetting" >
                             <!-- listing-item -->
                             <div class="listing-item">
                                 <article class="geodir-category-listing fl-wrap">
                                     <div class="geodir-category-img fl-wrap">
 
                                         <a href="{% url 'pgDetails' %}" class="geodir-category-img_item">
-                                            <img class="listingimgsize" src="{{ each.pg_image.url }}" alt="" />
+                                            <img style="height: 13rem;" class="listingimgsize" src="{{ each.pg_image.url }}" alt="" />
                                             <div class="overlay"></div>
                                         </a>
                                         <div class="geodir-category-location">
