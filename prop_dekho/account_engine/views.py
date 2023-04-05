@@ -6,6 +6,14 @@ from django.contrib.auth.hashers import make_password
 
 from  properties_engine .models import  Property,LatestPg,LatesFlat
 from .models import User
+from properties_engine.forms import PropertyForm
+from django.urls import reverse_lazy
+from django.http import JsonResponse
+from django.views.generic.edit import CreateView
+from django.views import generic, View
+from django.views.generic import TemplateView
+from properties_engine.models import Property, LatestPg, LatesFlat, PropertyType, Amenities, Category, City
+
 
 
 def register(request):
@@ -67,9 +75,34 @@ def index(request):
         'properties': properties,
     })
 
+class AddListingView(TemplateView):
+    template_name = "dashboard-add-listing.html"
 
-def dashboard_add_listing(request):
-    return render(request, 'dashboard-add-listing.html')
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categoryies'] = Category.objects.all()
+        context['types'] = PropertyType.objects.all()
+        context['city'] = City.objects.all()
+        context['amenitiess'] = Amenities.objects.all()
+        
+        return context
+
+
+class ListingCreateView(generic.CreateView):
+    form_class = PropertyForm
+    template_name = 'dashboard-add-listing.html'
+    success_url = reverse_lazy('index')
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            data = {'success': True}
+            return JsonResponse(data)
+        else:
+            # Display form errors to the user
+            print(form.errors)
+            return super().post(request, *args, **kwargs)
 
 
 def contacts(request):
@@ -162,3 +195,5 @@ def pg_Single_Listing(request):
 def plot_Single_Listing(request):
     return render(request, 'plotSingleListing.html')
 
+def login_register(request):
+    return render(request, 'widgets/register_login.html')
