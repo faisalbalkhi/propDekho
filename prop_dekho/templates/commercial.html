@@ -15,20 +15,84 @@
                     <div class="hero-slider-item hero-slider-item_first fl-wrap div-height">
                         <div class="bg div-height" data-bg="../static/images/commercial/bg.png"></div>
                         <div class="overlay div-height"></div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="hero-title ht-column fl-wrap">
-                                        <h4>Real Estate Searching Platform</h4>
-                                        <h2>Commercial Property
-                                        </h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in
-                                            pulvinar neque. Nulla finibus lobortis pulvinar.</p>
-                                    </div>
-                                </div>
+                        <div class="container" style="margin-top : 2rem">
+                            <div class="hero-title hero-title_small">
+                              <h2 style="font-size : 41px; margin-left:15rem; color: white;">
+                               Commercial Property For Sale & Rent In Delhi
+                              </h2>
                             </div>
-
-                        </div>
+                            </div>
+                            <div class="container searchHouseType">
+                            <div class="house-statuses" >
+                                <a class="houseastyle" href="{% url 'index' %}" >
+                              <button type="button" class="btn houseBtnStyle">Sell</button>
+                            </a>
+                              <a class="houseastyle" href="{% url 'rent' %}" >
+                              <button type="button" class="btn houseBtnStyle">Rent</button>
+                              </a>
+                        
+                              <a class="houseastyle" href="{% url 'pg_Coliving' %}" >
+                              <button type="button" class="btn houseBtnStyle">PG/Co-living</button>
+                              </a>
+                        
+                              <a class="houseastyle" href="{% url 'commercial' %}" >
+                                <button type="button" class="btn houseBtnStyle">Commercial</button>
+                                </a>
+                        
+                                 <a class="houseastyle" href="{% url 'plot' %}" >
+                                <button type="button" class="btn houseBtnStyle">Plots</button>
+                                </a>
+                            </div>
+                            <div class="main-search-input-wrap">
+                              <div class="main-search-input fl-wrap">
+                                <div class="main-search-input-item">
+                                  <select data-placeholder="All Categories" class="chosen-select">
+                                    <option>All Cities</option>
+                                    <option>Mumbai</option>
+                                    <option>Bengaluru</option>
+                                    <option>Hyderbad</option>
+                                    <option>Pune</option>
+                                    <option>Chennai</option>
+                                    <option>Delhi</option>
+                                    <option>Gurgaon</option>
+                                    <option>Noida</option>
+                                    <option>Kolkata</option>
+                                    <option>Ahmedabad</option>
+                                    <option>Thane</option>
+                                    <option>Navi Mumbai</option>
+                                    <option>OTHER CITIES</option>
+                                    <option>Agra</option>
+                                    <option>Agartala</option>
+                                    <option>Ajmer</option>
+                                    <option>Ahmednagar</option>
+                                    
+                                    <option>Noida</option>
+                                  </select>
+                                </div>
+                                <div class="main-search-input-item">
+                                  <input
+                                    type="text"
+                                    placeholder="What are you looking for?"
+                                    value=""
+                                    style="color: white"
+                                  />
+                                </div>
+                                
+                                <button
+                                  class="main-search-button color-bg"
+                                  onclick="window.location.href='listing.html'"
+                                >
+                                  Search <i class="fal fa-search"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="scroll-down-wrap">
+                              <div class="mousey">
+                                <div class="scroller"></div>
+                              </div>
+                              <span>Scroll Down To Discover</span>
+                            </div>
+                          </div>
                     </div>
                     <!--  hero-slider-item end  -->
 
@@ -114,7 +178,7 @@
                             <div class="listing-item">
                                 <article class="geodir-category-listing fl-wrap">
                                     <div class="geodir-category-img fl-wrap  agent_card">
-                                        <a href="{% url 'commercial_Sale_All_Listing' %}" class="geodir-category-img_item">
+                                        <a href="{% url 'commercial_Sell_All_Listing' %}" class="geodir-category-img_item">
                                             <img src="/static/images/agency/agent/1.jpg" alt="">
 
                                         </a>
@@ -122,8 +186,8 @@
                                     <div class="geodir-category-content fl-wrap">
 
                                         <div class="agent_card-title fl-wrap">
-                                            <h4><a class="removeline" href="{% url 'commercial_Sale_All_Listing' %}">₹13.3 Lac</a></h4>
-                                            <h5><a class="removeline" href="{% url 'commercial_Sale_All_Listing' %}">Commercial Plot</a></h5>
+                                            <h4><a class="removeline" href="{% url 'commercial_Sell_All_Listing' %}">₹13.3 Lac</a></h4>
+                                            <h5><a class="removeline" href="{% url 'commercial_Sell_All_Listing' %}">Commercial Plot</a></h5>
 
                                             <h6 class="textsale">Plot Area: 275 </h6>
                                             <h6 class="textsale">Locality: Jagdamba Colony</h6>
@@ -146,7 +210,7 @@
                             <div class="listing-item">
                                 <article class="geodir-category-listing fl-wrap">
                                     <div class="geodir-category-img fl-wrap  agent_card">
-                                        <a href="{% url 'commercial_Sale_All_Listing' %}" class="geodir-category-img_item">
+                                        <a href="{% url 'commercial_Sell_All_Listing' %}" class="geodir-category-img_item">
                                             <img src="/static/images/agency/agent/1.jpg" alt="">
 
                                         </a>
@@ -154,8 +218,8 @@
                                     <div class="geodir-category-content fl-wrap">
 
                                         <div class="agent_card-title fl-wrap">
-                                            <h4><a class="removeline" href="{% url 'commercial_Sale_All_Listing' %}">₹39 Lac</a></h4>
-                                            <h5><a class="removeline" href="{% url 'commercial_Sale_All_Listing' %}">Commercial Plot</a></h5>
+                                            <h4><a class="removeline" href="{% url 'commercial_Sell_All_Listing' %}">₹39 Lac</a></h4>
+                                            <h5><a class="removeline" href="{% url 'commercial_Sell_All_Listing' %}">Commercial Plot</a></h5>
                                         </div>
                                         <h6 class="textsale">Plot Area: 275 </h6>
                                         <h6 class="textsale">Locality: Jagdamba Colony</h6>

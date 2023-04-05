@@ -160,8 +160,8 @@ def plot_All_Listing(request):
     return render(request, 'plotAllListing.html')
 
 
-def commercial_Sale_All_Listing(request):
-    return render(request, 'commercialSaleAllListing.html')
+def commercial_Sell_All_Listing(request):
+    return render(request, 'commercialSellAllListing.html')
 
 
 def commercial_Rent_All_Listing(request):
@@ -174,4 +174,24 @@ def pg_All_Listing(request):
 
 def rent_Single_Listing(request):
     return render(request, 'rentSingleListing.html')
+
+
+def sell_Single_Listing(request):
+    return render(request, 'sellSingleListing.html')
+
+
+def commercial_Rent_Single_Listing(request):
+    return render(request, 'commercialRentSingleListing.html')
+
+
+def commercial_Sell_Single_Listing(request):
+    return render(request, 'commercialSellSingleListing.html')
+
+
+def pg_Single_Listing(request):
+    return render(request, 'pgSingleListing.html')
+
+
+def plot_Single_Listing(request):
+    return render(request, 'plotSingleListing.html')
 
