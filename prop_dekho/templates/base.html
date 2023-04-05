@@ -108,11 +108,11 @@
             <!-- header-search button end  -->
             <!--  add new  btn -->
             <div class="add-list_wrap">
-                {% if user.is_authenticated %}
-                <a href="{% url 'dashboard_add_listing' %}" class="add-list color-bg">
+                
+                <a href="{% url 'dashboard_add_listing' %}" class="add-list color-bg" id="add-listing-btn">
                     <i class="fal fa-plus"></i> <span>Add Listing</span>
                 </a>
-                {% endif %}
+                
             </div>
             <!--  add new  btn end -->
 
@@ -616,6 +616,20 @@
             //     return false;
             // }
         }
+/*
+        const addListingLink = document.getElementById('add-listing-btn');
+        console.log(user);
+        if (isLoggedIn) {
+            // If the user is signed in, redirect the "Add Listing" link to the dashboard page
+            addListingLink.href = "/dashboard-add-listing.html";
+            console.log('auth');
+        } else {
+            // If the user is not signed in, redirect the "Add Listing" link to the sign in page
+            addListingLink.classList.add( "modal-open");
+            console.log('unauth');
+        }
+
+  */
     </script>
 </body>
 
