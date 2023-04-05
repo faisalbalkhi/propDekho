@@ -154,3 +154,17 @@
     display: block;
   }
 
+.pgdivsetting{
+  width: 27% !important;
+  position: relative !important;
+  left: 0px !important;
+  top: 0px !important;
+}
+
+.pglistingsetting{
+  display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

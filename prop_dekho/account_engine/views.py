@@ -195,3 +195,5 @@ def pg_Single_Listing(request):
 def plot_Single_Listing(request):
     return render(request, 'plotSingleListing.html')
 
+def login_register(request):
+    return render(request, 'widgets/register_login.html')
