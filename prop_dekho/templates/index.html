@@ -116,7 +116,9 @@
     left: 0px !important;
     top: 0px !important;
   }
-  
+  .height8vh{
+    height: 8vh;
+  }
 </style>
 
 <section
@@ -156,33 +158,20 @@
         </a>
     </div>
     <div class="main-search-input-wrap">
-      <div class="main-search-input fl-wrap">
-        <div class="main-search-input-item">
-          <select data-placeholder="All Categories" class="chosen-select">
-            <option>All Cities</option>
-            <option>Mumbai</option>
-            <option>Bengaluru</option>
-            <option>Hyderbad</option>
-            <option>Pune</option>
-            <option>Chennai</option>
-            <option>Delhi</option>
-            <option>Gurgaon</option>
-            <option>Noida</option>
-            <option>Kolkata</option>
-            <option>Ahmedabad</option>
-            <option>Thane</option>
-            <option>Navi Mumbai</option>
-            <option>OTHER CITIES</option>
-            <option>Agra</option>
-            <option>Agartala</option>
-            <option>Ajmer</option>
-            <option>Ahmednagar</option>
-            
-            <option>Noida</option>
-          </select>
+      <div class="main-search-input fl-wrap height8vh">
+        <div class="main-search-input-item height8vh" style="display: flex;">          
+                <!-- <select name="state_name" id="state_Name" class="form-select">
+                    <option value="">Stata Name</option>
+                </select> -->
+                <select name="city_name" id="city_Name" class="form-select" style="background-color: #292e3a;
+                color: white;
+                border: none;">
+                    <option value="">City Name</option>
+                </select>
         </div>
-        <div class="main-search-input-item">
-          <input
+      
+        <div class="main-search-input-item height8vh">
+          <input style="height: 8vh;"
             type="text"
             placeholder="What are you looking for?"
             value=""
@@ -229,7 +218,7 @@
         </div> -->
 
         <button
-          class="main-search-button color-bg"
+          class="main-search-button color-bg height8vh"
           onclick="window.location.href='listing.html'"
         >
           Search <i class="fal fa-search"></i>
@@ -504,9 +493,92 @@
 </section>
 
 <script>
-  function func1() {
-    document.getElementById("buy").style.color = "red";
-  }
+  let auth_token;
+
+$(document).ready(function() {
+$.ajax({
+  type : 'get',
+  url : 'https://www.universal-tutorial.com/api/getaccesstoken',
+  success : function(data){
+      auth_token = data.auth_token;
+      getState(data.auth_token)
+  },
+  error : function(error){
+      comnsole.log(error);
+  },
+  headers : {
+      "Accept": "application/json",
+      "api-token": "FnHRD1ODcJQcBTjYoxzQNzF5IAbRynB2CXZMZ9IrdTJJAB7-w__SEHoxKure9qgCfE8",
+      "user-email": "nikhil.adssquad@gmail.com"
+    }
+})
+// $('#country_Name').change(function() {
+//     getState();
+// })
+$('#state_Name').change(function() {
+  getCity();
+})
+console.log('hello');
+})
+// function getCountry(auth_token) {
+//     $.ajax({
+//         type : 'get',
+//         url : 'https://www.universal-tutorial.com/api/countries/',
+//         success : function(data){
+//             data.forEach(element => {
+//                 $('#country_Name').append('<option value="'+element.country_name +'">'+element.country_name +'</option>')
+//             });
+//         //    getState(auth_token);
+//         },
+//         error : function(error){
+//             console.log(error);
+//         },
+//         headers : {
+//             "Authorization": "Bearer " + auth_token,
+//             "Accept": "application/json"
+//           }
+//     })
+// }
+function getState(){
+let country_name = 'India'
+$.ajax({
+  type : 'get',
+  url : 'https://www.universal-tutorial.com/api/states/'+country_name,
+  success : function(data){
+      $('#state_Name').empty();
+      data.forEach(element => {
+          $('#state_Name').append('<option value="'+element.state_name +'">'+element.state_name +'</option>')
+      });
+  },
+  error : function(error){
+      console.log(error);
+  },
+  headers : {
+      "Authorization": "Bearer " + auth_token,
+      "Accept": "application/json"
+    }
+})
+}
+function getCity(){
+let state_name = $('#state_Name').val();
+$.ajax({
+  type : 'get',
+  url : 'https://www.universal-tutorial.com/api/cities/'+state_name,
+  success : function(data){
+      $('#city_Name').empty();
+      data.forEach(element => {
+          $('#city_Name').append('<option value="'+element.city_name +'">'+element.city_name +'</option>')
+      });
+  },
+  error : function(error){
+      console.log(error);
+  },
+  headers : {
+      "Authorization": "Bearer " + auth_token,
+      "Accept": "application/json"
+    }
+})
+}
 </script>
 
 {% include "widgets/meet_our_agents.html" %}
