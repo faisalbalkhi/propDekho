@@ -31,5 +31,5 @@ urlpatterns = [
     path('commercial-Sell-Single-Listing/',views.commercial_Sell_Single_Listing, name='commercial_Sell_Single_Listing'),
     path('pg-Single-Listing/',views.pg_Single_Listing, name='pg_Single_Listing'),
     path('plot-Single-Listing/',views.plot_Single_Listing, name='plot_Single_Listing'),
-
+    path('create_listing', ListingCreateView.as_view(), name='create_listing'),
 ]
