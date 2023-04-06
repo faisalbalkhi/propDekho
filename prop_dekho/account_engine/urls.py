@@ -25,19 +25,12 @@ urlpatterns = [
     path('commercial-Rent-All-Listing/',views.commercial_Rent_All_Listing, name='commercial_Rent_All_Listing'),
     path('pg-All-Listing/',views.pg_All_Listing, name='pg_All_Listing'),
     path('rent-Single-Listing/',views.rent_Single_Listing, name='rent_Single_Listing'),
-<<<<<<< HEAD
     path('create_listing', ListingCreateView.as_view(), name='create_listing'),
-=======
     path('sell-Single-Listing/',views.sell_Single_Listing, name='sell_Single_Listing'),
     path('commercial-Rent-Single-Listing/',views.commercial_Rent_Single_Listing, name='commercial_Rent_Single_Listing'),
     path('commercial-Sell-Single-Listing/',views.commercial_Sell_Single_Listing, name='commercial_Sell_Single_Listing'),
     path('pg-Single-Listing/',views.pg_Single_Listing, name='pg_Single_Listing'),
     path('plot-Single-Listing/',views.plot_Single_Listing, name='plot_Single_Listing'),
-<<<<<<< HEAD
     path('login-register/',views.login_register, name='login_register'),
-=======
-
->>>>>>> 166a8147802af2fb223eb351fdcb532f6de52bde
->>>>>>> b49d1659c34e8ac5532c8913577383efbddc6b82
 
 ]

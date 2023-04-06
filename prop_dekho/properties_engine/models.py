@@ -9,27 +9,27 @@ from django_extensions.db.models import TimeStampedModel
 class Category(models.Model):
     name = models.CharField(max_length=200)
 
-    def __str__(self):
+    def _str_(self):
         return self.name
 
 
 class PropertyType(models.Model):
     name = models.CharField(max_length=200)
 
-    def __str__(self):
+    def _str_(self):
         return self.name
 
 class City(models.Model):
     name = models.CharField(max_length=200)
 
-    def __str__(self):
+    def _str_(self):
         return self.name
 
 
 class Amenities(models.Model):
     name = models.CharField(max_length=100)
 
-    def __str__(self):
+    def _str_(self):
         return self.name
 
 
@@ -51,7 +51,7 @@ class Property(TimeStampedModel):
    
 
 
-    def __str__(self):
+    def _str_(self):
         return self. author_name
 
 
@@ -59,14 +59,14 @@ class PgFacility(models.Model):
     name = models.CharField(max_length=100)
     facility_type = models.BooleanField(default=0)
 
-    def __str__(self):
+    def _str_(self):
         return self.name
 
 
 class PgType(models.Model):
     name = models.CharField(max_length=100)
 
-    def __str__(self):
+    def _str_(self):
         return self.name
 
 
@@ -92,7 +92,7 @@ class LatestPg(models.Model):
     side_table = models.BooleanField(choices=KEY_FACILITIES)
     balcony = models.BooleanField(choices=KEY_FACILITIES)
 
-    def __str__(self):
+    def _str_(self):
         return self.pg_name
 
 
@@ -111,7 +111,7 @@ class LatesFlat(models.Model):
     area = models.IntegerField()
     flat_location = models.CharField(max_length=200)
 
-    def __str__(self):
+    def _str_(self):
         return self.flat_name
 
 
@@ -123,8 +123,5 @@ class PropertyForSale(models.Model):
     sale_address = models.CharField(max_length=200)
     sale_area = models.IntegerField()
 
-    def __str__(self):
+    def _str_(self):
         return self.property_name
-
-
-
